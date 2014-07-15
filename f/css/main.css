@@ -58,12 +58,12 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font: 800 50px/50px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 50px/50px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0 0 21px;
   color: #051013;
 }
 h2 {
-  font: 800 30px/30px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 30px/30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 32px 0 26px;
   color: #051013;
 }
@@ -560,7 +560,7 @@ a:hover .icon-video {
   background: #f60;
   border: 0;
   color: #fff;
-  font: 800 16px/22px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 16px/22px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: .05em;
   text-transform: uppercase;
   margin-right: 30px;
@@ -825,7 +825,7 @@ fieldset[disabled] .btn-link {
   }
 }
 .phrase {
-  font: italic 400 18px/26px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: italic 400 18px/26px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #051013;
   letter-spacing: .025em;
   padding: 20px 0;
@@ -896,7 +896,7 @@ fieldset[disabled] .btn-link {
   float: right;
   text-align: left;
   width: 120px;
-  font: 600 14px/18px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 600 14px/18px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 0 10px 0 20px;
   margin-left: 26px;
   height: 50px;
@@ -948,7 +948,7 @@ fieldset[disabled] .btn-link {
   margin-bottom: 3px;
 }
 .header__phone-num {
-  font: 600 20px/20px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 600 20px/20px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #32393c;
 }
 .header__menu {
@@ -967,7 +967,7 @@ fieldset[disabled] .btn-link {
 .header__menu a:focus {
   display: inline-block;
   text-decoration: none;
-  font: 600 14px/20px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 600 14px/20px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .header__menu a {
   padding: 5px 0 0;
@@ -1042,12 +1042,12 @@ fieldset[disabled] .btn-link {
   transition: all .1s linear;
 }
 .intro__title-name {
-  font: 300 italic 26px/50px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 300 italic 26px/50px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: .05em;
   margin-bottom: 1px;
 }
 .intro__title-text {
-  font: 800 70px/65px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 70px/65px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: .05em;
   text-transform: uppercase;
 }
@@ -1063,7 +1063,7 @@ fieldset[disabled] .btn-link {
   transition: all .1s linear;
 }
 .intro__menu-item {
-  font: 800 20px/30px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 20px/30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: inline-block;
   margin-right: 36px;
   vertical-align: top;
@@ -1130,10 +1130,10 @@ fieldset[disabled] .btn-link {
     top: 100px;
   }
   .intro__title-name {
-    font: 300 italic 24px/48px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font: 300 italic 24px/48px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   .intro__title-text {
-    font: 800 62px/58px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font: 800 62px/58px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   .intro__menu {
     top: 320px;
@@ -1171,7 +1171,7 @@ fieldset[disabled] .btn-link {
   height: 249px;
 }
 .services__intro-title {
-  font: 800 50px/50px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 50px/50px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   float: left;
   width: 480px;
   padding: 0 20px 0 59px
@@ -1185,14 +1185,14 @@ fieldset[disabled] .btn-link {
   color: #f60;
 }
 .services__intro-text {
-  font: italic 400 18px/26px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: italic 400 18px/26px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   float: left;
   width: 390px;
   letter-spacing: .025em;
   padding-top: 8px;
 }
 .services__menu {
-  font: 800 16px/28px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 16px/28px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: .05em;
   padding-left: 52px;
@@ -1236,7 +1236,7 @@ fieldset[disabled] .btn-link {
   padding-left: 59px;
 }
 .services__total-title {
-  font: 800 20px/30px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 20px/30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: .05em;
   display: inline-block;
   margin-right: 15px;
@@ -1267,7 +1267,7 @@ fieldset[disabled] .btn-link {
 }
 .services__total-item b,
 .services__total-extra b {
-  font: 400 50px/48px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 400 50px/48px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: block;
   color: #051013;
 }
@@ -1337,7 +1337,7 @@ fieldset[disabled] .btn-link {
   height: 180px;
   color: #fff;
   text-transform: uppercase;
-  font: 800 16px/22px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 16px/22px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-align: center;
   vertical-align: center;
   letter-spacing: .05em;
@@ -1371,7 +1371,7 @@ a:hover .services__gallery-item-title {
   background: url(/f/i/map-bg.png) right top no-repeat;
 }
 .map__title {
-  font: 800 50px/50px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 50px/50px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   float: right;
   width: 466px;
   padding: 65px 20px 0 0px
@@ -1385,7 +1385,7 @@ a:hover .services__gallery-item-title {
   color: #f60;
 }
 .map__text {
-  font: italic 400 18px/26px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: italic 400 18px/26px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   float: left;
   width: 450px;
   letter-spacing: .025em;
@@ -1397,7 +1397,7 @@ a:hover .services__gallery-item-title {
   position: absolute;
   top: 320px;
   right: 301px;
-  font: 800 20px/30px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 20px/30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: .05em;
   text-transform: uppercase;
 }
@@ -1557,11 +1557,11 @@ a:hover .map__item-back {
 }
 .about__title {
   padding: 35px 0 0 59px;
-  font: 800 50px/50px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 50px/50px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-bottom: 27px;
 }
 .about__intro {
-  font: italic 400 18px/26px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: italic 400 18px/26px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0 340px 64px 240px;
 }
 .about__video {
@@ -1598,11 +1598,11 @@ a:hover .map__item-back {
   display: block;
 }
 .about__fact-num {
-  font: 400 50px/50px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 400 50px/50px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-bottom: 4px;
 }
 .about__fact-measure {
-  font: 800 20px/24px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 20px/24px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 1px;
@@ -1669,7 +1669,7 @@ a:hover .map__item-back {
   position: relative;
 }
 .brands__title {
-  font: 800 50px/50px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 50px/50px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   float: right;
   width: 385px;
   padding-right: 30px;
@@ -1771,7 +1771,7 @@ a:hover .brands__smtitle {
   float: left;
 }
 .partner__title {
-  font: 800 20px/30px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 20px/30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #051013;
   margin-bottom: 18px;
   letter-spacing: .05em;
@@ -1801,7 +1801,7 @@ a:hover .brands__smtitle {
   position: relative;
 }
 .leasing__title {
-  font: 800 50px/50px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 50px/50px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 0 0 0 59px;
   position: relative;
   width: 270px;
@@ -1848,11 +1848,11 @@ a:hover .brands__smtitle {
   margin-left: -20px;
 }
 .leasing__fact-value {
-  font: 400 50px/48px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 400 50px/48px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -.05em;
 }
 .leasing__fact-value b {
-  font: 800 20px/30px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 20px/30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   margin-left: 5px;
   letter-spacing: .05em;
@@ -1877,7 +1877,7 @@ a:hover .brands__smtitle {
   width: 103px;
   height: 103px;
   background: #f60;
-  font: 800 16px/22px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 16px/22px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: .05em;
   position: relative;
   text-transform: uppercase;
@@ -1901,7 +1901,7 @@ a:hover .brands__smtitle {
 }
 .leasing__text {
   margin-left: 192px;
-  font: italic 400 18px/26px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: italic 400 18px/26px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: .025em;
   padding-top: 3px;
 }
@@ -1932,7 +1932,7 @@ a:hover .brands__smtitle {
   margin-bottom: 6px;
 }
 .catalog__title {
-  font: 800 20px/30px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 20px/30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: .05em;
   margin-bottom: 17px;
@@ -2095,7 +2095,7 @@ a:hover .brands__smtitle {
 }
 .menu__item {
   text-transform: uppercase;
-  font: 800 16px/22px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 16px/22px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: .05em;
   text-decoration: none;
 }
@@ -2221,11 +2221,11 @@ a:hover .brands__smtitle {
   padding: ;
 }
 .contacts__title {
-  font: 800 30px/40px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 800 30px/40px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-bottom: 34px;
 }
 .contacts__subtitle {
-  font: 600 20px/30px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 600 20px/30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-left: 16px;
 }
 .contacts__item {
@@ -2235,14 +2235,14 @@ a:hover .brands__smtitle {
   margin: 0;
 }
 .contacts__item-title {
-  font: 600 16px/24px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 600 16px/24px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #5bc4f0;
 }
 .contacts__item-phone {
-  font: 400 40px/40px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 400 40px/40px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .contacts__item-phonecode {
-  font: 400 20px/40px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 400 20px/40px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .contacts__email {
   margin-top: -2px;
@@ -2272,11 +2272,11 @@ a:hover .brands__smtitle {
   min-width: 130px;
 }
 .contacts__branch-title {
-  font: 600 16px/24px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 600 16px/24px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-bottom: 5px;
 }
 .contacts__branch-phone {
-  font: 400 15px/24px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 400 15px/24px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-bottom: 0;
 }
 .contacts__feedback {
@@ -2299,7 +2299,7 @@ a:hover .brands__smtitle {
 }
 .contacts__callback,
 .contacts__callback b {
-  font: 600 16px/22px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 600 16px/22px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .contacts__callback,
 .contacts__callback:hover,
@@ -2325,7 +2325,7 @@ a:hover .brands__smtitle {
   width: 120px;
 }
 .contacts__feedback-letter {
-  font: 600 16px/22px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 600 16px/22px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   width: 120px;
   padding-left: 20px;
 }
@@ -2346,7 +2346,7 @@ a:hover .brands__smtitle {
     width: 32%;
   }
   .contacts__item-phone {
-    font: 400 40px/40px'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font: 400 40px/40px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   .contacts__branch {
     width: 47%;
