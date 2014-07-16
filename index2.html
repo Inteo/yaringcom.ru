@@ -1,0 +1,479 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Яринжком</title>
+  <meta name="viewport" content="width=1010">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="/f/css/main.css">
+  <!--[if lte IE 9]><link rel="stylesheet" href="/f/css/ie.css"><![endif]-->
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Open+Sans:400,400italic,800,600&subset=latin,cyrillic" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <script src="/f/js/modernizr.min.js"></script>
+  <script src="/f/js/jquery-1.10.2.min.js"></script>
+  <script src="/f/js/plugins.min.js"></script>
+  <script src="/f/js/kenburn.min.js"></script>
+  <script src="/f/js/jquery.smooth.js"></script>
+  <script src="/f/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="/f/js/common.js"></script>
+  <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><script src="/f/js/sandpaper.js"></script><![endif]-->
+  
+	<script>
+	function facility_switch(n){
+		if(n == 1){
+			$(".facility__switch-item_1").addClass("facility__switch-item_state_active");
+			$(".facility__switch-item_2").removeClass("facility__switch-item_state_active");
+			$(".facility__switch-item_3").removeClass("facility__switch-item_state_active");
+			
+			$(".facility__image").css("backgroundImage", "url(/f/i/intro_1.jpg)");
+			
+			$(".facility__switch-container_1").addClass("facility__switch-container_state_active");
+			$(".facility__switch-container_2").removeClass("facility__switch-container_state_active");
+			$(".facility__switch-container_3").removeClass("facility__switch-container_state_active");
+		}
+		else if(n == 2){
+			$(".facility__switch-item_2").addClass("facility__switch-item_state_active");
+			$(".facility__switch-item_1").removeClass("facility__switch-item_state_active");
+			$(".facility__switch-item_3").removeClass("facility__switch-item_state_active");
+			
+			$(".facility__image").css("backgroundImage", "url(/f/i/intro_2.jpg)");
+			
+			$(".facility__switch-container_2").addClass("facility__switch-container_state_active");
+			$(".facility__switch-container_1").removeClass("facility__switch-container_state_active");
+			$(".facility__switch-container_3").removeClass("facility__switch-container_state_active");
+		}
+		else if(n == 3){
+			$(".facility__switch-item_3").addClass("facility__switch-item_state_active");
+			$(".facility__switch-item_1").removeClass("facility__switch-item_state_active");
+			$(".facility__switch-item_2").removeClass("facility__switch-item_state_active");
+			
+			$(".facility__image").css("backgroundImage", "url(/f/i/intro_3.jpg)");
+			
+			$(".facility__switch-container_3").addClass("facility__switch-container_state_active");
+			$(".facility__switch-container_1").removeClass("facility__switch-container_state_active");
+			$(".facility__switch-container_2").removeClass("facility__switch-container_state_active");
+		}
+	}
+	 
+	function facility_see_photo(){
+		if($(".facility__see-photo").hasClass("facility__see-photo_state_active")){
+			$(".facility__image").animate({
+				width: "33%"
+			}, 500);
+			
+			setTimeout(function () {
+				$(".facility__icon").show();
+				$(".facility__image").css("z-index", "-1");
+			}, 500); 
+			$(".facility__see-photo").removeClass("facility__see-photo_state_active");
+		}
+		else {
+			if($(window).width() > 1280){
+				$(".facility__image").animate({
+				width: "82%"
+			}, 500);
+			}
+			else{
+				$(".facility__image").animate({
+				width: "100%"
+				}, 500);
+			}
+		
+		
+			$(".facility__icon").hide();
+			$(".facility__image").css("z-index", "99");
+			$(".facility__see-photo").addClass("facility__see-photo_state_active");
+		}
+		
+	}
+	</script>
+	<script>
+	$(document).ready(function() {
+		if($(".facility__switch-item_1").hasClass("facility__switch-item_state_active")){
+			$(".facility__image").css("backgroundImage", "url(/f/i/intro_1.jpg)");
+			$(".facility__switch-container_1").addClass("facility__switch-container_state_active");
+		}
+		else if($(".facility__switch-item_2").hasClass("facility__switch-item_state_active")){
+			$(".facility__image").css("backgroundImage", "url(/f/i/intro_2.jpg)");
+			$(".facility__switch-container_2").addClass("facility__switch-container_state_active");
+		}
+		else if($(".facility__switch-item_3").hasClass("facility__switch-item_state_active")){
+			$(".facility__image").css("backgroundImage", "url(/f/i/intro_3.jpg)");
+			$(".facility__switch-container_3").addClass("facility__switch-container_state_active");
+		}
+	});
+	</script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="contacts"><!--noindex-->
+    <div class="wrap">
+      <div class="contacts__wrap">
+        <div class="contacts__feedback">
+          <div class="contacts__feedback-wrap">
+            
+            <a class="contacts__callback" href="#"><span class="valign"></span><b>Закажите обратный звонок</b></a>
+            <div class="contacts__feedback-or">или</div>
+            <div class="contacts__feedback-letter"><a href="#" class="pseudo">напишите нам</a></div>
+          </div>
+
+        </div>
+        <div class="clear">
+          <div class="contacts__main">
+            <p class="contacts__title">Головной офис <span class="contacts__subtitle">Ярославль</span></p>
+            <div class="contacts__item">
+              <p class="contacts__item-title">Коммерческий отдел:</p>
+              <p class="contacts__item-phone"><span class="contacts__item-phonecode">(4852)</span> 40-85-33, 40-85-31</p>
+            </div>
+            <div class="contacts__item">
+              <p class="contacts__item-title">Отдел закупки:</p>
+              <p class="contacts__item-phone"><span class="contacts__item-phonecode">(4852)</span> 40-85-68</p>
+            </div>
+            <div class="contacts__item">
+              <p class="contacts__item-title">Проектная группа:</p>
+              <p class="contacts__item-phone"><span class="contacts__item-phonecode">(4852)</span> 79-18-00</p>
+            </div>
+            <div class="contacts__email"><b>E-mail:</b> <a href="mailto:info@yaringcom.ru">info@yaringcom.ru</a></div>
+          </div>
+          <div class="contacts__branch">
+            <p class="contacts__title">Представительства</p>
+            <table>
+            <tr><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Москва</p>
+              <p class="contacts__branch-phone">(495) 602-00-63</p>
+              <p class="contacts__branch-email"><a href="mailto:moscow@yaringcom.ru">moscow@yaringcom.ru</a></p>
+            </div></td><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Екатеринбург</p>
+              <p class="contacts__branch-phone">(343) 237-03-73</p>
+              <p class="contacts__branch-email"><a href="mailto:ural@yaringcom.ru">ural@yaringcom.ru</a></p>
+            </div></td><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Нижний Новгород</p>
+              <p class="contacts__branch-phone">(831) 233-02-35</p>
+              <p class="contacts__branch-email"><a href="mailto:nnov@yaringcom.ru">nnov@yaringcom.ru</a></p>
+            </div></td></tr><tr><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Краснодар</p>
+              <p class="contacts__branch-phone">(861) 944-13-10</p>
+              <p class="contacts__branch-email"><a href="mailto:kras1@yaringcom.ru">kras1@yaringcom.ru</a></p>
+            </div></td><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Алматы</p>
+              <p class="contacts__branch-phone">(727) 390-85-83<br>(727) 233-03-25</p>
+              <p class="contacts__branch-email"><a href="mailto:kz@yaringcom.ru">kz@yaringcom.ru</a></p>
+            </div></td><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Казань</p>
+              <p class="contacts__branch-phone">(843) 216-56-93</p>
+              <p class="contacts__branch-email"><a href="mailto:kazan@yaringcom.ru">kazan@yaringcom.ru</a></p>
+            </div></td></tr></table>
+          </div>
+        </div>
+      </div></div><!--/noindex-->
+    </div>
+
+    <div class="header"><div class="wrap"><div class="header__wrap">
+      <div class="header__logo">
+        <a href="/" class="header__logo-link">
+          <img src="/f/i/logo.png" alt="Яринжком">
+          <ins>
+            <span>Производство</span>модульных котельных</ins>
+        </a>
+      </div>
+      <div class="header__contacts">
+        <span class="header__phone">
+          <span class="header__phone-text">Звонок бесплатный</span>
+          <span class="header__phone-num">8 800 540-32-76</span>
+        </span>
+        <a href="#" class="header__button"><span class="valign"></span><span class="header__button-link">Как с нами связаться?</span><span class="header__button-link header__button-link_close">Закрыть <span>&times;</span></span></a>
+      </div>
+      <div class="header__menu">
+        <span><a href="#">Продукция</a>
+        </span>
+        <span><a href="#">Услуги</a>
+        </span>
+        <span><a href="#">Проекты</a>
+        </span>
+        <span><a href="#">Решения</a>
+        </span>
+        <span><a href="#">О компании</a>
+        </span>
+        <span><a href="#">Производство</a>
+        </span>
+        <span><a href="#">Контакты</a>
+        </span>
+        <span class="justify"></span>
+      </div>
+    </div></div></div>
+  
+	<div class = "production">
+		<div = class = "production__mask"></div>
+		<div class = "wrap">
+			<span class = "production__icon"></span>
+			<ul class = "breadcrumbs">
+				<li class = "breadcrumbs__item"><a href = "#" class = "breadcrumbs__link">Главная</a></li>
+				<li class = "breadcrumbs__item"><a href = "#" class = "breadcrumbs__link">Продукция</a></li>
+				<li class = "breadcrumbs__item"><a href = "#" class = "breadcrumbs__link">Котельные</a></li>
+				<li class = "breadcrumbs__item breadcrumbs__item_last"><a href = "#" class = "breadcrumbs__link">Передвижная котельная</a></li>
+			</ul>
+			<span class = "production__title">Производство</span>
+			<p class = "production__text">ЗАО «Яринжком» – один из крупнейших российских производителей на рынке котельных и теплоэнергетического оборудования. Более 20 лет компания успешно развивается в малой энергетике, наращивая темпы производства, постоянно повышая качество выпускаемой продукции, квалификацию персонала и уровень сервиса для клиента.  </p>
+			<div class = "production__item production__item_first">
+				<span class = "production__item-title">9000<span class = "production__item-title_small">м<sup>2</sup></span></span>
+				<span class = "production__item-text">производственных Площадей</span>
+			</div>
+			<div class = "production__item">
+				<span class = "production__item-title">350</span>
+				<span class = "production__item-text">сорудников</span>
+			</div>
+			<div class = "production__item">
+				<span class = "production__item-title">>20</span>
+				<span class = "production__item-text">лет успешной работы</span>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "our-product">
+		<div class = "wrap">
+			<span class = "our-product__title">Наша продукция – это качественный источник тепловой и электрической энергии</span>
+			<p class = "our-product__text">для промышленных предприятий, комплексов и объектов жилищно-коммунального и сельского хозяйства, социальных объектов, для предприятий, добывающих и перерабатывающих природные ресурсы, как в России, так и на территории стран СНГ.</p>
+		</div>
+	</div>
+	
+	<div class = "employ">
+		<div class = "wrap">
+			<span class = "employ__title employ__title_big">350</span> 
+			<span class = "employ__title">инженерно-технических сотрудников, специалистов и производственного персонала</span>
+			<p class = "employ__text">оснащённые современным оборудованием, позволяют в кратчайшие сроки изготавливать и поставлять необходимые Заказчику объёмы продукции.</p>
+		</div>
+	</div>
+	
+	<div class = "area">
+		<div class = "wrap">
+			<span class = "area__icon"></span>
+			<span class = "area__title area__title_big">9000<span class = "area__title area__title_small">м<sup>2</sup></span></span> 
+			<span class = "area__title">собственных производственных площадей на <a href = "#" class = "area__link">3 предприятиях</a></span>
+		</div>
+	</div>
+	
+	<div class = "facility">
+		<div class = "facility__image">
+			<span class = "facility__see-photo" onclick = "facility_see_photo();">Посмотреть фото предприятия</span>
+			<span class = "facility__icon"></span>
+		</div>
+		<div class = "wrap">
+			<div class = "facility__switch">
+				<div class = "facility__switch-item facility__switch-item_1  facility__switch-item_state_active" onclick = "facility_switch(1);">
+					<span class = "facility__switch-link">Производственное предприятие № 1</span>
+					<span class = "facility__switch-address">г.Ярославль, пр-т Домостроителей, 1</span>
+				</div>
+				<div class = "facility__switch-item facility__switch-item_2" onclick = "facility_switch(2);">
+					<span class = "facility__switch-link">Производственное предприятие № 2</span>
+					<span class = "facility__switch-address">г.Ярославль, Полушкина Роща, 9</span>
+				</div>
+				<div class = "facility__switch-item facility__switch-item_3" onclick = "facility_switch(3);">
+					<span class = "facility__switch-link">Производственное предприятие № 3</span>
+					<span class = "facility__switch-address">г.Ярославль, Вторая Яковлевская, 3</span>
+				</div>
+			</div>
+			
+			<div class = "facility__switch-container facility__switch-container_1">
+				<div class = "facility__switch-container-item">
+					<span class = "facility__pretext facility__pretext"> <img src="/f/i/facility-pict1.png" alt=""></span>
+					<p class = "facility__text facility__text_font_italic">Основная и самая крупная производственная площадка компании. Здесь изготавливается весь объём котельных установок и стальных резервуаров, которые в заводских условиях проходят комплекс необходимых испытаний и приёмо-сдаточных операций ОТК.</p>
+				</div>
+	
+				<div class = "facility__switch-container-item">
+					<div class = "facility__pretext">
+						<span class = "facility__pretext-cont facility__pretext-cont_size_big">7100</span>
+						<span class = "facility__pretext-cont facility__pretext-cont_size_small">м<sup>2</sup></span>
+						<span class = "facility__pretext-cont">производственной Площади</span>
+					</div>
+					<span class = "facility__title">Оборудование</span>
+					<p class = "facility__text">Площадка оснащена современным оборудованием: металлообрабатывающие и трубогибочные станки, вальцы, оборудование для резки и заготовки металла, сварочные и слесарные посты, окрасочная, грузоподъемное оборудование и механизмы, а также стенды для проведения испытаний готовых изделий и настройки отдельных элементов комплектующего оборудования.</p>
+				</div>
+				
+				<div class = "facility__switch-container-item">
+					<div class = "facility__pretext">
+						<span class = "facility__pretext-cont facility__pretext-cont_size_big">158</span>
+						<span class = "facility__pretext-cont">сотрудников</span>
+					</div>
+					<span class = "facility__title">Рабочий персонал</span>
+					<p class = "facility__text">На предприятии работают бригады сварщиков, монтажников, сборщиков металлоконструкций, электриков, специалисты по сборке оборудования КИПиА, специалисты по водоподготовительному оборудованию, окрасочным и изоляционным работам, мастера производства работ, сотрудники службы входного контроля и специалисты отдела ОТК</p>
+					<p class = "facility__text facility__text_iconized">В цехах установлены камеры наблюдения для оперативного контроля выполнения производственных задач.</p>
+				</div>
+			</div>
+			
+			<div class = "facility__switch-container facility__switch-container_2">
+				<div class = "facility__switch-container-item">
+					<span class = "facility__pretext facility__pretext"> <img src="/f/i/facility-pict1.png" alt=""></span>
+					<p class = "facility__text facility__text_font_italic">Основная и самая крупная производственная площадка компании. Здесь изготавливается весь объём котельных установок и стальных резервуаров, которые в заводских условиях проходят комплекс необходимых испытаний и приёмо-сдаточных операций ОТК.</p>
+				</div>
+				<div class = "facility__switch-container-item">
+					<div class = "facility__pretext">
+						<span class = "facility__pretext-cont facility__pretext-cont_size_big">8200</span>
+						<span class = "facility__pretext-cont facility__pretext-cont_size_small">м<sup>2</sup></span>
+						<span class = "facility__pretext-cont">производственной Площади</span>
+					</div>
+					<span class = "facility__title">Оборудование</span>
+					<p class = "facility__text">Площадка оснащена современным оборудованием: металлообрабатывающие и трубогибочные станки, вальцы, оборудование для резки и заготовки металла, сварочные и слесарные посты, окрасочная, грузоподъемное оборудование и механизмы, а также стенды для проведения испытаний готовых изделий и настройки отдельных элементов комплектующего оборудования.</p>
+				</div>
+				
+				<div class = "facility__switch-container-item">
+					<div class = "facility__pretext">
+						<span class = "facility__pretext-cont facility__pretext-cont_size_big">238</span>
+						<span class = "facility__pretext-cont">сотрудников</span>
+					</div>
+					<span class = "facility__title">Рабочий персонал</span>
+					<p class = "facility__text">На предприятии работают бригады сварщиков, монтажников, сборщиков металлоконструкций, электриков, специалисты по сборке оборудования КИПиА, специалисты по водоподготовительному оборудованию, окрасочным и изоляционным работам, мастера производства работ, сотрудники службы входного контроля и специалисты отдела ОТК</p>
+					<p class = "facility__text facility__text_iconized">В цехах установлены камеры наблюдения для оперативного контроля выполнения производственных задач.</p>
+				</div>
+			</div>
+			
+			<div class = "facility__switch-container facility__switch-container_3">
+				<div class = "facility__switch-container-item">
+					<span class = "facility__pretext facility__pretext"> <img src="/f/i/facility-pict1.png" alt=""></span>
+					<p class = "facility__text facility__text_font_italic">Основная и самая крупная производственная площадка компании. Здесь изготавливается весь объём котельных установок и стальных резервуаров, которые в заводских условиях проходят комплекс необходимых испытаний и приёмо-сдаточных операций ОТК.</p>
+				</div>
+				<div class = "facility__switch-container-item">
+					<div class = "facility__pretext">
+						<span class = "facility__pretext-cont facility__pretext-cont_size_big">6700</span>
+						<span class = "facility__pretext-cont facility__pretext-cont_size_small">м<sup>2</sup></span>
+						<span class = "facility__pretext-cont">производственной Площади</span>
+					</div>
+					<span class = "facility__title">Оборудование</span>
+					<p class = "facility__text">Площадка оснащена современным оборудованием: металлообрабатывающие и трубогибочные станки, вальцы, оборудование для резки и заготовки металла, сварочные и слесарные посты, окрасочная, грузоподъемное оборудование и механизмы, а также стенды для проведения испытаний готовых изделий и настройки отдельных элементов комплектующего оборудования.</p>
+				</div>
+				
+				<div class = "facility__switch-container-item">
+					<div class = "facility__pretext">
+						<span class = "facility__pretext-cont facility__pretext-cont_size_big">288</span>
+						<span class = "facility__pretext-cont">сотрудников</span>
+					</div>
+					<span class = "facility__title">Рабочий персонал</span>
+					<p class = "facility__text">На предприятии работают бригады сварщиков, монтажников, сборщиков металлоконструкций, электриков, специалисты по сборке оборудования КИПиА, специалисты по водоподготовительному оборудованию, окрасочным и изоляционным работам, мастера производства работ, сотрудники службы входного контроля и специалисты отдела ОТК</p>
+					<p class = "facility__text facility__text_iconized">В цехах установлены камеры наблюдения для оперативного контроля выполнения производственных задач.</p>
+				</div>
+			</div>
+			
+			<div class = "facility__switch-container facility__switch-container_2">
+			
+			</div>
+			
+			<div class = "facility__switch-container facility__switch-container_3">
+			
+			</div>
+		</div>
+	</div>
+	
+    <div class="catalog"><div class="wrap"><div class="catalog__wrap">
+      <p class="catalog__title"><a href="#">Котельные</a></p>
+      <table>
+        <tr>
+          <td>
+            <p class="catalog__subtitle">по типу исполнения:</p>
+            <ul>
+              <li><a href="#">Блочно-модульные котельные</a></li>
+              <li><a href="#">Модульные котельные</a></li>
+              <li><a href="#">Блочные котельные</a></li>
+              <li><a href="#">Передвижная котельная</a></li>
+              <li><a href="#">Стационарная котельная</a></li>
+              <li><a href="#">Промышленная котельная</a></li>
+              <li><a href="#">Аварийная котельная</a></li>
+              <li><a href="#">Мини-котельная</a></li>
+            </ul>
+          </td>
+          <td>
+            <p class="catalog__subtitle">по виду топлива:</p>
+            <ul>
+              <li><a href="#">Газовая котельная</a></li>
+              <li><a href="#">Жидкотопливная котельная</a></li>
+              <li><a href="#">Твёрдотопливная котельная</a></li>
+              <li><a href="#">Электрокотельная</a></li>
+              <li><a href="#">Мини-котельная</a></li>
+            </ul>
+          </td>
+          <td>
+            <p class="catalog__subtitle">по типу тепловой нагрузки:</p>
+            <ul>
+              <li><a href="#">Отопительная котельная</a></li>
+              <li><a href="#">Производственная котельная</a></li>
+              <li><a href="#">Производственно-отопительная котельная</a></li>
+            </ul>
+          </td>
+          <td>
+            <p class="catalog__subtitle">по размещению:</p>
+            <ul>
+              <li><a href="#">Отдельно стоящая котельная</a></li>
+              <li><a href="#">Крышная котельная</a></li>
+              <li><a href="#">Пристроенная котельная</a></li>
+              <li><a href="#">Встроенная котельная</a></li>
+              <li><a href="#">Мини-котельная</a></li>
+            </ul>
+          </td>
+          <td>
+            <p class="catalog__subtitle">по типу котлоагрегатов:</p>
+            <ul>
+              <li><a href="#">Паровая котельная</a></li>
+              <li><a href="#">Водоргейная котельная</a></li>
+              <li><a href="#">Паро-водогрейная котельная</a></li>
+              <li><a href="#">Котельная на диатермическом масле</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td style="width:20%">
+            <p class="catalog__title"><a href="#">Дымовые трубы</a></p>
+            <ul>
+              <li><a href="#">Ферменные дымовые трубы</a></li>
+              <li><a href="#">Самонесущие дымовые трубы</a></li>
+              <li><a href="#">Фасадные дымовые трубы</a></li>
+              <li><a href="#">Колонные дымовые трубы</a></li>
+              <li><a href="#">Дымовые трубы на растяжках</a></li>
+            </ul>
+          </td>
+          <td style="width:30%">
+            <p class="catalog__title"><a href="#">Стальные резервуары</a></p>
+            <ul>
+              <li><a href="#">Резервуары надземные РГЦ-3 – РГЦ 100)</a></li>
+              <li><a href="#">Резервуары подземные (РГЦ-3 – РГЦ 100)</a></li>
+              <li><a href="#">Резервуары для воды (РГЦ-3 – РГЦ 100)</a></li>
+              <li><a href="#">Резервуары для нефтепродуктов (ГЦ-3 – РГЦ 100)</a></li>
+            </ul>
+          </td>
+          <td style="width:25%">
+            <p class="catalog__title"><a href="#">Промышленные дымоходы</a></p>
+            <ul>
+              <li><a href="#">Модульные дымоходы</a></li>
+              <li><a href="#">Промышленные системы дымоудаления</a></li>
+            </ul>
+          </td>
+          <td style="width:25%">
+            <p class="catalog__title"><a href="#">Индивидуальные тепловые пункты</a></p>
+            <ul>
+              <li><a href="#">В блочном исполнении</a></li>
+              <li><a href="#">На раме</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div></div></div>
+    <div class="footer"><div class="wrap">
+      <div class="footer__wrap">
+        <div class="developer">Создание сайта – <a href="http://inteo-s.ru" rel="external">Интео</a></div>
+        © 1992—2014 ЗАО «Яринжком»<br>
+Все права защищены.<br>
+Полное или частичное копирование материалов запрещено.
+      </div>
+    </div></div>
+  </div>
+</body>
+
+</html>
