@@ -831,6 +831,9 @@ fieldset[disabled] .btn-link {
   padding: 20px 0;
   margin-bottom: 42px;
 }
+.phrase p {
+  margin: 0;
+}
 .rel {
   position: relative;
 }
