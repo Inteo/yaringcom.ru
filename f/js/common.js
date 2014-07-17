@@ -304,8 +304,13 @@ function gallerify() {
     var off = globalOffset;
     if (off == 0) {off = $(this).offset().left;}
     var gwidth = $(window).width() - off,
-      ghwidth = $(this).find('.gallery__holder').width();
-    $(this).find('.gallery__holder').width(ghwidth + 41);
+      ghwidth = $(this).find('.gallery__holder').data('width');
+      if ($(window).width() > 1190) {
+        $(this).find('.gallery__holder').width(ghwidth + 41);
+      }
+      else {
+        $(this).find('.gallery__holder').width(ghwidth + 33);
+      }
     $(this).width(gwidth);
     $(this).mCustomScrollbar({
       axis: "x",
