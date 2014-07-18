@@ -302,7 +302,21 @@ globalOffset = 0;
 function gallerify() {
   $(".gallery").each(function(index) {
     var off = globalOffset;
-    if (off == 0) {off = $(this).offset().left;}
+    if (off == 0) {
+      if ($(this).closest('.swapper').length) {
+        off = $(this).closest('.swapper').offset().left;
+        if ($(window).width() > 1190) {
+          off-=41;
+        }
+        else {
+          off-=33;
+        }
+      }
+      else {
+        off = $(this).offset().left;
+      }
+    }
+
     var gwidth = $(window).width() - off,
       ghwidth = $(this).find('.gallery__holder').data('width');
       if ($(window).width() > 1190) {
@@ -321,6 +335,7 @@ function gallerify() {
       }
     });
   });
+
 }
 
 $(document).ready(function() {
@@ -369,6 +384,11 @@ $(document).ready(function() {
   $(window).resize(function() {
     globalOffset = 0;
     gallerify();
+    setTimeout(function() { 
+      $(".swapper").each(function(index) {
+        $(".swapper").height($(".swapper > .active").height());
+      });
+    }, 100);
   });
 
   if ($('#zoomscheme').length) {
@@ -410,7 +430,7 @@ $(document).ready(function() {
         }
 
         function c(a) {
-          -1 != g.prevIndex && f.panels[g.prevIndex].addClass(a ? "_prev" : "_next").removeClass("active"), f.panels[g.currentIndex].addClass("_part active").removeClass("_prev _next"), setTimeout(b, 700)
+          -1 != g.prevIndex && f.panels[g.prevIndex].addClass(a ? "_prev" : "_next").removeClass("active"), f.panels[g.currentIndex].addClass("_part active").removeClass("_prev _next"), f.panels[g.currentIndex].parent().height(f.panels[g.currentIndex].height()), setTimeout(b, 700)
         }
 
         function d() {
@@ -423,8 +443,6 @@ $(document).ready(function() {
             f.items.removeClass("active"), b.addClass("active"), g.prevIndex = e, g.currentIndex = d, a(h), setTimeout(function() {
               c(h)
             }, 20);
-            b.closest(".js-tab").attr("data-current",d);
-            console.log(b.closest(".js-tab"));
           }
         }
         var e = $(this),
@@ -441,7 +459,7 @@ $(document).ready(function() {
         $(".js-tab-panel", e).each(function() {
           var a = $(this);
           a.addClass("_next"), f.panels[a.data("panel")] = a, g.panelCount++
-        }), f.panels[g.currentIndex].removeClass("_next").addClass("_part active"), f.items.on("click", d)
+        }), f.panels[g.currentIndex].removeClass("_next").addClass("_part active"), f.panels[g.currentIndex].parent().height(f.panels[g.currentIndex].height()), f.items.on("click", d)
       })
     }(),
     function() {

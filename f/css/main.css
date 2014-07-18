@@ -807,14 +807,13 @@ fieldset[disabled] .btn-link {
 }
 .zoomer {
   position: relative;
-  height: 577px;
+  height: 580px;
   overflow: hidden;
   border-left: 5px solid #0e8abd;
-  margin-bottom: 41px;
   background: #f8f8f8;
 }
 .zoomer img {
-  max-height: 577px;
+  max-height: 580px;
 }
 .bigcut .zoomer {
   margin-left: -41px;
@@ -2522,12 +2521,7 @@ a:hover .realized__item-info {
   -ms-transition: all .2s linear;
   -o-transition: all .2s linear;
   transition: all .2s linear;
-}
-[data-current='0'] .swapper {
-  height: 620px;
-}
-[data-current='1'] .swapper {
-  height: 661px;
+  margin-bottom: 41px;
 }
 .swapper__item {
   position: relative;
