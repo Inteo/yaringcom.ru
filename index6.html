@@ -26,6 +26,42 @@
   <script src="/f/js/common.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
   <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><script src="/f/js/sandpaper.js"></script><![endif]-->
+  
+  <script>
+    $(function(){
+	var history_items = [];
+	var history_years = [];
+   	$('.story__item').each(function (i){
+  	    history_items[i] = $(this);
+    });
+	
+	$('.story__year-line').each(function (i){
+  	    history_years[i] = $(this);
+    });
+	
+    $(window).scroll(function(){
+	  $.each(history_items, function (i){
+	    var top = $(this).offset().top - $(document).scrollTop();
+  	    if (top <= 300){
+		  $(this).removeClass("story__item_unmasked").addClass("story__item_unmasked");
+		}
+		else if (top > 300){
+		  $(this).removeClass("story__item_unmasked");
+		}
+      });
+	  $.each(history_years, function (i){
+	    var top = $(this).offset().top - $(document).scrollTop();
+  	    if (top <= 260){
+		  $(this).removeClass("story__year-line_unmasked").addClass("story__year-line_unmasked");
+		}
+		else if (top > 260){
+		  $(this).removeClass("story__year-line_unmasked");
+		}
+      });
+    });
+    });
+   
+  </script>
 </head>
 
 <body>
@@ -153,88 +189,112 @@
                   <h1 class="short">История <br>компании</h1>
 				  <div class = "cut"><div class = "phrase">Компания была основана в 1992 году и за время своего существования приобрела статус надёжного партнёра и лидера в сфере разработки и реализации решений в теплоэнергетике. Большой опыт работы в отрасли, а также профессионализм наших специалистов – гарантия надёжности и высокого качества работы ЗАО «Яринжком».</div></div>
 				  <div class = "story-wrap">
-				    <div class = "story__item story__item_unmasked">
+				    <div class = "story__item">
 					  <div class = "story__year">
-					    <span class = "story__year-item story__year-item_big story__year-item_unmasked">1992</span>
-					    <span class = "story__year-item story__year-item_unmasked">1993</span>
-					    <span class = "story__year-item story__year-item_unmasked">1994</span>
+					    <div class="story__year-wrap">
+					      <div class="story__year-line"><span class = "story__year-item story__year-item_big">1992</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">1993</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">1994</span></div>
+						</div>
 					  </div>
 					  <div class = "story__item-mask"></div>
-					  <img src = "" class = "story__item-image"></img>
-					  <span class = "story__item-title">Новое инженерно-конструкторское бюро в Ярославле</span>
-					  <p class = "story__item-text">2000-е – годы уверенного развития и роста ЗАО «Яринжком». Накопленный за время успешной работы профессиональный опыт в области конструкторских разработок и активное участие в решении различных проблем малой энергетики привели к существенному прорыву в деятельности компании. Были оснащены современным оборудованием производственные площадки предприятия, приняты в штат специалисты производственники, увеличено количество рабочих высшей квалификации для изготовления нового продукта – блочно-модульных водогрейных котельных. </p>
-					  <p class = "story__item-text">Первая блочно-модульная водогрейная котельная была изготовлена по заказу мэрии г. Ярославля. Установка имела мощность 1,3 МВт и была оснащена самым современным оборудованием и автоматикой, что позволяло эксплуатировать котельную в автоматическом режиме, используя в качестве топлива природный газ.</p>
+					  <img src = "/f/i/history-image1.jpg" class = "story__item-image"></img>
+					  <div class = "story__item-text-wrap">
+					    <span class = "story__item-title">Новое инженерно-конструкторское бюро в Ярославле</span>
+					    <p class = "story__item-text">2000-е – годы уверенного развития и роста ЗАО «Яринжком». Накопленный за время успешной работы профессиональный опыт в области конструкторских разработок и активное участие в решении различных проблем малой энергетики привели к существенному прорыву в деятельности компании. Были оснащены современным оборудованием производственные площадки предприятия, приняты в штат специалисты производственники, увеличено количество рабочих высшей квалификации для изготовления нового продукта – блочно-модульных водогрейных котельных. </p>
+					    <p class = "story__item-text">Первая блочно-модульная водогрейная котельная была изготовлена по заказу мэрии г. Ярославля. Установка имела мощность 1,3 МВт и была оснащена самым современным оборудованием и автоматикой, что позволяло эксплуатировать котельную в автоматическом режиме, используя в качестве топлива природный газ.</p>
+					  </div>
 					</div>
 					
 					<div class = "story__item">
 					  <div class = "story__year">
-					    <span class = "story__year-item story__year-item_big">1995</span>
-					    <span class = "story__year-item">1996</span>
-					    <span class = "story__year-item">1997</span>
-					    <span class = "story__year-item">1998</span>
-					    <span class = "story__year-item">1999</span>
-					    <span class = "story__year-item">2000</span>
-					    <span class = "story__year-item">2001</span>
-					    <span class = "story__year-item">2002</span>
+					    <div class="story__year-wrap">
+					      <div class="story__year-line"><span class = "story__year-item story__year-item_big">1995</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">1996</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">1997</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">1998</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">1999</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2000</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2001</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2002</span></div>
+						</div>
 					  </div>
 					  <div class = "story__item-mask"></div>
-					  <img src = "" class = "story__item-image"></img>
-					  <span class = "story__item-title">Разработка котлов «Луч»</span>
-					  <p class = "story__item-text">С ростом потребности теплоэнергетического рынка в прогрессивных и эффективных решениях увеличивалось и количество выпускаемой продукции, а также совершенствовались проектно-конструкторские решения ЗАО «Яринжком».</p> 
-					  <p class = "story__item-text">Значительно увеличились производственные площади и возможности компании, расширился ассортимент выпускаемых котельных. Появились комбинированные пароводогрейные котельные, котельные на двух видах топлива, передвижные аварийные котельные. Возросла и единичная мощность изготавливаемых установок, которая достигала теперь 18 МВт. Существенно расширилась география поставок, охватив самые отдаленные уголки страны – Владивосток, Магадан, Якутск. </p>
-					  <p class = "story__item-text">Рынок диктовал необходимость и отражал потребности Заказчиков в сопутствующих работах и услугах, таких как: предпроектные изыскания, доставка, монтаж, шефмонтаж, пусковые и наладочные работы.</p>
+					  <img src = "/f/i/history-image2.jpg" class = "story__item-image"></img>
+					  <div class = "story__item-text-wrap">
+					    <span class = "story__item-title">Разработка котлов «Луч»</span>
+					    <p class = "story__item-text">С ростом потребности теплоэнергетического рынка в прогрессивных и эффективных решениях увеличивалось и количество выпускаемой продукции, а также совершенствовались проектно-конструкторские решения ЗАО «Яринжком».</p> 
+					    <p class = "story__item-text">Значительно увеличились производственные площади и возможности компании, расширился ассортимент выпускаемых котельных. Появились комбинированные пароводогрейные котельные, котельные на двух видах топлива, передвижные аварийные котельные. Возросла и единичная мощность изготавливаемых установок, которая достигала теперь 18 МВт. Существенно расширилась география поставок, охватив самые отдаленные уголки страны – Владивосток, Магадан, Якутск. </p>
+					    <p class = "story__item-text">Рынок диктовал необходимость и отражал потребности Заказчиков в сопутствующих работах и услугах, таких как: предпроектные изыскания, доставка, монтаж, шефмонтаж, пусковые и наладочные работы.</p>
+					  </div>
 					</div>
 					
 					<div class = "story__item">
 					  <div class = "story__year">
-					    <span class = "story__year-item story__year-item_big">2003</span>
-					    <span class = "story__year-item">2004</span>
-					    <span class = "story__year-item">2005</span>
-					    <span class = "story__year-item">2006</span>
+					    <div class="story__year-wrap">
+					      <div class="story__year-line"><span class = "story__year-item story__year-item_big">2003</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2004</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2005</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2006</span></div>
+						</div>
 					  </div>
 					  <div class = "story__item-mask"></div>
-					  <img src = "" class = "story__item-image"></img>
+					  <img src = "/f/i/history-image3.jpg" class = "story__item-image"></img>
+					  <div class = "story__item-text-wrap">
 					  <span class = "story__item-title">Первая блочно-модульная котельная</span>
-					  <p class = "story__item-text">2000-е – годы уверенного развития и роста ЗАО «Яринжком». Накопленный за время успешной работы профессиональный опыт в области конструкторских разработок и активное участие в решении различных проблем малой энергетики привели к существенному прорыву в деятельности компании. Были оснащены современным оборудованием производственные площадки предприятия, приняты в штат специалисты производственники, увеличено количество рабочих высшей квалификации для изготовления нового продукта – блочно-модульных водогрейных котельных.</p>
-					  <p class = "story__item-text">Первая блочно-модульная водогрейная котельная была изготовлена по заказу мэрии г. Ярославля. Установка имела мощность 1,3 МВт и была оснащена самым современным оборудованием и автоматикой, что позволяло эксплуатировать котельную в автоматическом режиме, используя в качестве топлива природный газ.</p>
+					    <p class = "story__item-text">2000-е – годы уверенного развития и роста ЗАО «Яринжком». Накопленный за время успешной работы профессиональный опыт в области конструкторских разработок и активное участие в решении различных проблем малой энергетики привели к существенному прорыву в деятельности компании. Были оснащены современным оборудованием производственные площадки предприятия, приняты в штат специалисты производственники, увеличено количество рабочих высшей квалификации для изготовления нового продукта – блочно-модульных водогрейных котельных.</p>
+					    <p class = "story__item-text">Первая блочно-модульная водогрейная котельная была изготовлена по заказу мэрии г. Ярославля. Установка имела мощность 1,3 МВт и была оснащена самым современным оборудованием и автоматикой, что позволяло эксплуатировать котельную в автоматическом режиме, используя в качестве топлива природный газ.</p>
+					  </div>
 					</div>
 					
 					<div class = "story__item">
 					  <div class = "story__year">
-					    <span class = "story__year-item story__year-item_big">2007</span>
-					    <span class = "story__year-item">2008</span>
-					    <span class = "story__year-item">2009</span>
+					    <div class="story__year-wrap">
+					      <div class="story__year-line"><span class = "story__year-item story__year-item_big">2007</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2008</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2009</span></div>
+						</div>
 					  </div>
 					  <div class = "story__item-mask"></div>
-					  <img src = "" class = "story__item-image"></img>
-					  <span class = "story__item-title">Расширение производственных возможностей</span>
-					  <p class = "story__item-text">С ростом потребности теплоэнергетического рынка в прогрессивных и эффективных решениях увеличивалось и количество выпускаемой продукции, а также совершенствовались проектно-конструкторские решения ЗАО «Яринжком».</p>
-					  <p class = "story__item-text">Значительно увеличились производственные площади и возможности компании, расширился ассортимент выпускаемых котельных. Появились комбинированные пароводогрейные котельные, котельные на двух видах топлива, передвижные аварийные котельные. Возросла и единичная мощность изготавливаемых установок, которая достигала теперь 18 МВт. Существенно расширилась география поставок, охватив самые отдаленные уголки страны – Владивосток, Магадан, Якутск.</p>
-					  <p class = "story__item-text">Рынок диктовал необходимость и отражал потребности Заказчиков в сопутствующих работах и услугах, таких как: предпроектные изыскания, доставка, монтаж, шефмонтаж, пусковые и наладочные работы.</p>
+					  <img src = "/f/i/history-image4.jpg" class = "story__item-image"></img>
+					  <div class = "story__item-text-wrap">
+					    <span class = "story__item-title">Расширение производственных возможностей</span>
+					    <p class = "story__item-text">С ростом потребности теплоэнергетического рынка в прогрессивных и эффективных решениях увеличивалось и количество выпускаемой продукции, а также совершенствовались проектно-конструкторские решения ЗАО «Яринжком».</p>
+					    <p class = "story__item-text">Значительно увеличились производственные площади и возможности компании, расширился ассортимент выпускаемых котельных. Появились комбинированные пароводогрейные котельные, котельные на двух видах топлива, передвижные аварийные котельные. Возросла и единичная мощность изготавливаемых установок, которая достигала теперь 18 МВт. Существенно расширилась география поставок, охватив самые отдаленные уголки страны – Владивосток, Магадан, Якутск.</p>
+					    <p class = "story__item-text">Рынок диктовал необходимость и отражал потребности Заказчиков в сопутствующих работах и услугах, таких как: предпроектные изыскания, доставка, монтаж, шефмонтаж, пусковые и наладочные работы.</p>
+					  </div>
 					</div>  
 					
 					<div class = "story__item">
 					  <div class = "story__year">
-					    <span class = "story__year-item story__year-item_big">2010</span>
-					    <span class = "story__year-item">2011</span>
-					    <span class = "story__year-item">2012</span>
-					    <span class = "story__year-item">2013</span>
+					    <div class="story__year-wrap">
+					      <div class="story__year-line"><span class = "story__year-item story__year-item_big">2010</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2011</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2012</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2013</span></div>
+						</div>
 					  </div>
 					  <div class = "story__item-mask"></div>
-					  <img src = "" class = "story__item-image"></img>
-					  <span class = "story__item-title">Увеличение ассортимента</span>
-					  <p class = "story__item-text">ЗАО «Яринжком» было принято решение о расширении ассортиментного ряда и оборудованы отдельные производственные площадки для изготовления дымовых труб и стальных резервуаров.</p>
+					  <img src = "/f/i/history-image5.jpg" class = "story__item-image"></img>
+					  <div class = "story__item-text-wrap">
+					    <span class = "story__item-title">Увеличение ассортимента</span>
+					    <p class = "story__item-text">ЗАО «Яринжком» было принято решение о расширении ассортиментного ряда и оборудованы отдельные производственные площадки для изготовления дымовых труб и стальных резервуаров.</p>
+					  </div>
 					</div>  
 				
 					<div class = "story__item">
-					  <div class = "story__year">
-					    <span class = "story__year-item story__year-item_big">2014</span>
+					  <div class = "story__year story__year_last">
+					    <div class="story__year-wrap">
+					      <div class="story__year-line"><span class = "story__year-item story__year-item_big">2014</span></div>
+						</div>
 					  </div>
-					   <div class = "story__item-mask"></div>
-					   <img src = "" class = "story__item-image"></img>
-					  <span class = "story__item-title">Компания «Яринжком» сегодня</span>
-					  <p class = "story__item-text">Одна из крупнейших российских компаний, специализирующаяся на выполнении комплекса работ и услуг по проектированию, изготовлению, монтажу, наладке и инжинирингу объектов теплоснабжения. </p>
-					  <p class = "story__item-text">Двадцатилетний опыт успешной работы в отрасли, а также открытость к новым подходам в решении задач энергоснабжения – качества, характеризующие «Яринжком» как надёжного партнёра и поставщика.</p>
+					  <div class = "story__item-mask"></div>
+					  <img src = "/f/i/history-image6.jpg" class = "story__item-image"></img>
+					  <div class = "story__item-text-wrap">
+					    <span class = "story__item-title">Компания «Яринжком» сегодня</span>
+					    <p class = "story__item-text">Одна из крупнейших российских компаний, специализирующаяся на выполнении комплекса работ и услуг по проектированию, изготовлению, монтажу, наладке и инжинирингу объектов теплоснабжения. </p>
+					    <p class = "story__item-text">Двадцатилетний опыт успешной работы в отрасли, а также открытость к новым подходам в решении задач энергоснабжения – качества, характеризующие «Яринжком» как надёжного партнёра и поставщика.</p>
+					  </div>
 					</div>  
 					<div style = "clear: both;"></div>
 				  </div>

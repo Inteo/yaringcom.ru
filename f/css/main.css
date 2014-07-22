@@ -4140,25 +4140,130 @@ a:hover .complectation__item-info {
   position: relative;
 }
 
+.story__item-text-wrap {
+   padding: 50px 0 50px 230px;
+   width: 93%;
+}
+
 .story__item-title {
   font: bold 20px 'PT Sans','Helvetica';
+  color: #051013;
+  display: block;
+  width: 95%;  
+  margin-bottom: 20px;
+  padding-right: 20px;
 }
 
 .story__item-text  {
-  
+  font: 16px 'PT Sans','Helvetica';
+  color: #435155;
+  padding-bottom: 20px;
 }
 
 .story__year {
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: table;
-  width: 100px;
   position: absolute;
-  border-right: 5px solid #0e8abd;
+  left: -10px;
+  bottom: 0;
+  top: -40px;
+  width: 95px;
+ 
+}
+
+.story__year-wrap {
+  display: table;
+  height: 100%;
+  min-height: 100%;
+}
+
+.story__year-line {
+  display: table-row;
+  vertical-align: middle;
+  position: relative;
+}
+
+.story__year-line:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -25px;
+  width: 5px;
+  height: 100%;
+  border-right: 5px solid #f8f9f9
 }
 
 .story__year-item {
-  width: 100px;
-  display: table-row;
+  display: table-cell;
+  vertical-align: middle;
+  height: auto;
+  color: #f7f9f9;
+  font: 800 20px 'Open Sans','Helvetica';
+  float: left;
+  margin-left: 21px;
+}
+
+.story__year-line_unmasked:after {
+   border-right: 5px solid #0e8abd;
+}
+
+.story__year-line_unmasked  .story__year-item {
+  color: #0e8abd;
+}
+
+.story__year-line_unmasked .story__year-item_big {
+  color: #051013;
+}
+
+.story__year-item_big {
+  vertical-align: top;
+  height: 30px;
+  color: #051013;
+  font: 800 30px 'Open Sans','Helvetica';
+  line-height: 30px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-left: 0;
+}
+
+.story__item-image {
+  left: 120px;
+  top: 40px;
+  position: absolute;
+  display: block;
+  width: 180px;
+}
+
+.story__year-item_big:after {
+  content: '';
+  background: url(/f/i/image-stroke.png) no-repeat;
+  height: 221px;
+  width: 40px;
+  right: -65px;
+  position: absolute;
+  display: block;
+  top: 39px;
+  background-position: -40px 0;
+  z-index: 10;
+}
+
+.story__year_last .story__year-line:after {
+  height: 60px;
+}
+
+.story__item-mask {
+  background: none repeat scroll 0 0 #fff;
+  height: 180px;
+  left: 120px;
+  opacity: 0.5;
+  position: absolute;
+  top: 40px;
+  width: 180px;
+  z-index: 10;
+}
+
+.story__item_unmasked  .story__item-mask {
+  display: none;
+}
+
+.story__item_unmasked .story__year-item_big:after {
+  background-position: 0 0;
 }
