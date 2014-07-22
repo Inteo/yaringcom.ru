@@ -4142,7 +4142,7 @@ a:hover .complectation__item-info {
 
 .story__item-text-wrap {
    padding: 50px 0 50px 230px;
-   width: 93%;
+   width: 100%;
 }
 
 .story__item-title {
@@ -4173,6 +4173,7 @@ a:hover .complectation__item-info {
   display: table;
   height: 100%;
   min-height: 100%;
+  width: 100%;
 }
 
 .story__year-line {
@@ -4185,10 +4186,9 @@ a:hover .complectation__item-info {
   content: '';
   position: absolute;
   top: 0;
-  right: -25px;
-  width: 5px;
+  right: 0;
   height: 100%;
-  border-right: 5px solid #f8f9f9
+  border-right: 5px solid #f8f9f9;
 }
 
 .story__year-item {
@@ -4197,12 +4197,9 @@ a:hover .complectation__item-info {
   height: auto;
   color: #f7f9f9;
   font: 800 20px 'Open Sans','Helvetica';
-  float: left;
-  margin-left: 21px;
-}
-
-.story__year-line_unmasked:after {
-   border-right: 5px solid #0e8abd;
+  text-align: right;
+  padding-right: 21px;
+  padding-bottom: 40px;
 }
 
 .story__year-line_unmasked  .story__year-item {
@@ -4237,7 +4234,7 @@ a:hover .complectation__item-info {
   background: url(/f/i/image-stroke.png) no-repeat;
   height: 221px;
   width: 40px;
-  right: -65px;
+  right: -40px;
   position: absolute;
   display: block;
   top: 39px;
@@ -4264,6 +4261,16 @@ a:hover .complectation__item-info {
   display: none;
 }
 
-.story__item_unmasked .story__year-item_big:after {
-  background-position: 0 0;
+.story__item_unmasked  .story__year-item {
+  color: ##0e8abd;
+}
+
+.story__fill {
+  border-right: 5px solid #0e8abd;
+  position: absolute;
+  top: 250px;
+  left: 80px;
+  width: 5px;
+  height: 0;
+  z-index: 10;
 }

@@ -35,7 +35,7 @@
   	    history_items[i] = $(this);
     });
 	
-	$('.story__year-line').each(function (i){
+	$(".story__year-line").each(function (i){
   	    history_years[i] = $(this);
     });
 	
@@ -58,6 +58,9 @@
 		  $(this).removeClass("story__year-line_unmasked");
 		}
       });
+	 
+	    $(".story__fill").height($(document).scrollTop() - 160);
+	  
     });
     });
    
@@ -189,6 +192,7 @@
                   <h1 class="short">История <br>компании</h1>
 				  <div class = "cut"><div class = "phrase">Компания была основана в 1992 году и за время своего существования приобрела статус надёжного партнёра и лидера в сфере разработки и реализации решений в теплоэнергетике. Большой опыт работы в отрасли, а также профессионализм наших специалистов – гарантия надёжности и высокого качества работы ЗАО «Яринжком».</div></div>
 				  <div class = "story-wrap">
+				    <div class="story__fill"></div>
 				    <div class = "story__item">
 					  <div class = "story__year">
 					    <div class="story__year-wrap">
