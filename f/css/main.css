@@ -3723,9 +3723,6 @@ a:hover .complectation__item-info {
   line-height: 28px;
 }
 
-.fixed-scroll {
-  
-}
 
 .fixed-scroll_visible {
   display: block;
@@ -4121,4 +4118,47 @@ a:hover .complectation__item-info {
 	height: 400px;
 	left: -10px;
   }
+}
+
+.menu_story {
+  padding-left: 45px;
+}
+
+.menu_story li {
+  margin-bottom: 20px;
+}
+
+.story .content:before {
+  background: url(/f/i/story-back.png) no-repeat;
+  height: 1000px;
+  width: 1000px;
+  left: -40px;
+}
+
+.story__item {
+  padding-left: 100px;
+  position: relative;
+}
+
+.story__item-title {
+  font: bold 20px 'PT Sans','Helvetica';
+}
+
+.story__item-text  {
+  
+}
+
+.story__year {
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: table;
+  width: 100px;
+  position: absolute;
+  border-right: 5px solid #0e8abd;
+}
+
+.story__year-item {
+  width: 100px;
+  display: table-row;
 }
