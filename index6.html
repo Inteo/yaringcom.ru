@@ -1,0 +1,419 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="ie"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Яринжком</title>
+  <meta name="viewport" content="width=1010">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="/f/css/jquery.mCustomScrollbar.css"><link rel="stylesheet" href="/f/css/main.css">
+  <!--[if lte IE 9]><link rel="stylesheet" href="/f/css/ie.css"><![endif]-->
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Open+Sans:400,400italic,800,600&subset=latin,cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="/f/fancybox/jquery.fancybox.css?v=2.1.5" media="screen">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <script src="/f/js/modernizr.min.js"></script>
+  <script src="/f/js/jquery-1.10.2.min.js"></script>
+
+  <script src="/f/js/kenburn.min.js"></script>
+  <script src="/f/js/jquery.smooth.js"></script>
+  <script src="/f/js/jquery.mousewheel.min.js"></script>
+  <script src="/f/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="/f/js/jquery.mCustomScrollbar.js"></script>
+  <script src="/f/js/plugins.min.js"></script>
+  <script src="/f/js/common.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+  <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><script src="/f/js/sandpaper.js"></script><![endif]-->
+  
+  <script>
+    $(function(){
+	var history_items = [];
+	var history_years = [];
+   	$('.story__item').each(function (i){
+  	    history_items[i] = $(this);
+    });
+	
+	$(".story__year-line").each(function (i){
+  	    history_years[i] = $(this);
+    });
+	
+    $(window).scroll(function(){
+	  $.each(history_items, function (i){
+	    var top = $(this).offset().top - $(document).scrollTop();
+  	    if (top <= 300){
+		  $(this).removeClass("story__item_unmasked").addClass("story__item_unmasked");
+		}
+		else if (top > 300){
+		  $(this).removeClass("story__item_unmasked");
+		}
+      });
+	  $.each(history_years, function (i){
+	    var top = $(this).offset().top - $(document).scrollTop();
+  	    if (top <= 260){
+		  $(this).removeClass("story__year-line_unmasked").addClass("story__year-line_unmasked");
+		}
+		else if (top > 260){
+		  $(this).removeClass("story__year-line_unmasked");
+		}
+      });
+	 
+	    $(".story__fill").height($(document).scrollTop() - 160);
+	  
+    });
+    });
+   
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="contacts"><!--noindex-->
+    <div class="wrap">
+      <div class="contacts__wrap">
+        <div class="contacts__feedback">
+          <div class="contacts__feedback-wrap">
+            
+            <a class="contacts__callback" href="#"><span class="valign"></span><b>Закажите обратный звонок</b></a>
+            <div class="contacts__feedback-or">или</div>
+            <div class="contacts__feedback-letter"><a href="#" class="pseudo">напишите нам</a></div>
+          </div>
+
+        </div>
+        <div class="clear">
+          <div class="contacts__main">
+            <p class="contacts__title">Головной офис <span class="contacts__subtitle">Ярославль</span></p>
+            <div class="contacts__item">
+              <p class="contacts__item-title">Коммерческий отдел:</p>
+              <p class="contacts__item-phone"><span class="contacts__item-phonecode">(4852)</span> 40-85-33, 40-85-31</p>
+            </div>
+            <div class="contacts__item">
+              <p class="contacts__item-title">Отдел закупки:</p>
+              <p class="contacts__item-phone"><span class="contacts__item-phonecode">(4852)</span> 40-85-68</p>
+            </div>
+            <div class="contacts__item">
+              <p class="contacts__item-title">Проектная группа:</p>
+              <p class="contacts__item-phone"><span class="contacts__item-phonecode">(4852)</span> 79-18-00</p>
+            </div>
+            <div class="contacts__email"><b>E-mail:</b> <a href="mailto:info@yaringcom.ru">info@yaringcom.ru</a></div>
+          </div>
+          <div class="contacts__branch">
+            <p class="contacts__title">Представительства</p>
+            <table>
+            <tr><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Москва</p>
+              <p class="contacts__branch-phone">(495) 602-00-63</p>
+              <p class="contacts__branch-email"><a href="mailto:moscow@yaringcom.ru">moscow@yaringcom.ru</a></p>
+            </div></td><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Екатеринбург</p>
+              <p class="contacts__branch-phone">(343) 237-03-73</p>
+              <p class="contacts__branch-email"><a href="mailto:ural@yaringcom.ru">ural@yaringcom.ru</a></p>
+            </div></td><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Нижний Новгород</p>
+              <p class="contacts__branch-phone">(831) 233-02-35</p>
+              <p class="contacts__branch-email"><a href="mailto:nnov@yaringcom.ru">nnov@yaringcom.ru</a></p>
+            </div></td></tr><tr><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Краснодар</p>
+              <p class="contacts__branch-phone">(861) 944-13-10</p>
+              <p class="contacts__branch-email"><a href="mailto:kras1@yaringcom.ru">kras1@yaringcom.ru</a></p>
+            </div></td><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Алматы</p>
+              <p class="contacts__branch-phone">(727) 390-85-83<br>(727) 233-03-25</p>
+              <p class="contacts__branch-email"><a href="mailto:kz@yaringcom.ru">kz@yaringcom.ru</a></p>
+            </div></td><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Казань</p>
+              <p class="contacts__branch-phone">(843) 216-56-93</p>
+              <p class="contacts__branch-email"><a href="mailto:kazan@yaringcom.ru">kazan@yaringcom.ru</a></p>
+            </div></td></tr></table>
+          </div>
+        </div>
+      </div></div><!--/noindex-->
+    </div>
+
+    <div class="header"><div class="wrap"><div class="header__wrap">
+      <div class="header__logo">
+        <a href="/" class="header__logo-link">
+          <img src="/f/i/logo.png" alt="Яринжком">
+          <ins>
+            <span>Производство</span>модульных котельных</ins>
+        </a>
+      </div>
+      <div class="header__contacts">
+        <span class="header__phone">
+          <span class="header__phone-text">Звонок бесплатный</span>
+          <span class="header__phone-num">8 800 540-32-76</span>
+        </span>
+        <a href="#" class="header__button"><span class="valign"></span><span class="header__button-link">Как с нами связаться?</span><span class="header__button-link header__button-link_close">Закрыть <span>&times;</span></span></a>
+      </div>
+      <div class="header__menu">
+        <span><a href="#">Продукция</a>
+        </span>
+        <span><a href="#">Услуги</a>
+        </span>
+        <span><a href="#">Проекты</a>
+        </span>
+        <span><a href="#">Решения</a>
+        </span>
+        <span><a href="#">О компании</a>
+        </span>
+        <span><a href="#">Производство</a>
+        </span>
+        <span><a href="#">Контакты</a>
+        </span>
+        <span class="justify"></span>
+      </div>
+    </div></div></div>
+
+    <div class="inner">
+      <div class="wrap">
+        <div class="inner__wrap clear">
+          <div class="inner__menu">
+            <ul class="menu menu_story">
+              <li><a href="#" class="menu__item">Руководство и сотрудники</a></li>
+              <li><a href="#" class="menu__item">Заказчики и партнеры</a></li>
+              <li><a href="#" class="menu__item">История компании</a></li>
+              <li><a href="#" class="menu__item">Пресс-центр</a></li>
+              <li><a href="#" class="menu__item">разрешения, лицензии и сертификаты</a></li>
+            </ul>
+          </div>
+          <div class="inner__content">
+            <div class="inner__content-wrap">
+              <div class="path"><a href="/">Главная</a> → <a href="#">Продукция</a> → <a href="#">Котельные</a> → Передвижная котельная</div>
+			  <div class=" cut story">
+                <div class="content">
+                 <div class="rel">
+                  <h1 class="short">История <br>компании</h1>
+				  <div class = "cut"><div class = "phrase">Компания была основана в 1992 году и за время своего существования приобрела статус надёжного партнёра и лидера в сфере разработки и реализации решений в теплоэнергетике. Большой опыт работы в отрасли, а также профессионализм наших специалистов – гарантия надёжности и высокого качества работы ЗАО «Яринжком».</div></div>
+				  <div class = "story-wrap">
+				    <div class="story__fill"></div>
+				    <div class = "story__item">
+					  <div class = "story__year">
+					    <div class="story__year-wrap">
+					      <div class="story__year-line"><span class = "story__year-item story__year-item_big">1992</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">1993</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">1994</span></div>
+						</div>
+					  </div>
+					  <div class = "story__item-mask"></div>
+					  <img src = "/f/i/history-image1.jpg" class = "story__item-image"></img>
+					  <div class = "story__item-text-wrap">
+					    <span class = "story__item-title">Новое инженерно-конструкторское бюро в Ярославле</span>
+					    <p class = "story__item-text">2000-е – годы уверенного развития и роста ЗАО «Яринжком». Накопленный за время успешной работы профессиональный опыт в области конструкторских разработок и активное участие в решении различных проблем малой энергетики привели к существенному прорыву в деятельности компании. Были оснащены современным оборудованием производственные площадки предприятия, приняты в штат специалисты производственники, увеличено количество рабочих высшей квалификации для изготовления нового продукта – блочно-модульных водогрейных котельных. </p>
+					    <p class = "story__item-text">Первая блочно-модульная водогрейная котельная была изготовлена по заказу мэрии г. Ярославля. Установка имела мощность 1,3 МВт и была оснащена самым современным оборудованием и автоматикой, что позволяло эксплуатировать котельную в автоматическом режиме, используя в качестве топлива природный газ.</p>
+					  </div>
+					</div>
+					
+					<div class = "story__item">
+					  <div class = "story__year">
+					    <div class="story__year-wrap">
+					      <div class="story__year-line"><span class = "story__year-item story__year-item_big">1995</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">1996</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">1997</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">1998</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">1999</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2000</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2001</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2002</span></div>
+						</div>
+					  </div>
+					  <div class = "story__item-mask"></div>
+					  <img src = "/f/i/history-image2.jpg" class = "story__item-image"></img>
+					  <div class = "story__item-text-wrap">
+					    <span class = "story__item-title">Разработка котлов «Луч»</span>
+					    <p class = "story__item-text">С ростом потребности теплоэнергетического рынка в прогрессивных и эффективных решениях увеличивалось и количество выпускаемой продукции, а также совершенствовались проектно-конструкторские решения ЗАО «Яринжком».</p> 
+					    <p class = "story__item-text">Значительно увеличились производственные площади и возможности компании, расширился ассортимент выпускаемых котельных. Появились комбинированные пароводогрейные котельные, котельные на двух видах топлива, передвижные аварийные котельные. Возросла и единичная мощность изготавливаемых установок, которая достигала теперь 18 МВт. Существенно расширилась география поставок, охватив самые отдаленные уголки страны – Владивосток, Магадан, Якутск. </p>
+					    <p class = "story__item-text">Рынок диктовал необходимость и отражал потребности Заказчиков в сопутствующих работах и услугах, таких как: предпроектные изыскания, доставка, монтаж, шефмонтаж, пусковые и наладочные работы.</p>
+					  </div>
+					</div>
+					
+					<div class = "story__item">
+					  <div class = "story__year">
+					    <div class="story__year-wrap">
+					      <div class="story__year-line"><span class = "story__year-item story__year-item_big">2003</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2004</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2005</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2006</span></div>
+						</div>
+					  </div>
+					  <div class = "story__item-mask"></div>
+					  <img src = "/f/i/history-image3.jpg" class = "story__item-image"></img>
+					  <div class = "story__item-text-wrap">
+					  <span class = "story__item-title">Первая блочно-модульная котельная</span>
+					    <p class = "story__item-text">2000-е – годы уверенного развития и роста ЗАО «Яринжком». Накопленный за время успешной работы профессиональный опыт в области конструкторских разработок и активное участие в решении различных проблем малой энергетики привели к существенному прорыву в деятельности компании. Были оснащены современным оборудованием производственные площадки предприятия, приняты в штат специалисты производственники, увеличено количество рабочих высшей квалификации для изготовления нового продукта – блочно-модульных водогрейных котельных.</p>
+					    <p class = "story__item-text">Первая блочно-модульная водогрейная котельная была изготовлена по заказу мэрии г. Ярославля. Установка имела мощность 1,3 МВт и была оснащена самым современным оборудованием и автоматикой, что позволяло эксплуатировать котельную в автоматическом режиме, используя в качестве топлива природный газ.</p>
+					  </div>
+					</div>
+					
+					<div class = "story__item">
+					  <div class = "story__year">
+					    <div class="story__year-wrap">
+					      <div class="story__year-line"><span class = "story__year-item story__year-item_big">2007</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2008</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2009</span></div>
+						</div>
+					  </div>
+					  <div class = "story__item-mask"></div>
+					  <img src = "/f/i/history-image4.jpg" class = "story__item-image"></img>
+					  <div class = "story__item-text-wrap">
+					    <span class = "story__item-title">Расширение производственных возможностей</span>
+					    <p class = "story__item-text">С ростом потребности теплоэнергетического рынка в прогрессивных и эффективных решениях увеличивалось и количество выпускаемой продукции, а также совершенствовались проектно-конструкторские решения ЗАО «Яринжком».</p>
+					    <p class = "story__item-text">Значительно увеличились производственные площади и возможности компании, расширился ассортимент выпускаемых котельных. Появились комбинированные пароводогрейные котельные, котельные на двух видах топлива, передвижные аварийные котельные. Возросла и единичная мощность изготавливаемых установок, которая достигала теперь 18 МВт. Существенно расширилась география поставок, охватив самые отдаленные уголки страны – Владивосток, Магадан, Якутск.</p>
+					    <p class = "story__item-text">Рынок диктовал необходимость и отражал потребности Заказчиков в сопутствующих работах и услугах, таких как: предпроектные изыскания, доставка, монтаж, шефмонтаж, пусковые и наладочные работы.</p>
+					  </div>
+					</div>  
+					
+					<div class = "story__item">
+					  <div class = "story__year">
+					    <div class="story__year-wrap">
+					      <div class="story__year-line"><span class = "story__year-item story__year-item_big">2010</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2011</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2012</span></div>
+					      <div class="story__year-line"><span class = "story__year-item">2013</span></div>
+						</div>
+					  </div>
+					  <div class = "story__item-mask"></div>
+					  <img src = "/f/i/history-image5.jpg" class = "story__item-image"></img>
+					  <div class = "story__item-text-wrap">
+					    <span class = "story__item-title">Увеличение ассортимента</span>
+					    <p class = "story__item-text">ЗАО «Яринжком» было принято решение о расширении ассортиментного ряда и оборудованы отдельные производственные площадки для изготовления дымовых труб и стальных резервуаров.</p>
+					  </div>
+					</div>  
+				
+					<div class = "story__item">
+					  <div class = "story__year story__year_last">
+					    <div class="story__year-wrap">
+					      <div class="story__year-line"><span class = "story__year-item story__year-item_big">2014</span></div>
+						</div>
+					  </div>
+					  <div class = "story__item-mask"></div>
+					  <img src = "/f/i/history-image6.jpg" class = "story__item-image"></img>
+					  <div class = "story__item-text-wrap">
+					    <span class = "story__item-title">Компания «Яринжком» сегодня</span>
+					    <p class = "story__item-text">Одна из крупнейших российских компаний, специализирующаяся на выполнении комплекса работ и услуг по проектированию, изготовлению, монтажу, наладке и инжинирингу объектов теплоснабжения. </p>
+					    <p class = "story__item-text">Двадцатилетний опыт успешной работы в отрасли, а также открытость к новым подходам в решении задач энергоснабжения – качества, характеризующие «Яринжком» как надёжного партнёра и поставщика.</p>
+					  </div>
+					</div>  
+					<div style = "clear: both;"></div>
+				  </div>
+		    	</div>
+			    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="catalog catalog_inner"><div class="wrap"><div class="catalog__wrap">
+      <p class="catalog__title"><a href="#">Котельные</a></p>
+      <table>
+        <tr>
+          <td>
+            <p class="catalog__subtitle">по типу исполнения:</p>
+            <ul>
+              <li><a href="#">Блочно-модульные котельные</a></li>
+              <li><a href="#">Модульные котельные</a></li>
+              <li><a href="#">Блочные котельные</a></li>
+              <li><a href="#">Передвижная котельная</a></li>
+              <li><a href="#">Стационарная котельная</a></li>
+              <li><a href="#">Промышленная котельная</a></li>
+              <li><a href="#">Аварийная котельная</a></li>
+              <li><a href="#">Мини-котельная</a></li>
+            </ul>
+          </td>
+          <td>
+            <p class="catalog__subtitle">по виду топлива:</p>
+            <ul>
+              <li><a href="#">Газовая котельная</a></li>
+              <li><a href="#">Жидкотопливная котельная</a></li>
+              <li><a href="#">Твёрдотопливная котельная</a></li>
+              <li><a href="#">Электрокотельная</a></li>
+              <li><a href="#">Мини-котельная</a></li>
+            </ul>
+          </td>
+          <td>
+            <p class="catalog__subtitle">по типу тепловой нагрузки:</p>
+            <ul>
+              <li><a href="#">Отопительная котельная</a></li>
+              <li><a href="#">Производственная котельная</a></li>
+              <li><a href="#">Производственно-отопительная котельная</a></li>
+            </ul>
+          </td>
+          <td>
+            <p class="catalog__subtitle">по размещению:</p>
+            <ul>
+              <li><a href="#">Отдельно стоящая котельная</a></li>
+              <li><a href="#">Крышная котельная</a></li>
+              <li><a href="#">Пристроенная котельная</a></li>
+              <li><a href="#">Встроенная котельная</a></li>
+              <li><a href="#">Мини-котельная</a></li>
+            </ul>
+          </td>
+          <td>
+            <p class="catalog__subtitle">по типу котлоагрегатов:</p>
+            <ul>
+              <li><a href="#">Паровая котельная</a></li>
+              <li><a href="#">Водоргейная котельная</a></li>
+              <li><a href="#">Паро-водогрейная котельная</a></li>
+              <li><a href="#">Котельная на диатермическом масле</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td style="width:20%">
+            <p class="catalog__title"><a href="#">Дымовые трубы</a></p>
+            <ul>
+              <li><a href="#">Ферменные дымовые трубы</a></li>
+              <li><a href="#">Самонесущие дымовые трубы</a></li>
+              <li><a href="#">Фасадные дымовые трубы</a></li>
+              <li><a href="#">Колонные дымовые трубы</a></li>
+              <li><a href="#">Дымовые трубы на растяжках</a></li>
+            </ul>
+          </td>
+          <td style="width:30%">
+            <p class="catalog__title"><a href="#">Стальные резервуары</a></p>
+            <ul>
+              <li><a href="#">Резервуары надземные РГЦ-3 – РГЦ 100)</a></li>
+              <li><a href="#">Резервуары подземные (РГЦ-3 – РГЦ 100)</a></li>
+              <li><a href="#">Резервуары для воды (РГЦ-3 – РГЦ 100)</a></li>
+              <li><a href="#">Резервуары для нефтепродуктов (ГЦ-3 – РГЦ 100)</a></li>
+            </ul>
+          </td>
+          <td style="width:25%">
+            <p class="catalog__title"><a href="#">Промышленные дымоходы</a></p>
+            <ul>
+              <li><a href="#">Модульные дымоходы</a></li>
+              <li><a href="#">Промышленные системы дымоудаления</a></li>
+            </ul>
+          </td>
+          <td style="width:25%">
+            <p class="catalog__title"><a href="#">Индивидуальные тепловые пункты</a></p>
+            <ul>
+              <li><a href="#">В блочном исполнении</a></li>
+              <li><a href="#">На раме</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div></div></div>
+    <div class="footer"><div class="wrap">
+      <div class="footer__wrap">
+        <div class="developer">Создание сайта – <a href="http://inteo-s.ru" rel="external">Интео</a></div>
+        © 1992—2014 ЗАО «Яринжком»<br>
+Все права защищены.<br>
+Полное или частичное копирование материалов запрещено.
+      </div>
+    </div></div>
+  </div>
+</body>
+
+</html>
