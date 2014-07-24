@@ -710,6 +710,9 @@ fieldset[disabled] .btn-link {
   top: 50%;
   margin-top: -19px;
 }
+.iconize-menu.active {
+  color: #051013;
+}
 .iconize-menu_1:before {
   background-position: 0 -206px;
 }
@@ -2083,6 +2086,8 @@ a:hover .brands__smtitle {
   margin-top: 19px;
   margin-left: 9px;
   margin-bottom: -2px;
+  padding-left: 40px;
+  margin-right: 3px;
 }
 .menu ul ul {
   margin: 10px 0 0 20px;
@@ -2100,6 +2105,56 @@ a:hover .brands__smtitle {
   font: 800 16px/22px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: .05em;
   text-decoration: none;
+}
+.menu__block {
+  position: relative;
+}
+.menu__extra {
+  position: absolute;
+  left: 20px;
+  top: -30px;
+  z-index: 10;
+  border: 3px solid #f7f9f9;
+  border-right: 0;
+  background: #fff;
+  display: none;
+}
+.menu__extra ul + ul {
+  margin-top: 25px;
+}
+.menu__extra-table {
+  display: table;
+}
+.menu__extra-holder {
+  display: table-row;
+}
+.menu__extra-item {
+  border-right: 3px solid #f7f9f9;
+  display: table-cell;
+  vertical-align: top;
+}
+.menu__extra-item:hover {
+  background: #f7f9f9;
+}
+.menu__extra-item-holder {
+  padding: 27px 17px 21px 26px;
+  width: 217px;
+}
+@media all and (max-width: 1190px) {
+  .menu__extra-item_secondary .menu__extra-item-holder {
+    font-size: 12px;
+    width: 170px;
+  }
+}
+.menu__extra-item .iconize-menu {
+  margin-left: 0;
+}
+.menu__extra-item ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+.menu__extra-item_secondary {
+  padding-top: 22px;
 }
 .path {
   margin-bottom: 50px;
