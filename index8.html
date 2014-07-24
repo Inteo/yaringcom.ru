@@ -26,28 +26,6 @@
   <script src="/f/js/common.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
   <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><script src="/f/js/sandpaper.js"></script><![endif]-->
-  
-  <script>
-  var h_hght = 800;
-  $(function(){
-   $(window).scroll(function(){
-		
-		var top = $(this).scrollTop();
-		var elem = $('.fixed-scroll__top');
-		var elem2 = $('.fixed-scroll__left');
-		if (top > h_hght)
-		{
-			elem.addClass('fixed-scroll__top_visible');
-			elem2.addClass('fixed-scroll__left_visible');
-		} 
-		else 
-		{
-			elem.removeClass('fixed-scroll__top_visible');
-			elem2.removeClass('fixed-scroll__left_visible');
-		}
-    });
-  });
-</script>
 </head>
 
 <body>
@@ -156,38 +134,10 @@
 
     <div class="inner">
       <div class="wrap">
-        <div class="inner__wrap clear">
-	    
-			<div class = "fixed-scroll__top">
-			  <div class = "fixed-scroll__wrap">
-			    <span class = "fixed-scroll__title">Блочно-модульная котельная, 1,5 Мвт</span>
-			    <div class="tabs tabs_scroll">
-                      <span class="tabs__item"><a href="#" class="pseudo js-scroll-to" data-scrollto="description">Описание</a></span><span class="tabs__item"><a href="#" class="pseudo js-scroll-to" data-scrollto="feature">Характеристики</a></span><span class="tabs__item"><a href="#" class="pseudo js-scroll-to" data-scrollto="specification">Спецификация поставки</a></span><span class="tabs__item"><a href="#" class="pseudo js-scroll-to" data-scrollto="documents">Документация</a></span>
-                </div>
-			  </div>
-			</div>
-			<div style = "clear: both;"></div>
-			<div class = "fixed-scroll__left">
-			  <div class = "fixed-scroll__wrap">
-				<span class = "fixed-scroll__in-stock">В наличии на складе</span>
-			    <div class="fixed-scroll__order"><a class="btn" href="#"><span class="icon-box"></span>Заказать</a></div>
-			  </div>
-			</div>
-		
+        <div class="inner__wrap clear">		
           <div class="inner__menu">
             <ul class="menu">
-              <li><a href="#" class="menu__item iconize-menu iconize-menu_1">Котельные</a>
-                <ul>
-                  <li class="inner__menu-title">по типу исполнения:</li>
-                  <li><b>Блочно-модульные котельные</b></li>
-                  <li><a href="#">Модульные котельные</a></li>
-                  <li><a href="#">Блочные котельные</a></li>
-                  <li><a href="#">Передвижные котельные</a></li>
-                  <li><a href="#">Стационарная котельная</a></li>
-                  <li><a href="#">Промышленная котельная</a></li>
-                  <li><a href="#">Мини-котельная</a></li>
-                </ul>
-              </li>
+              <li><a href="#" class="menu__item iconize-menu iconize-menu_1">Котельные</a></li>
               <li><a href="#" class="menu__item iconize-menu iconize-menu_2">Дымовые трубы</a></li>
               <li><a href="#" class="menu__item iconize-menu iconize-menu_3">Стальные резервуары</a></li>
               <li><a href="#" class="menu__item iconize-menu iconize-menu_4">Промышленные дымоходы</a></li>
@@ -197,75 +147,109 @@
           <div class="inner__content">
             <div class="inner__content-wrap">
               <div class="path"><a href="/">Главная</a> → <a href="#">Продукция</a> → <a href="#">Котельные</a> → Передвижная котельная</div>
-              <div class="content">
+              <div class="content content_big">
                 <div class="decor decor_scheme">
                  <div class="rel">
+				 <div class="project">
                   <div class="cut cut_fixed">
-                    <h1 class="short">Блочно-модульная котельная 1,5 МВт</h1>
+                    <h1 class="short">Аварийная котельная. 2 МВт. г.Москва</h1>
 
                     <div class="tabs">
-                      <span class="tabs__item"><a href="#" class="pseudo js-scroll-to" data-scrollto="description">Описание</a></span><span class="tabs__item"><a href="#" class="pseudo js-scroll-to" data-scrollto="feature">Характеристики</a></span><span class="tabs__item"><a href="#" class="pseudo js-scroll-to" data-scrollto="specification">Спецификация поставки</a></span><span class="tabs__item"><a href="#" class="pseudo js-scroll-to" data-scrollto="documents">Документация</a></span>
+                      <span class="tabs__item"><a href="#" class="pseudo js-scroll-to" data-scrollto="description">Описание</a></span><span class="tabs__item"><a href="#" class="pseudo js-scroll-to" data-scrollto="feature">Характеристики</a></span><span class="tabs__item"><a href="#" class="pseudo js-scroll-to" data-scrollto="main-equip">Основное оборудование</a></span>
                     </div>
                    </div>
                   <div class="bigcut js-scroll-target" data-scrollto="description">
-				    <div class = "description description_left">
-						<span class = "description__text">Тип котельной:</span>
-						<span class = "description__text">Назначение:</span>
-						<span class = "description__text">Срок изготовления:</span>
+				    <div class = "phrase">Аварийное теплоснабжение, оперативное восстановление и подача отопления при возникновении аварии или ЧС на <a href="#" class="pseudo">НТЦ «Экспертцентр»</a></div>
+                    <div class="description">
+					  <div class="description__wrap">
+					    <div class="description__left">
+						  <div class="description__item">
+						    <span class="description__item-text description__item-text_title">Тип котельной:</span>
+							<span class="description__item-text">Аварийная котельная</span>
+						  </div>
+						  <div class="description__item">
+						    <span class="description__item-text description__item-text_title">Назначение:</span>
+							<span class="description__item-text">Аварийное теплоснабжение</span>
+						  </div>
+						</div>
+						<div class="description__right">
+						  <div class="description__item">
+						    <span class="description__item-text description__item-text_title">Место отгрузки:</span>
+							<span class="description__item-text">г. Москва</span>
+						  </div>
+						  <div class="description__item">
+						    <span class="description__item-text description__item-text_title">Дата отгрузки:</span>
+							<span class="description__item-text">Февраль 2014</span>
+						  </div>
+						</div>
+					  </div>
+					  <a class="btn btn-default" href="#"><span class="icon-box"></span>Заказать аналогичный проект</a>
 					</div>
-					<div class = "description description_right">
-						<span class = "description__text">Блочно-модульная</span>
-						<span class = "description__text">Отопление и горячее водоснабжение</span>
-						<span class = "description__text description__text_time"> Готова, находится на складе</span>
-					</div>
-                    <div class="description description_order"><a class="btn" href="#"><span class="icon-box"></span>Заказать</a></div>
                     <div class="section">
                       <div class="gallery gallery_main">
                         <div class="gallery__holder" style="width:1440px; height: 360px;">
-                          <a href="#" class="gallery__item gallery__item_main"><img src="/f/i/img2.jpg" alt=""></a>
-                          <a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small4.jpg" alt=""></a>
-                          <a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small5.jpg" alt=""></a>
-                          <a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small6.jpg" alt=""></a><a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small7.jpg" alt=""></a><a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small8.jpg" alt=""></a><a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small5.jpg" alt=""></a><a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small5.jpg" alt=""></a>
+                          <a href="#" class="gallery__item gallery__item_main"><img src="/f/i/img1.jpg" alt=""></a>
+                          <a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small9.jpg" alt=""></a>
+						   <a href="#" class="gallery__item gallery__item_order"><span><i class="icon-map"></i>Посмотреть<br> проект на карте</span></a>
+                          <a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small10.jpg" alt=""></a>
+                          <a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small11.jpg" alt=""></a><a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small12.jpg" alt=""></a><a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small10.jpg" alt=""></a><a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small9.jpg" alt=""></a><a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small12.jpg" alt=""></a>
                         </div>
                       </div>
                     </div>
 				    <div class = "section section_feature js-scroll-target" data-scrollto="feature">
 					  <h2>Характеристики</h2>
 					  <div class = "feature">
-						<div class = "feature__item"><span class = "feature__text">Количество блоков:</span><div class = "feature__right"><span class = "feature__value">1</span></div></div>
-						<div class = "feature__item"><span class = "feature__text">Мощность:</span><div class = "feature__right"><span class = "feature__value">1,5 МВт</span></div></div>
-						<div class = "feature__item"><span class = "feature__text">Температурный график:</span><div class = "feature__right"><span class = "feature__value">95о / 70о С</span></div></div>
-						<div class = "feature__item"><span class = "feature__text">Габариты (ДхШхВ):</span><div class = "feature__right"><span class = "feature__value">12х2,5х2,5 м</span></div></div>
-						<div class = "feature__item"><span class = "feature__text">Топливо основное:</span><div class = "feature__right"><span class = "feature__value">Природный газ</span></div></div>
-						<div class = "feature__item"><span class = "feature__text">Топливо резервное:</span><div class = "feature__right"><span class = "feature__value">Нет</span></div></div>
-						<div class = "feature__item"><span class = "feature__text">ГВС:</span><div class = "feature__right"><span class = "feature__value">Да</span></div></div>
-						<div class = "feature__item"><span class = "feature__text">Дымовая труба:</span><div class = "feature__right"><span class = "feature__value">Стальная самонесущая, h = 5 м</span></div></div>
-						<div class = "feature__item"><span class = "feature__text">Паспорт котельной:</span><div class = "feature__right"><span class = "feature__value">Прилагается</span></div></div>
 						<div class = "feature__item">
-						  <span class = "feature__text">Объем работ по котельной:</span>
-						  <div class = "feature__right">
-						    <div class = "feature__point-wrap">
-						      <div class = "feature__point-cont feature__point-cont_left">
-						        <span class = "feature__point-title">Выполнено:</span>
-							    <span class = "feature__point-item">Проектирование</span>
-							    <span class = "feature__point-item">Изготовление</span>
-						      </div>
-						      <div class = "feature__point-cont feature__point-cont_right">
-							    <span class = "feature__point-title">Возможен дозаказ:</span>
-							    <span class = "feature__point-item">Доставка</span>
-							    <span class = "feature__point-item">Монтаж</span>
-							    <span class = "feature__point-item">Пусковые и наладочные работы</span>
-						      </div>
-						    </div>
-						  </div>
+						  <span class = "feature__text feature__text_title">Количество блоков:</span>
+						  <span class = "feature__text">1, установленный на шасси КАМАЗ 65115-1095-62</span>
+						</div>
+						<div class = "feature__item">
+						  <span class = "feature__text feature__text_title">Мощность:</span>
+						  <span class = "feature__text">2 МВт</span>
+						</div>
+						<div class = "feature__item">
+						  <span class = "feature__text feature__text_title">Температурный график:</span>
+						  <span class = "feature__text">95о / 70о С</span>
+						</div>
+						<div class = "feature__item">
+						  <span class = "feature__text feature__text_title">Габариты (ДхШхВ):</span>
+						  <span class = "feature__text">12х2,5х2,5 м</span>
+						</div>
+						<div class = "feature__item">
+						  <span class = "feature__text feature__text_title">Топливо основное:</span>
+						  <span class = "feature__text">Дизельное топливо</span>
+						</div>
+						<div class = "feature__item">
+						  <span class = "feature__text feature__text_title">Топливо резервное:</span>
+						  <span class = "feature__text">Нет</span>
+						</div>
+						<div class = "feature__item">
+						  <span class = "feature__text feature__text_title">ГВС:</span>
+						  <span class = "feature__text">Нет</span>
+						</div>
+						<div class = "feature__item">
+						  <span class = "feature__text feature__text_title">Дымовая труба:</span>
+						  <span class = "feature__text">Стальная двухсекционная, h = 5 м</span>
+						</div>
+						<div class = "feature__item">
+						  <span class = "feature__text feature__text_title">Паспорт котельной:</span>
+						  <span class = "feature__text">Прилагается</span>
+						</div>
+						<div class = "feature__item">
+						  <span class = "feature__text feature__text_title">Дополнительно:</span>
+						  <span class = "feature__text">Автономный источник электроснабжения: дизель генератор мощностью 50 КВт</span>
+						</div>
+						<div class = "feature__item">
+						  <span class = "feature__text feature__text_title">Объем работ по котельной:</span>
+						  <span class = "feature__text">Проект выполнен «под ключ»</span>
 						</div>
 					  </div>
 				    </div>
-					<div class = "section js-scroll-target" data-scrollto="specification">
-					  <h2>Спецификация поставки</h2>
-					  <div class = "specification">
+					<div class = "section js-scroll-target" data-scrollto="main-equip">
+					  <h2>Основное оборудование</h2>
+					  <div class = "main-equip">
 					    <div class="file file_doc">
-                          <div class="file__title"><a href="#">Спецификация поставки</a></div>
+                          <div class="file__title"><a href="#">Основное оборудование</a></div>
                           <div class="file__size">DOC, 904 Кб</div>
                         </div>
 						
@@ -281,6 +265,7 @@
 							</div>
 							<div class = "table-cell table-cell_right"> <span class = "table-cell-text">1</span></div>
 						  </div>
+						  <div class = "table-sep"><span class="table-sep-text">Тепломеханическое оборудование</span></div>
 						  <div class = "table-line">
 							<div class = "table-cell">
 							  <span class = "table-cell-title">Стальной водогрейный котел «ELL 760» 760 кВт</span>
@@ -451,27 +436,10 @@
 						</div>
 					  </div>
 				    </div>
-					<div style = "clear: both;"></div>
-                    <div class="bigcut section js-scroll-target" data-scrollto="documents">
-                      <h2>Документация</h2>
-                      <div class="equal clear">
-                        <div class="equal__left">
-                          <div class="file file_pdf">
-                            <div class="file__title"><a href="#">Расположение оборудования</a></div>
-                            <div class="file__size">PDF, 904 Кб</div>
-                          </div>
-                        </div>
-                        <div class="equal__right">
-                          <div class="file file_pdf">
-                            <div class="file__title"><a href="#">Привязка котельной и дымовой трубы</a></div>
-                            <div class="file__size">PDF, 570 Кб</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                    </div>
                   </div>
                 </div>
+				</div>
               </div>
             </div>
           </div>
