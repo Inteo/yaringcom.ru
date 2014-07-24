@@ -717,6 +717,8 @@ fieldset[disabled] .btn-link {
   background-position: 0 -206px;
 }
 .iconize-menu_1:hover:before,
+.iconize-menu_1:active:before,
+.iconize-menu_1:focus:before,
 .iconize-menu_1.active:before {
   background-position: 0 -246px;
 }
@@ -724,6 +726,8 @@ fieldset[disabled] .btn-link {
   background-position: -40px -206px;
 }
 .iconize-menu_2:hover:before,
+.iconize-menu_2:active:before,
+.iconize-menu_2:focus:before,
 .iconize-menu_2.active:before {
   background-position: -40px -246px;
 }
@@ -731,6 +735,8 @@ fieldset[disabled] .btn-link {
   background-position: -80px -206px;
 }
 .iconize-menu_3:hover:before,
+.iconize-menu_3:active:before,
+.iconize-menu_3:focus:before,
 .iconize-menu_3.active:before {
   background-position: -80px -246px;
 }
@@ -738,6 +744,8 @@ fieldset[disabled] .btn-link {
   background-position: -120px -206px;
 }
 .iconize-menu_4:hover:before,
+.iconize-menu_4:active:before,
+.iconize-menu_4:focus:before,
 .iconize-menu_4.active:before {
   background-position: -120px -246px;
 }
@@ -745,6 +753,8 @@ fieldset[disabled] .btn-link {
   background-position: -160px -206px;
 }
 .iconize-menu_5:hover:before,
+.iconize-menu_5:active:before,
+.iconize-menu_5:focus:before,
 .iconize-menu_5.active:before {
   background-position: -160px -246px;
 }
@@ -2109,6 +2119,9 @@ a:hover .brands__smtitle {
 .menu__block {
   position: relative;
 }
+.menu__block ul + ul {
+  margin-top: 25px;
+}
 .menu__extra {
   position: absolute;
   left: 20px;
@@ -2118,9 +2131,6 @@ a:hover .brands__smtitle {
   border-right: 0;
   background: #fff;
   display: none;
-}
-.menu__extra ul + ul {
-  margin-top: 25px;
 }
 .menu__extra-table {
   display: table;
