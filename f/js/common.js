@@ -302,10 +302,29 @@ globalOffset = 0;
 function gallerify() {
   $(".gallery").each(function(index) {
     var off = globalOffset;
-    if (off == 0) {off = $(this).offset().left;}
+    if (off == 0) {
+      if ($(this).closest('.swapper').length) {
+        off = $(this).closest('.swapper').offset().left;
+        if ($(window).width() > 1190) {
+          off-=41;
+        }
+        else {
+          off-=33;
+        }
+      }
+      else {
+        off = $(this).offset().left;
+      }
+    }
+
     var gwidth = $(window).width() - off,
-      ghwidth = $(this).find('.gallery__holder').width();
-    $(this).find('.gallery__holder').width(ghwidth + 41);
+      ghwidth = $(this).find('.gallery__holder').data('width');
+      if ($(window).width() > 1190) {
+        $(this).find('.gallery__holder').width(ghwidth + 41);
+      }
+      else {
+        $(this).find('.gallery__holder').width(ghwidth + 33);
+      }
     $(this).width(gwidth);
     $(this).mCustomScrollbar({
       axis: "x",
@@ -316,9 +335,17 @@ function gallerify() {
       }
     });
   });
+
 }
 
 $(document).ready(function() {
+
+  var nCurPosX;
+
+  $('html').mousemove(function(e){
+    if(!e) e = window.event;
+    nCurPosX = e.clientX;
+  });
 
   $("input[type=number]").keydown(function(e) {
     // Allow: backspace, delete, tab, escape, enter and .
@@ -351,6 +378,57 @@ $(document).ready(function() {
     return false;
   });
 
+  $(".menu__item").click(function() {
+    if (is_touch_device()) {
+      if ($(this).closest('.menu__extra').length) {
+        $(this).closest('.menu__extra').hide();
+        return false;
+      } else {
+        if ($(this).closest('.menu__block').find('.menu__extra').length) {
+          $(this).closest('.menu__block').find('.menu__extra').fadeIn();
+          return false;
+        }
+      }
+    }
+  });
+
+  $('[data-popup]').hover(function() {
+    if (is_touch_device() === false) {
+      var $curItem = $(this),
+        $submenu = $(this).find('.menu__extra').eq(0);
+
+      $curItem.addClass('hover');
+      setTimeout(function() {
+        if ($curItem.hasClass('hover')) {
+          $submenu.fadeIn();
+        }
+      }, 50);
+    }
+
+  }, function() {
+    if (is_touch_device() === false) {
+      var nPosXStart = nCurPosX,
+        $submenu = $(this).find('.menu__extra').eq(0),
+        $curItem = $(this);
+
+      $curItem.removeClass('hover');
+      setTimeout(function() {
+        var nPosXEnd = nCurPosX;
+
+        if (nPosXEnd - nPosXStart > 0)
+          setTimeout(function() {
+            if (!$submenu.hasClass('hover') && !$curItem.hasClass('hover')) {
+              $submenu.hide().removeClass('hover');
+            }
+          }, 200);
+        else if (!$submenu.hasClass('hover') && !$curItem.hasClass('hover')) {
+          $submenu.hide().removeClass('hover');
+        }
+      }, 10);
+    }
+  });
+
+
   $(".fancybox").fancybox({
     helpers: {
       overlay: {
@@ -364,6 +442,11 @@ $(document).ready(function() {
   $(window).resize(function() {
     globalOffset = 0;
     gallerify();
+    setTimeout(function() { 
+      $(".swapper").each(function(index) {
+        $(".swapper").height($(".swapper > .active").height());
+      });
+    }, 100);
   });
 
   if ($('#zoomscheme').length) {
@@ -405,7 +488,7 @@ $(document).ready(function() {
         }
 
         function c(a) {
-          -1 != g.prevIndex && f.panels[g.prevIndex].addClass(a ? "_prev" : "_next").removeClass("active"), f.panels[g.currentIndex].addClass("_part active").removeClass("_prev _next"), setTimeout(b, 700)
+          -1 != g.prevIndex && f.panels[g.prevIndex].addClass(a ? "_prev" : "_next").removeClass("active"), f.panels[g.currentIndex].addClass("_part active").removeClass("_prev _next"), f.panels[g.currentIndex].parent().height(f.panels[g.currentIndex].height()), setTimeout(b, 700)
         }
 
         function d() {
@@ -418,8 +501,6 @@ $(document).ready(function() {
             f.items.removeClass("active"), b.addClass("active"), g.prevIndex = e, g.currentIndex = d, a(h), setTimeout(function() {
               c(h)
             }, 20);
-            b.closest(".js-tab").attr("data-current",d);
-            console.log(b.closest(".js-tab"));
           }
         }
         var e = $(this),
@@ -436,7 +517,7 @@ $(document).ready(function() {
         $(".js-tab-panel", e).each(function() {
           var a = $(this);
           a.addClass("_next"), f.panels[a.data("panel")] = a, g.panelCount++
-        }), f.panels[g.currentIndex].removeClass("_next").addClass("_part active"), f.items.on("click", d)
+        }), f.panels[g.currentIndex].removeClass("_next").addClass("_part active"), f.panels[g.currentIndex].parent().height(f.panels[g.currentIndex].height()), f.items.on("click", d)
       })
     }(),
     function() {
