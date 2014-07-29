@@ -27,90 +27,121 @@
   <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
   <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><script src="/f/js/sandpaper.js"></script><![endif]-->
   <script>
-  $(document).ready(function(){
-	$(".pseudo-radio").click(function () {
-	  $(this).parent().find(".pseudo-radio").each(function (){
-	    $(this).removeClass("pseudo-radio_active");
+  $(document).ready(function() {
+    $(".pseudo-radio").click(function() {
+      $(this).closest("[data-radio]").find(".pseudo-radio").each(function() {
+        $(this).removeClass("pseudo-radio_active");
       });
-	  $(this).addClass("pseudo-radio_active");
+      $(this).addClass("pseudo-radio_active");
+      var c = $(this).attr('data-filter-type');
+      if (typeof c !== typeof undefined && c !== false) {
+        $("[data-filter-item]").hide();
+        $("[data-filter-item=" + c + "]").css('display', 'table-row');
+      }
+      return false;
     });
-	
-	var pagin_item=[];
-	$(".projects__result-paginator-item").each(function(i){
-      pagin_item[i]=$(this);
-	});
-	
-	$.each(pagin_item, function(i){
-	  var right = $(this).parent().parent().parent().width() +  $(this).parent().parent().parent().offset().left - $(this).offset().left + $(this).width() ;
-	  if(right < $(this).width() || pagin_item[0].offset().top < pagin_item[i].offset().top || pagin_item[0].offset().top > pagin_item[i].offset().top){
-	    $(this).addClass("projects__result-paginator-item_hidden");
-	
-	  }
-	  else {
-	    $(this).removeClass("projects__result-paginator-item_hidden");
 
-	  }
-	});
+    $(this).closest("[data-radio]").find(".pseudo-radio").each(function() {
+      $(this).removeClass("pseudo-radio_active");
+    });
+    $(this).addClass("pseudo-radio_active");
+
+
+  $("[data-filter-type]").each(function() {
+    if ($(this).hasClass("pseudo-radio_active")) {
+      var c = $(this).attr("data-filter-type");
+      $("[data-filter-item]").hide();
+      $("[data-filter-item=" + c + "]").css('display', 'table-row');
+    }
+  });
+
+  $(".projects__close-map-link").click(function() {
+    if ($(this).hasClass('closed')) {
+      $('.projects__result-map-wrap').show();
+      $(this).removeClass('closed').text('Закрыть карту проектов');
+    } else {
+      $('.projects__result-map-wrap').hide();
+      $(this).addClass('closed').text('Открыть карту проектов');
+    }
+    return false;
+
+  });
+  });
+
+
+
+  /*
+  $.each(pagin_item, function(i){
+    var right = $(this).parent().parent().parent().width() +  $(this).parent().parent().parent().offset().left - $(this).offset().left + $(this).width() ;
+    if(right < $(this).width() || pagin_item[0].offset().top < pagin_item[i].offset().top || pagin_item[0].offset().top > pagin_item[i].offset().top){
+      $(this).addClass("projects__result-paginator-item_hidden");
+  
+    }
+    else {
+      $(this).removeClass("projects__result-paginator-item_hidden");
+
+    }
+  });
  
   });
   $(window).resize(function(){
     var pagin_item=[];
-	$(".projects__result-paginator-item").each(function(i){
+  $(".projects__result-paginator-item").each(function(i){
       pagin_item[i]=$(this);
-	});
-	
-	$.each(pagin_item, function(i){
-	  var right = $(this).parent().parent().parent().width() +  $(this).parent().parent().parent().offset().left - $(this).offset().left + $(this).width() ;
-	  if(right < $(this).width() || pagin_item[0].offset().top < pagin_item[i].offset().top || pagin_item[0].offset().top > pagin_item[i].offset().top){
-	    $(this).addClass("projects__result-paginator-item_hidden");
-
-	  }
-	  else{
-	    $(this).removeClass("projects__result-paginator-item_hidden");
-
-	  }
-	});
   });
   
-  equalheight = function(container){
+  $.each(pagin_item, function(i){
+    var right = $(this).parent().parent().parent().width() +  $(this).parent().parent().parent().offset().left - $(this).offset().left + $(this).width() ;
+    if(right < $(this).width() || pagin_item[0].offset().top < pagin_item[i].offset().top || pagin_item[0].offset().top > pagin_item[i].offset().top){
+      $(this).addClass("projects__result-paginator-item_hidden");
 
-var currentTallest = 0,
-     currentRowStart = 0,
-     rowDivs = new Array(),
-     $el,
-     topPosition = 0;
- $(container).each(function() {
+    }
+    else{
+      $(this).removeClass("projects__result-paginator-item_hidden");
 
-   $el = $(this);
-   $($el).height('auto')
-   topPostion = $el.position().top;
+    }
+  });
+  });*/
 
-   if (currentRowStart != topPostion) {
-     for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-       rowDivs[currentDiv].height(currentTallest);
-     }
-     rowDivs.length = 0; // empty the array
-     currentRowStart = topPostion;
-     currentTallest = $el.height();
-     rowDivs.push($el);
-   } else {
-     rowDivs.push($el);
-     currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+  equalheight = function(container) {
+
+    var currentTallest = 0,
+      currentRowStart = 0,
+      rowDivs = new Array(),
+      $el,
+      topPosition = 0;
+    $(container).each(function() {
+
+      $el = $(this);
+      $($el).height('auto')
+      topPostion = $el.position().top;
+
+      if (currentRowStart != topPostion) {
+        for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+          rowDivs[currentDiv].height(currentTallest);
+        }
+        rowDivs.length = 0; // empty the array
+        currentRowStart = topPostion;
+        currentTallest = $el.height();
+        rowDivs.push($el);
+      } else {
+        rowDivs.push($el);
+        currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+      }
+      for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+        rowDivs[currentDiv].height(currentTallest);
+      }
+    });
   }
-   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-     rowDivs[currentDiv].height(currentTallest);
-   }
- });
-}
 
-$(window).load(function() {
-  equalheight('.projects__result-object_item');
-});
+  $(window).load(function() {
+    equalheight('.projects__result-object_item');
+  });
 
 
-$(window).resize(function(){
-  equalheight('.projects__result-object_item');
-});
+  $(window).resize(function() {
+    equalheight('.projects__result-object_item');
+  });
   </script>
 </head>
 
@@ -219,302 +250,423 @@ $(window).resize(function(){
     </div></div></div>
 
     <div class="inner">
-      <div class="wrap">
-        <div class="inner__wrap clear">
-          <div class="inner__menu">
-            <ul class="menu">
-              <li><a href="#" class="menu__item iconize-menu iconize-menu_1">Котельные</a></li>
-              <li><a href="#" class="menu__item iconize-menu iconize-menu_2">Дымовые трубы</a></li>
-              <li><a href="#" class="menu__item iconize-menu iconize-menu_3">стальные резервуары</a></li>
-              <li><a href="#" class="menu__item iconize-menu iconize-menu_4">промышленные дымоходы</a></li>
-              <li><a href="#" class="menu__item iconize-menu iconize-menu_5">тепловые пункты</a></li>
-            </ul>
-          </div>
-          <div class="inner__content">
-            <div class="inner__content-wrap">
-              <div class="path"><a href="/">Главная</a> → <a href="#">Продукция</a> → <a href="#">Котельные</a> → Передвижная котельная</div>
-			  <div class=" cut projects">
-                <div class="content">
-                  <div class="rel">
-                    <h1 class="short">Реализованные <br>проекты</h1>
-				    <div class="projects__period">
-					  <span class="projects__period-title">Период отгрузки:</span>
-					  <div class="projects__radio-box">
-					    <span class="pseudo-radio pseudo-radio_active"><a href="#" class="pseudo-radio__link">2014</a></span>
-						<span class="pseudo-radio"><a href="#" class="pseudo-radio__link">2013</a></span>
-						<span class="pseudo-radio"><a href="#" class="pseudo-radio__link">2012</a></span>
-						<span class="pseudo-radio"><a href="#" class="pseudo-radio__link">2011</a></span>
-						<span class="pseudo-radio"><a href="#" class="pseudo-radio__link">2010 и ранее</a></span>
-					  </div>
-					</div>  
-					<div class="projects__type">
-					  <span class="projects__type-title">Тип проектов:</span>
-					  <div class="projects__radio-box">
-					    <span class="pseudo-radio pseudo-radio_active"><a href="#" class="pseudo-radio__link">Все проекты</a></span><br><br>
-						<span class="pseudo-radio pseudo-radio_arrowed"><a href="#" class="pseudo-radio__link">Котельные</a></span>
-						<span class="pseudo-radio pseudo-radio_arrowed"><a href="#" class="pseudo-radio__link">Дымовые трубы</a></span>
-						<span class="pseudo-radio pseudo-radio_arrowed"><a href="#" class="pseudo-radio__link">Резервуары</a></span>
-						<span class="pseudo-radio pseudo-radio_arrowed"><a href="#" class="pseudo-radio__link">Промышленные дымоходы</a></span>
-						<span class="pseudo-radio pseudo-radio_arrowed"><a href="#" class="pseudo-radio__link">Тепловые пункты</a></span>
-					  </div>
-					</div>  
-					</div>
-				  </div>
-					<div class="cut">
-					  <div class="projects__result section">
-					    <span class="projects__result-title">Выполнено 54 проекта котельных</span>
-						<span class="projects__close-map"><a href="#" class="projects__close-map-link arr pseudo">Закрыть карту проектов</a></span>
-						<div class="projects__result-map-wrap">
-						  <div class="projects__result-map">
-						    <div class="projects__result-object projects__result-object_on-map">
-						      <img class="projects__result-object-image" src="/f/i/detail-object.jpg" alt=""></img>
-							  <a href = "#" class="projects__result-object-close"></a>
-							  <div class="projects__result-object-wrap">
-							    <span class="projects__result-object-text new-line">г.Москва</span>
-								<span class="btn-link projects__result-object-title new-line">Отопление производственных зданий</span>
-								<span class="projects__result-object-text new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
-								<span class="projects__result-object-text_italic new-line">Период отгрузки: <span class="projects__result-object-text">Февраль 2013</span></span>
-								<span class="projects__result-object-text_italic new-line">Мощность: <span class="projects__result-object-text">1МВт</span></span>
-							  </div>
-						    </div>
-						  </div>
-						</div>
-						<div class="projects__result-filter">
-						  <div class="projects__result-filter-feature-wrap">
-						    <span class="projects__result-filter-feature">Мощность:</span>
-						    <span class="projects__result-filter-feature">Топливо:</span>
-							<span class="projects__result-filter-feature">Котлоагрегатор:</span>
-						  </div>
-						    <div class="projects__result-filter-radio-wrap">
-						      <div class="projects__result-filter-radio">
-							    <span class="pseudo-radio pseudo-radio_active pseudo-radio_unbordered"><a class="pseudo-radio__link">Любая</a></span>
-							    <span class="pseudo-radio pseudo-radio_unbordered"><a class="pseudo-radio__link"><5 МВт</a></span>
-								<span class="pseudo-radio pseudo-radio_unbordered"><a class="pseudo-radio__link">5-10 МВт</a></span>
-								<span class="pseudo-radio pseudo-radio_unbordered"><a class="pseudo-radio__link">>10 МВт</a></span>
-							  </div>
-							  <div class="projects__result-filter-radio">
-							    <span class="pseudo-radio pseudo-radio_active pseudo-radio_unbordered"><a class="pseudo-radio__link">Любое</a></span>
-							    <span class="pseudo-radio pseudo-radio_unbordered"><a class="pseudo-radio__link">Газ</a></span>
-								<span class="pseudo-radio pseudo-radio_unbordered"><a class="pseudo-radio__link">Дизель</a></span>
-								<span class="pseudo-radio pseudo-radio_unbordered"><a class="pseudo-radio__link">Комбинированная газ-дизель</a></span>
-								<span class="pseudo-radio pseudo-radio_unbordered"><a class="pseudo-radio__link">Твердое топливо</a></span>
-							  </div>
-							  <div class="projects__result-filter-radio">
-							    <span class="pseudo-radio pseudo-radio_active pseudo-radio_unbordered"><a class="pseudo-radio__link">Любой</a></span>
-							    <span class="pseudo-radio pseudo-radio_unbordered"><a class="pseudo-radio__link">Паровой</a></span>
-								<span class="pseudo-radio pseudo-radio_unbordered"><a class="pseudo-radio__link">Водогрейный</a></span>
-							  </div>
-						    </div>
-					    </div>
-					  </div>
-                    </div>
-					<div class="projects__items">
-					  <div class="projects__result-object projects__result-object_item">
-					    <a href = "#" class="projects__result-object-link"></a>
-						<span class="projects__result-object-image-wrap">
-						  <div class="projects__result-object-mask"></div>
-						  <img class="projects__result-object-image" src="/f/i/detail-object.jpg" alt=""></img>
-						</span>
-						<div class="projects__result-object-wrap">
-						  <span class="projects__result-object-text new-line">г.Москва</span>
-						  <span class="btn-link projects__result-object-title new-line">Отопление административных и производственных зданий</span>
-						  <span class="projects__result-object-text new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
-					      <span class="projects__result-object-text_italic new-line">Период отгрузки: <span class="projects__result-object-text">Февраль 2013</span></span>
-					      <span class="projects__result-object-text_italic new-line">Мощность: <span class="projects__result-object-text">1МВт</span></span>
-						</div>
-					  </div>
-					  <div class="projects__result-object projects__result-object_item">
-					    <a href = "#" class="projects__result-object-link"></a>
-						<span class="projects__result-object-image-wrap">
-						  <div class="projects__result-object-mask"></div>
-						  <img class="projects__result-object-image" src="/f/i/detail-object2.jpg" alt=""></img>
-						</span>
-						<div class="projects__result-object-wrap">
-						  <span class="projects__result-object-text new-line">г.Москва</span>
-						  <span class="btn-link projects__result-object-title new-line">Отопление административных зданий</span>
-						  <span class="projects__result-object-text new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
-					      <span class="projects__result-object-text_italic new-line">Период отгрузки: <span class="projects__result-object-text">Февраль 2013</span></span>
-					      <span class="projects__result-object-text_italic new-line">Мощность: <span class="projects__result-object-text">1МВт</span></span>
-						</div>
-					  </div>
-					  <div class="projects__result-object projects__result-object_item">
-					    <a href = "#" class="projects__result-object-link"></a>
-					    <span class="projects__result-object-image-wrap">
-						  <div class="projects__result-object-mask"></div>
-						  <img class="projects__result-object-image" src="/f/i/detail-object3.jpg" alt=""></img>
-						</span>
-						<div class="projects__result-object-wrap">
-						  <span class="projects__result-object-text new-line">г.Москва</span>
-						  <span class="btn-link projects__result-object-title new-line">Аварийная котельная для теплоснабжения объектов НТЦ Экспертцентр</span>
-						  <span class="projects__result-object-text new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
-					      <span class="projects__result-object-text_italic new-line">Период отгрузки: <span class="projects__result-object-text">Февраль 2013</span></span>
-					      <span class="projects__result-object-text_italic new-line">Мощность: <span class="projects__result-object-text">1МВт</span></span>
-						</div>
-					  </div>
-					   <div class="projects__result-object projects__result-object_item">
-					    <a href = "#" class="projects__result-object-link"></a>
-						<span class="projects__result-object-image-wrap">
-						  <div class="projects__result-object-mask"></div>
-						  <img class="projects__result-object-image" src="/f/i/detail-object.jpg" alt=""></img>
-						</span>
-						<div class="projects__result-object-wrap">
-						  <span class="projects__result-object-text new-line">г.Москва</span>
-						  <span class="btn-link projects__result-object-title new-line">Отопление административных и производственных зданий</span>
-						  <span class="projects__result-object-text new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
-					      <span class="projects__result-object-text_italic new-line">Период отгрузки: <span class="projects__result-object-text">Февраль 2013</span></span>
-					      <span class="projects__result-object-text_italic new-line">Мощность: <span class="projects__result-object-text">1МВт</span></span>
-						</div>
-					  </div>
-					  <div class="projects__result-object projects__result-object_item">
-					    <a href = "#" class="projects__result-object-link"></a>
-						<span class="projects__result-object-image-wrap">
-						  <div class="projects__result-object-mask"></div>
-						  <img class="projects__result-object-image" src="/f/i/detail-object2.jpg" alt=""></img>
-						</span>
-						<div class="projects__result-object-wrap">
-						  <span class="projects__result-object-text new-line">г.Москва</span>
-						  <span class="btn-link projects__result-object-title new-line">Отопление административных зданий</span>
-						  <span class="projects__result-object-text new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
-					      <span class="projects__result-object-text_italic new-line">Период отгрузки: <span class="projects__result-object-text">Февраль 2013</span></span>
-					      <span class="projects__result-object-text_italic new-line">Мощность: <span class="projects__result-object-text">1МВт</span></span>
-						</div>
-					  </div>
-					  <div class="projects__result-object projects__result-object_item">
-					    <a href = "#" class="projects__result-object-link"></a>
-						<span class="projects__result-object-image-wrap">
-						  <div class="projects__result-object-mask"></div>
-						  <img class="projects__result-object-image" src="/f/i/detail-object3.jpg" alt=""></img>
-						</span>
-						<div class="projects__result-object-wrap">
-						  <span class="projects__result-object-text new-line">г.Москва</span>
-						  <span class="btn-link projects__result-object-title new-line">Аварийная котельная для теплоснабжения объектов НТЦ Экспертцентр</span>
-						  <span class="projects__result-object-text new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
-					      <span class="projects__result-object-text_italic new-line">Период отгрузки: <span class="projects__result-object-text">Февраль 2013</span></span>
-					      <span class="projects__result-object-text_italic new-line">Мощность: <span class="projects__result-object-text">1МВт</span></span>
-						</div>
-					  </div>
-					   <div class="projects__result-object projects__result-object_item">
-					    <a href = "#" class="projects__result-object-link"></a>
-						<span class="projects__result-object-image-wrap">
-						  <div class="projects__result-object-mask"></div>
-						  <img class="projects__result-object-image" src="/f/i/detail-object.jpg" alt=""></img>
-						</span>
-						<div class="projects__result-object-wrap">
-						  <span class="projects__result-object-text new-line">г.Москва</span>
-						  <span class="btn-link projects__result-object-title new-line">Отопление административных и производственных зданий</span>
-						  <span class="projects__result-object-text new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
-					      <span class="projects__result-object-text_italic new-line">Период отгрузки: <span class="projects__result-object-text">Февраль 2013</span></span>
-					      <span class="projects__result-object-text_italic new-line">Мощность: <span class="projects__result-object-text">1МВт</span></span>
-						</div>
-					  </div>
-					  <div class="projects__result-object projects__result-object_item">
-					    <a href = "#" class="projects__result-object-link"></a>
-						<span class="projects__result-object-image-wrap">
-						  <div class="projects__result-object-mask"></div>
-						  <img class="projects__result-object-image" src="/f/i/detail-object2.jpg" alt=""></img>
-						</span>
-						<div class="projects__result-object-wrap">
-						  <span class="projects__result-object-text new-line">г.Москва</span>
-						  <span class="btn-link projects__result-object-title new-line">Отопление административных зданий</span>
-						  <span class="projects__result-object-text new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
-					      <span class="projects__result-object-text_italic new-line">Период отгрузки: <span class="projects__result-object-text">Февраль 2013</span></span>
-					      <span class="projects__result-object-text_italic new-line">Мощность: <span class="projects__result-object-text">1МВт</span></span>
-						</div>
-					  </div>
-					  <div class="projects__result-object projects__result-object_item">
-					    <a href = "#" class="projects__result-object-link"></a>
-						<span class="projects__result-object-image-wrap">
-						  <div class="projects__result-object-mask"></div>
-						  <img class="projects__result-object-image" src="/f/i/detail-object3.jpg" alt=""></img>
-						</span>
-						<div class="projects__result-object-wrap">
-						  <span class="projects__result-object-text new-line">г.Москва</span>
-						  <span class="btn-link projects__result-object-title new-line">Аварийная котельная для теплоснабжения объектов НТЦ Экспертцентр</span>
-						  <span class="projects__result-object-text new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
-					      <span class="projects__result-object-text_italic new-line">Период отгрузки: <span class="projects__result-object-text">Февраль 2013</span></span>
-					      <span class="projects__result-object-text_italic new-line">Мощность: <span class="projects__result-object-text">1МВт</span></span>
-						</div>
-					  </div>
-					  <div class="projects__result-object projects__result-object_item">
-					    <a href = "#" class="projects__result-object-link"></a>
-						<span class="projects__result-object-image-wrap">
-						  <div class="projects__result-object-mask"></div>
-						  <img class="projects__result-object-image" src="/f/i/detail-object.jpg" alt=""></img>
-						</span>
-						<div class="projects__result-object-wrap">
-						  <span class="projects__result-object-text new-line">г.Москва</span>
-						  <span class="btn-link projects__result-object-title new-line">Отопление административных и производственных зданий</span>
-						  <span class="projects__result-object-text new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
-					      <span class="projects__result-object-text_italic new-line">Период отгрузки: <span class="projects__result-object-text">Февраль 2013</span></span>
-					      <span class="projects__result-object-text_italic new-line">Мощность: <span class="projects__result-object-text">1МВт</span></span>
-						</div>
-					  </div>
-					  <div class="projects__result-object projects__result-object_item">
-					    <a href = "#" class="projects__result-object-link"></a>
-						<span class="projects__result-object-image-wrap">
-						  <div class="projects__result-object-mask"></div>
-						  <img class="projects__result-object-image" src="/f/i/detail-object2.jpg" alt=""></img>
-						</span>
-						<div class="projects__result-object-wrap">
-						  <span class="projects__result-object-text new-line">г.Москва</span>
-						  <span class="btn-link projects__result-object-title new-line">Отопление административных зданий</span>
-						  <span class="projects__result-object-text new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
-					      <span class="projects__result-object-text_italic new-line">Период отгрузки: <span class="projects__result-object-text">Февраль 2013</span></span>
-					      <span class="projects__result-object-text_italic new-line">Мощность: <span class="projects__result-object-text">1МВт</span></span>
-						</div>
-					  </div>
-					  <div class="projects__result-object projects__result-object_item">
-					    <a href = "#" class="projects__result-object-link"></a>
-						<span class="projects__result-object-image-wrap">
-						  <div class="projects__result-object-mask"></div>
-						  <img class="projects__result-object-image" src="/f/i/detail-object.jpg" alt=""></img>
-						</span>
-						<div class="projects__result-object-wrap">
-						  <span class="projects__result-object-text new-line">г.Москва</span>
-						  <span class="btn-link projects__result-object-title new-line">Аварийная котельная для теплоснабжения объектов НТЦ Экспертцентр</span>
-						  <span class="projects__result-object-text new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
-					      <span class="projects__result-object-text_italic new-line">Период отгрузки: <span class="projects__result-object-text">Февраль 2013</span></span>
-					      <span class="projects__result-object-text_italic new-line">Мощность: <span class="projects__result-object-text">1МВт</span></span>
-						</div>
-					  </div>
-				    </div>
-					<div style = "clear: both;"></div>
-					<div class="cut">
-					<div class = "projects__result-paginator">
-				      <ul>
-					  <li class="projects__result-paginator-item"><a href = "#">1</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">2</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">3</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">4</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">5</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">6</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">7</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">8</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">9</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">10</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">11</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">12</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">13</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">14</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">15</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">16</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">17</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">18</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">19</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">20</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">21</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">22</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">23</a></li>
-					  <li class="projects__result-paginator-item"><a href = "#">24</a></li>
-				      </ul>
-			        </div>
-				    </div>
+  <div class="wrap">
+    <div class="inner__wrap clear">
+      <div class="inner__menu">
+        <ul class="menu">
+          <li><a href="#" class="menu__item iconize-menu iconize-menu_1">Котельные</a>
+          </li>
+          <li><a href="#" class="menu__item iconize-menu iconize-menu_2">Дымовые трубы</a>
+          </li>
+          <li><a href="#" class="menu__item iconize-menu iconize-menu_3">стальные резервуары</a>
+          </li>
+          <li><a href="#" class="menu__item iconize-menu iconize-menu_4">промышленные дымоходы</a>
+          </li>
+          <li><a href="#" class="menu__item iconize-menu iconize-menu_5">тепловые пункты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="inner__content">
+        <div class="inner__content-wrap">
+          <div class="path"><a href="/">Главная</a> → <a href="#">Продукция</a> → <a href="#">Котельные</a> → Передвижная котельная</div>
+          <div class="content">
+            <div class="rel">
+              <div class="cut">
+                <h1 class="short">Реализованные<br>проекты</h1>
+                <div class="projects__filter">
+                <div class="projects__period">
+                  <span class="projects__period-title">Период отгрузки:</span>
+                  <div class="projects__radio-box" data-radio="1">
+                    <span class="pseudo-radio pseudo-radio_active"><a href="#" class="pseudo-radio__link">2014</a></span>
+                    <span class="pseudo-radio"><a href="#" class="pseudo-radio__link">2013</a></span>
+                    <span class="pseudo-radio"><a href="#" class="pseudo-radio__link">2012</a></span>
+                    <span class="pseudo-radio"><a href="#" class="pseudo-radio__link">2011</a></span>
+                    <span class="pseudo-radio"><a href="#" class="pseudo-radio__link">2010 и ранее</a></span>
+                  </div>
+                </div>
+                <div class="projects__type">
+                  <span class="projects__type-title">Тип проектов:</span>
+                  <div class="projects__radio-box" data-radio="1">
+                    <div class="projects__radio-main"><span class="pseudo-radio pseudo-radio_active"><a href="#" class="pseudo-radio__link">Все проекты</a></span></div>
+                    <span class="pseudo-radio pseudo-radio_arrowed"><a href="#" class="pseudo-radio__link">Котельные</a></span>
+                    <span class="pseudo-radio pseudo-radio_arrowed"><a href="#" class="pseudo-radio__link">Дымовые трубы</a></span>
+                    <span class="pseudo-radio pseudo-radio_arrowed"><a href="#" class="pseudo-radio__link">Резервуары</a></span>
+                    <span class="pseudo-radio pseudo-radio_arrowed"><a href="#" class="pseudo-radio__link">Промышленные дымоходы</a></span>
+                    <span class="pseudo-radio pseudo-radio_arrowed"><a href="#" class="pseudo-radio__link">Тепловые пункты</a></span>
+                  </div>
+                </div>
+                </div>
+                              <div class="projects__load"><div class="projects__result section clear"><div class="projects__load-content">
+                <span class="projects__result-title">Выполнено 54 проекта котельных</span>
+                <span class="projects__close-map"><span class="projects__close-map-link arr pseudo">Закрыть карту проектов</span></span>
+              </div></div></div>
               </div>
             </div>
           </div>
+<div class="projects__load"><div class="projects__load-content">
+                <div class="projects__result-map-wrap">
+                  <div class="projects__result-map">
+                    <div class="projects__result-object projects__result-object_on-map"><a href="#" class="projects__result-object-close"></a>
+                      <a href="#" class="projects__result-object-link"><img class="projects__result-object-image" src="/f/i/detail-object.jpg" alt="">
+                      
+                      <span class="projects__result-object-wrap">
+                        <span class="projects__result-object-text new-line">г.Москва</span>
+                        <span class="btn-link projects__result-object-title new-line">Отопление производственных зданий</span>
+                        <span class="projects__result-object-text projects__result-object-description new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
+                        <span class="projects__result-object-text_italic new-line">Период отгрузки:
+                          <span class="projects__result-object-text">Февраль 2013</span>
+                        </span>
+                        <span class="projects__result-object-text_italic new-line">Мощность:
+                          <span class="projects__result-object-text">1МВт</span>
+                        </span>
+                      </span></a>
+                    </div>
+                  </div>
+                </div>
+                          <div class="rel">
+            <div class="cut">
+              <div class="projects__result">
+                <div class="projects__result-filter">
+
+                  <div class="projects__result-filter-item">
+                    <div class="projects__result-filter-feature-wrap">
+                      <span class="projects__result-filter-feature">Котлоагрегатор:</span>
+                    </div>
+                    <div class="projects__result-filter-radio-wrap">
+                      <div class="projects__result-filter-radio" data-radio="1">
+                        <span class="pseudo-radio pseudo-radio_active pseudo-radio_unbordered" data-filter-type="none"><span class="pseudo-radio__link">Любой</span></span>
+                        <span class="pseudo-radio pseudo-radio_unbordered" data-filter-type="steam"><span class="pseudo-radio__link">Паровой</span></span>
+                        <span class="pseudo-radio pseudo-radio_unbordered" data-filter-type="water"><span class="pseudo-radio__link">Водогрейный</span></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="projects__result-filter-item">
+                    <div class="projects__result-filter-feature-wrap">
+                      <span class="projects__result-filter-feature">Топливо:</span>
+                    </div>
+                    <div class="projects__result-filter-radio-wrap">
+                      <div class="projects__result-filter-radio" data-radio="1">
+                        <span class="pseudo-radio pseudo-radio_active pseudo-radio_unbordered"><span class="pseudo-radio__link">Любое</span></span>
+                        <span class="pseudo-radio pseudo-radio_unbordered"><span class="pseudo-radio__link">Газ</span></span>
+                        <span class="pseudo-radio pseudo-radio_unbordered"><span class="pseudo-radio__link">Дизель</span></span>
+                        <span class="pseudo-radio pseudo-radio_unbordered"><span class="pseudo-radio__link">Комбинированная газ-дизель</span></span>
+                        <span class="pseudo-radio pseudo-radio_unbordered"><span class="pseudo-radio__link">Твердое топливо</span></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="projects__result-filter-item inv" data-filter-item="water">
+                    <div class="projects__result-filter-feature-wrap">
+                      <span class="projects__result-filter-feature">Мощность:</span>
+                    </div>
+                    <div class="projects__result-filter-radio-wrap">
+                      <div class="projects__result-filter-radio" data-radio="1">
+                        <span class="pseudo-radio pseudo-radio_active pseudo-radio_unbordered"><span class="pseudo-radio__link">Любая</span></span>
+                        <span class="pseudo-radio pseudo-radio_unbordered"><span class="pseudo-radio__link">&lt;5 МВт</span></span>
+                        <span class="pseudo-radio pseudo-radio_unbordered"><span class="pseudo-radio__link">5-10 МВт</span></span>
+                        <span class="pseudo-radio pseudo-radio_unbordered"><span class="pseudo-radio__link">&gt;10 МВт</span></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="projects__result-filter-item inv" data-filter-item="steam">
+                    <div class="projects__result-filter-feature-wrap">
+                      <span class="projects__result-filter-feature">Мощность:</span>
+                    </div>
+                    <div class="projects__result-filter-radio-wrap">
+                      <div class="projects__result-filter-radio" data-radio="1">
+                        <span class="pseudo-radio pseudo-radio_active pseudo-radio_unbordered"><span class="pseudo-radio__link">Любая</span></span>
+                        <span class="pseudo-radio pseudo-radio_unbordered"><span class="pseudo-radio__link">&lt;1 т.пара</span></span>
+                        <span class="pseudo-radio pseudo-radio_unbordered"><span class="pseudo-radio__link">1-5 т.пара</span></span>
+                        <span class="pseudo-radio pseudo-radio_unbordered"><span class="pseudo-radio__link">&gt;5 т.пара</span></span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            <div class="projects__items clear">
+              <div class="projects__result-object projects__result-object_item">
+                <a href="#" class="projects__result-object-link">
+                <span class="projects__result-object-image-wrap">
+                  <span class="projects__result-object-mask"></span>
+                  <img class="projects__result-object-image" src="/f/i/detail-object.jpg" alt="">
+                </span>
+                <span class="projects__result-object-wrap">
+                  <span class="projects__result-object-text new-line">г.Москва</span>
+                  <span class="btn-link projects__result-object-title new-line">Отопление административных и производственных зданий</span>
+                  <span class="projects__result-object-text projects__result-object-description new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
+                  <span class="projects__result-object-text_italic new-line">Период отгрузки:
+                    <span class="projects__result-object-text">Февраль 2013</span>
+                  </span>
+                  <span class="projects__result-object-text_italic new-line">Мощность:
+                    <span class="projects__result-object-text">1МВт</span>
+                  </span>
+                </span></a>
+              </div>
+              <div class="projects__result-object projects__result-object_item">
+                <a href="#" class="projects__result-object-link">
+                <span class="projects__result-object-image-wrap">
+                  <span class="projects__result-object-mask"></span>
+                  <img class="projects__result-object-image" src="/f/i/detail-object2.jpg" alt="">
+                </span>
+                <span class="projects__result-object-wrap">
+                  <span class="projects__result-object-text new-line">г.Москва</span>
+                  <span class="btn-link projects__result-object-title new-line">Отопление административных зданий</span>
+                  <span class="projects__result-object-text projects__result-object-description new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
+                  <span class="projects__result-object-text_italic new-line">Период отгрузки:
+                    <span class="projects__result-object-text">Февраль 2013</span>
+                  </span>
+                  <span class="projects__result-object-text_italic new-line">Мощность:
+                    <span class="projects__result-object-text">1МВт</span>
+                  </span>
+                </span></a>
+              </div>
+              <div class="projects__result-object projects__result-object_item">
+                <a href="#" class="projects__result-object-link">
+                <span class="projects__result-object-image-wrap">
+                  <span class="projects__result-object-mask"></span>
+                  <img class="projects__result-object-image" src="/f/i/detail-object3.jpg" alt="">
+                </span>
+                <span class="projects__result-object-wrap">
+                  <span class="projects__result-object-text new-line">г.Москва</span>
+                  <span class="btn-link projects__result-object-title new-line">Аварийная котельная для теплоснабжения объектов НТЦ Экспертцентр</span>
+                  <span class="projects__result-object-text projects__result-object-description new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
+                  <span class="projects__result-object-text_italic new-line">Период отгрузки:
+                    <span class="projects__result-object-text">Февраль 2013</span>
+                  </span>
+                  <span class="projects__result-object-text_italic new-line">Мощность:
+                    <span class="projects__result-object-text">1МВт</span>
+                  </span>
+                </span></a>
+              </div>
+              <div class="projects__result-object projects__result-object_item">
+                <a href="#" class="projects__result-object-link">
+                <span class="projects__result-object-image-wrap">
+                  <span class="projects__result-object-mask"></span>
+                  <img class="projects__result-object-image" src="/f/i/detail-object.jpg" alt="">
+                </span>
+                <span class="projects__result-object-wrap">
+                  <span class="projects__result-object-text new-line">г.Москва</span>
+                  <span class="btn-link projects__result-object-title new-line">Отопление административных и производственных зданий</span>
+                  <span class="projects__result-object-text projects__result-object-description new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
+                  <span class="projects__result-object-text_italic new-line">Период отгрузки:
+                    <span class="projects__result-object-text">Февраль 2013</span>
+                  </span>
+                  <span class="projects__result-object-text_italic new-line">Мощность:
+                    <span class="projects__result-object-text">1МВт</span>
+                  </span>
+                </span></a>
+              </div>
+              <div class="projects__result-object projects__result-object_item">
+                <a href="#" class="projects__result-object-link">
+                <span class="projects__result-object-image-wrap">
+                  <span class="projects__result-object-mask"></span>
+                  <img class="projects__result-object-image" src="/f/i/detail-object2.jpg" alt="">
+                </span>
+                <span class="projects__result-object-wrap">
+                  <span class="projects__result-object-text new-line">г.Москва</span>
+                  <span class="btn-link projects__result-object-title new-line">Отопление административных зданий</span>
+                  <span class="projects__result-object-text projects__result-object-description new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
+                  <span class="projects__result-object-text_italic new-line">Период отгрузки:
+                    <span class="projects__result-object-text">Февраль 2013</span>
+                  </span>
+                  <span class="projects__result-object-text_italic new-line">Мощность:
+                    <span class="projects__result-object-text">1МВт</span>
+                  </span>
+                </span></a>
+              </div>
+              <div class="projects__result-object projects__result-object_item">
+                <a href="#" class="projects__result-object-link">
+                <span class="projects__result-object-image-wrap">
+                  <span class="projects__result-object-mask"></span>
+                  <img class="projects__result-object-image" src="/f/i/detail-object3.jpg" alt="">
+                </span>
+                <span class="projects__result-object-wrap">
+                  <span class="projects__result-object-text new-line">г.Москва</span>
+                  <span class="btn-link projects__result-object-title new-line">Аварийная котельная для теплоснабжения объектов НТЦ Экспертцентр</span>
+                  <span class="projects__result-object-text projects__result-object-description new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
+                  <span class="projects__result-object-text_italic new-line">Период отгрузки:
+                    <span class="projects__result-object-text">Февраль 2013</span>
+                  </span>
+                  <span class="projects__result-object-text_italic new-line">Мощность:
+                    <span class="projects__result-object-text">1МВт</span>
+                  </span>
+                </span></a>
+              </div>
+              <div class="projects__result-object projects__result-object_item">
+                <a href="#" class="projects__result-object-link">
+                <span class="projects__result-object-image-wrap">
+                  <span class="projects__result-object-mask"></span>
+                  <img class="projects__result-object-image" src="/f/i/detail-object.jpg" alt="">
+                </span>
+                <span class="projects__result-object-wrap">
+                  <span class="projects__result-object-text new-line">г.Москва</span>
+                  <span class="btn-link projects__result-object-title new-line">Отопление административных и производственных зданий</span>
+                  <span class="projects__result-object-text projects__result-object-description new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
+                  <span class="projects__result-object-text_italic new-line">Период отгрузки:
+                    <span class="projects__result-object-text">Февраль 2013</span>
+                  </span>
+                  <span class="projects__result-object-text_italic new-line">Мощность:
+                    <span class="projects__result-object-text">1МВт</span>
+                  </span>
+                </span></a>
+              </div>
+              <div class="projects__result-object projects__result-object_item">
+                <a href="#" class="projects__result-object-link">
+                <span class="projects__result-object-image-wrap">
+                  <span class="projects__result-object-mask"></span>
+                  <img class="projects__result-object-image" src="/f/i/detail-object2.jpg" alt="">
+                </span>
+                <span class="projects__result-object-wrap">
+                  <span class="projects__result-object-text new-line">г.Москва</span>
+                  <span class="btn-link projects__result-object-title new-line">Отопление административных зданий</span>
+                  <span class="projects__result-object-text projects__result-object-description new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
+                  <span class="projects__result-object-text_italic new-line">Период отгрузки:
+                    <span class="projects__result-object-text">Февраль 2013</span>
+                  </span>
+                  <span class="projects__result-object-text_italic new-line">Мощность:
+                    <span class="projects__result-object-text">1МВт</span>
+                  </span>
+                </span></a>
+              </div>
+              <div class="projects__result-object projects__result-object_item">
+                <a href="#" class="projects__result-object-link">
+                <span class="projects__result-object-image-wrap">
+                  <span class="projects__result-object-mask"></span>
+                  <img class="projects__result-object-image" src="/f/i/detail-object3.jpg" alt="">
+                </span>
+                <span class="projects__result-object-wrap">
+                  <span class="projects__result-object-text new-line">г.Москва</span>
+                  <span class="btn-link projects__result-object-title new-line">Аварийная котельная для теплоснабжения объектов НТЦ Экспертцентр</span>
+                  <span class="projects__result-object-text projects__result-object-description new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
+                  <span class="projects__result-object-text_italic new-line">Период отгрузки:
+                    <span class="projects__result-object-text">Февраль 2013</span>
+                  </span>
+                  <span class="projects__result-object-text_italic new-line">Мощность:
+                    <span class="projects__result-object-text">1МВт</span>
+                  </span>
+                </span></a>
+              </div>
+              <div class="projects__result-object projects__result-object_item">
+                <a href="#" class="projects__result-object-link">
+                <span class="projects__result-object-image-wrap">
+                  <span class="projects__result-object-mask"></span>
+                  <img class="projects__result-object-image" src="/f/i/detail-object.jpg" alt="">
+                </span>
+                <span class="projects__result-object-wrap">
+                  <span class="projects__result-object-text new-line">г.Москва</span>
+                  <span class="btn-link projects__result-object-title new-line">Отопление административных и производственных зданий</span>
+                  <span class="projects__result-object-text projects__result-object-description new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
+                  <span class="projects__result-object-text_italic new-line">Период отгрузки:
+                    <span class="projects__result-object-text">Февраль 2013</span>
+                  </span>
+                  <span class="projects__result-object-text_italic new-line">Мощность:
+                    <span class="projects__result-object-text">1МВт</span>
+                  </span>
+                </span></a>
+              </div>
+              <div class="projects__result-object projects__result-object_item">
+                <a href="#" class="projects__result-object-link">
+                <span class="projects__result-object-image-wrap">
+                  <span class="projects__result-object-mask"></span>
+                  <img class="projects__result-object-image" src="/f/i/detail-object2.jpg" alt=""></img>
+                </span>
+                <span class="projects__result-object-wrap">
+                  <span class="projects__result-object-text new-line">г.Москва</span>
+                  <span class="btn-link projects__result-object-title new-line">Отопление административных зданий</span>
+                  <span class="projects__result-object-text projects__result-object-description new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
+                  <span class="projects__result-object-text_italic new-line">Период отгрузки:
+                    <span class="projects__result-object-text">Февраль 2013</span>
+                  </span>
+                  <span class="projects__result-object-text_italic new-line">Мощность:
+                    <span class="projects__result-object-text">1МВт</span>
+                  </span>
+                </span></a>
+              </div>
+              <div class="projects__result-object projects__result-object_item">
+                <a href="#" class="projects__result-object-link">
+                <span class="projects__result-object-image-wrap">
+                  <span class="projects__result-object-mask"></span>
+                  <img class="projects__result-object-image" src="/f/i/detail-object.jpg" alt=""></img>
+                </span>
+                <span class="projects__result-object-wrap">
+                  <span class="projects__result-object-text new-line">г.Москва</span>
+                  <span class="btn-link projects__result-object-title new-line">Аварийная котельная для теплоснабжения объектов НТЦ Экспертцентр</span>
+                  <span class="projects__result-object-text projects__result-object-description new-line">Спецификация поставки автоматизированной блочно-модульной котельной</span>
+                  <span class="projects__result-object-text_italic new-line">Период отгрузки:
+                    <span class="projects__result-object-text">Февраль 2013</span>
+                  </span>
+                  <span class="projects__result-object-text_italic new-line">Мощность:
+                    <span class="projects__result-object-text">1МВт</span>
+                  </span>
+                </span></a>
+              </div>
+            </div>
+
+<div class="projects__result">
+              <div class="projects__result-paginator">
+                <ul>
+                  <li class="projects__result-paginator-item"><a href="#" class="active">1</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">2</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">3</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">4</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">5</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">6</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">7</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">8</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">9</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">10</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">11</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">12</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">13</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">14</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">15</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">16</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">17</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">18</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">19</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">20</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">21</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">22</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">23</a>
+                  </li>
+                  <li class="projects__result-paginator-item"><a href="#">24</a>
+                  </li>
+                </ul>
+              </div></div>
+            </div></div></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</div>
+
     <div class="catalog catalog_inner"><div class="wrap"><div class="catalog__wrap">
       <p class="catalog__title"><a href="#">Котельные</a></p>
       <table>

@@ -109,6 +109,12 @@ hr {
 pre {
   overflow: auto;
 }
+.default {
+  font-size: 16px;
+  line-height: 28px;
+  color: #435155;
+  margin-bottom: 60px;
+}
 code,
 kbd,
 pre,
@@ -715,7 +721,7 @@ fieldset[disabled] .btn-link {
   top: 50%;
   margin-top: -19px;
 }
-.iconize-menu.active {
+.iconize-menu.active,.menu__item.active {
   color: #051013;
 }
 .iconize-menu_1:before {
@@ -2831,7 +2837,7 @@ a:hover .complectation__item-info {
 
 .production__text {
 	color: #fff;
-	font: italic 400 18px/26px 'Open Sans','Helvetica';
+	font: italic 400 18px/26px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	display: block;
 	margin-top: 80px;
 	z-index: 20;
@@ -2851,7 +2857,7 @@ a:hover .complectation__item-info {
 }
 
 .production__item-title {
-	font: 50px/50px 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+	font: 50px/50px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #fff;
 }
 
@@ -2864,7 +2870,7 @@ a:hover .complectation__item-info {
 	color: #fff;
 	font-size: 20px;
 	display: block;
-	font: 800 20px/20px 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+	font: 800 20px/20px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	width: 200px;
 	letter-spacing: 1px;
@@ -2927,13 +2933,13 @@ a:hover .complectation__item-info {
 	color: #fff;
 	font-weight: bold;
 	display: block;
-	font: 800 30px'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+	font: 800 30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height:40px;
 }
 
 .our-product__text{
 	color: #fff;
-	font: 16px'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+	font: 16px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	padding-top: 25px;
 	line-height: 27px;
 	letter-spacing: .01px;
@@ -2987,7 +2993,7 @@ a:hover .complectation__item-info {
 	font-weight: bold;
 	display: block;
 	padding: 15px 50px 0 125px;
-	font: 800 30px'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+	font: 800 30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height:40px;
 	width: 650px;
 }
@@ -3000,7 +3006,7 @@ a:hover .complectation__item-info {
 
 .employ__text {
 	color: #fff;
-	font: 16px'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+	font: 16px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	padding: 25px 130px 0 125px;
 	line-height: 27px;
 	letter-spacing: .01px;
@@ -3035,7 +3041,7 @@ a:hover .complectation__item-info {
 
 .area__title {
 	color: #051013;
-	font: 700 30px'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+	font: 700 30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 36px;
 	display: block;
 }
@@ -3108,7 +3114,7 @@ a:hover .complectation__item-info {
 	margin-top: 240px;
 	position: relative;
 	padding: 105px 0 0 25px;
-	font: italic 400 14px/26px 'Open Sans','Helvetica';
+	font: italic 400 14px/26px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	z-index: 99;
 	cursor: pointer;
 }
@@ -3209,7 +3215,7 @@ a:hover .complectation__item-info {
 	display: inline;
 	color: #0e8abd;
 	border-bottom: 2px dotted #0e8abd;
-	font: 600 20px 'PT Sans','Helvetica';
+	font: 600 20px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	cursor: pointer;
 	letter-spacing: .1px;
 }
@@ -3223,7 +3229,7 @@ a:hover .complectation__item-info {
 	display: none;
 	border: none;
 	color: #051013;
-	font: 600 20px 'PT Sans','Helvetica';
+	font: 600 20px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	padding-top: 20px;
 	width: 550px;
 }
@@ -3237,7 +3243,7 @@ a:hover .complectation__item-info {
 .facility__switch-item_state_active .facility__switch-link{
 	color: #051013;
 	border: none;
-	font: 800 30px 'Open Sans','Helvetica';
+	font: 800 30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .facility__switch-item_state_active .facility__switch-link:hover{
@@ -3277,13 +3283,13 @@ a:hover .complectation__item-info {
 .facility__pretext-cont{
 	display: block;
 	padding-top: 5px;
-	font: 600 14px 'Open Sans','Helvetica';
+	font: 600 14px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	width: 140px;
 	text-transform: uppercase;
 }
 
 .facility__pretext-cont_size_big{
-	font: 50px 'Open Sans','Helvetica';
+	font: 50px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	width: auto;
 	float: left;
 }
@@ -3301,7 +3307,7 @@ a:hover .complectation__item-info {
 
 .facility__text{
 	width: 55%;
-	font-family: "PT Sans";
+	font-family: 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 28px;
 	padding-left: 35px;
@@ -3316,7 +3322,7 @@ a:hover .complectation__item-info {
 }
 
 .facility__title{
-	font: bold 20px 'PT Sans','Helvetica';
+	font: bold 20px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	padding-left: 35px;
 	display: block;
 	margin-bottom: 10px;
@@ -3360,13 +3366,13 @@ a:hover .complectation__item-info {
 }
 
 .spec__title {
-  font: 800 50px 'Open Sans','Helvetica';
+  font: 800 50px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: block;
   color: #051013;
 }
 
 .spec__text {
-  font: italic 18px 'Open Sans','Helvetica';
+  font: italic 18px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #051013;
   padding-top: 30px;
   padding-right: 20px;
@@ -3406,7 +3412,7 @@ a:hover .complectation__item-info {
   color: #2a3639;
   display: block;
   width: 90%;
-  font: bold 20px 'PT Sans','Helvetica';
+  font: bold 20px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .spec__detail:before {
@@ -3441,7 +3447,7 @@ a:hover .complectation__item-info {
   color: #2a3639;
   padding-top: 10px;
   display: block;
-  font: 16px 'PT Sans','Helvetica';
+  font: 16px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .spec__select {
@@ -3513,7 +3519,7 @@ a:hover .complectation__item-info {
 
 .spec__select-item-title {
   display: inline-block;
-  font: 800 30px 'Open Sans','Helvetica';
+  font: 800 30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #ff6600;
   border-bottom: 2px solid #ff6600;
   line-height: 35px;
@@ -3588,7 +3594,7 @@ a:hover .complectation__item-info {
 
 .spec__select-item-text {
   display: block;
-  font: italic 14px 'PT Sans','Helvetica';
+  font: italic 14px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 26px;
 }
 
@@ -3623,7 +3629,7 @@ a:hover .complectation__item-info {
 
 .description__text {
   display: block;
-  font: 'PT Sans','Helvetica';
+  font: 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: .6px;
   line-height: 36px;
   color: #2a3639;
@@ -3648,30 +3654,16 @@ a:hover .complectation__item-info {
 }
 
 .decor_scheme:before {
-  background: url("/f/i/back2.png") no-repeat scroll left top rgba(0, 0, 0, 0);
-  height: 470px;
+  background: url(/f/i/back2.png) left top no-repeat;
+  height: 500px;
   left: 560px;
   top: -40px;
   width: 1292px;
 }
 
 .feature {
-  display: inline-block;
-  width: 100%;
-  padding-bottom: 20px;
-}
-
-.section_feature {
-  margin-top: -30px;
-}
-
-
-.feature__text{
-  font: 'PT Sans','Helvetica';
-  line-height: 35px;
-  font-weight: bold;
-  display: inline-block;
-  width: 200px;
+  display: table;
+  margin-bottom: 27px;
 }
 
 .feature__value {
@@ -3707,7 +3699,7 @@ a:hover .complectation__item-info {
 }
 
 .feature__point-title {
-  font: italic bold 16px 'PT Sans','Helvetica';
+  font: italic bold 16px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: inline-block;
 }
 
@@ -3742,20 +3734,65 @@ a:hover .complectation__item-info {
   margin-bottom: 20px;
 }
 
-.table {
-  width: auto;
+.data {
   margin: 40px 0 40px -41px;
-  border: 2px solid #f7f9f9;
 }
 
-.table-title {
+.data b,
+.data strong {
+  color: #2a3639;
+}
+
+@media all and (max-width: 1190px) {
+  .data {
+    padding-left: -33px;
+  }
+}
+
+.data table {
+  border: 2px solid #f7f9f9;
   width: 100%;
-  height: 50px;
+}
+
+.data th,
+.data td {
+  text-align: left;
+  vertical-align: top;
+  border-style: solid;
+  border-color: #f8f8f8;
+  border-width: 4px 2px;
+  padding:7px 18px 9px;
+}
+
+.data th {
+  color: #051013;
+}
+
+.data td {
+  padding-top: 12px;
+  padding-bottom: 11px;
+}
+
+.data table tr:last-child th,
+.data table tr:last-child td {
+  border-bottom: 0;
+}
+
+.data th {
   background: #f7f9f9;
 }
 
+.data .data-title {
+  font-size: 20px;
+  padding:23px 38px 25px;
+}
+
+.data p {
+  margin: 0;
+}
+
 .table-title-text {
-  font: bold 16px 'PT Sans','Helvetica';
+  font: bold 16px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 50px;
   padding-left: 20px;
 }
@@ -3768,10 +3805,6 @@ a:hover .complectation__item-info {
 .table-line {
   width: 100%;
   border-top: 4px solid #f7f9f9;
-}
-
-.table-line_first {
-  border: 0;
 }
 
 .table-cell {
@@ -3791,7 +3824,7 @@ a:hover .complectation__item-info {
 }
 
 .table-cell-title {
-  font: bold 16px 'PT Sans','Helvetica';
+  font: bold 16px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: block;
 }
 
@@ -3809,7 +3842,7 @@ a:hover .complectation__item-info {
 }
 
 .table-sep-text {
-  font: bold 20px 'PT Sans','Helvetica';
+  font: bold 20px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 80px;
   padding-left: 35px;
 }
@@ -3851,7 +3884,7 @@ a:hover .complectation__item-info {
 }
 
 .fixed-scroll__title {
-  font: bold 20px 'PT Sans','Helvetica';
+  font: bold 20px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: block;
   float: left;
   width: 200px;
@@ -3887,7 +3920,7 @@ a:hover .complectation__item-info {
 
 .fixed-scroll__in-stock {
   position: relative;
-  font: bold 18px 'PT Sans','Helvetica';
+  font: bold 18px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #ff6600;
   margin-left: 90px;
   margin-top: 35px;
@@ -3896,7 +3929,7 @@ a:hover .complectation__item-info {
 }
 
 .fixed-scroll__text {
-  font: bold 20px 'PT Sans','Helvetica';
+  font: bold 20px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #ff6600;
   margin-left: 50px;
   display: block;
@@ -3904,7 +3937,7 @@ a:hover .complectation__item-info {
 }
 
 .fixed-scroll__post-text {
-  font: italic 16px 'PT Sans','Helvetica';
+  font: italic 16px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #435155;
   margin-left: 50px;
   display: block;
@@ -3968,7 +4001,7 @@ a:hover .complectation__item-info {
 }
 
 .solutions-menu__title {
-  font: 800 20px 'Open Sans','Helvetica';
+  font: 800 20px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #0e8abd;
   text-transform: uppercase;
   display: block;
@@ -4003,7 +4036,7 @@ a:hover .complectation__item-info {
 }
 
 .solutions__point {
-  font: 16px 'PT Sans','Helvetica';
+  font: 16px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #435155;
   display: block;
   line-height: 26px;
@@ -4050,7 +4083,7 @@ a:hover .complectation__item-info {
 }
 
 .why__title {
-  font: 800 30px 'Open Sans','Helvetica';
+  font: 800 30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding-top: 30px;
   display: block;
   width: 400px;
@@ -4078,7 +4111,7 @@ a:hover .complectation__item-info {
 }
 
 .why__item-title {
-  font: bold 20px 'PT Sans','Helvetica';
+  font: bold 20px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: block;
   position: relative;
   margin-bottom: 10px;
@@ -4095,7 +4128,7 @@ a:hover .complectation__item-info {
 }
 
 .why__item-text {
-  font: 16px 'PT Sans','Helvetica';
+  font: 16px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #435155;
   letter-spacing: .4px;
 }
@@ -4107,7 +4140,7 @@ a:hover .complectation__item-info {
 
 .solution-spec__title {
   color: #051013;
-  font: 800 30px 'Open Sans','Helvetica';
+  font: 800 30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .solution-spec__all-spec {
@@ -4149,7 +4182,7 @@ a:hover .complectation__item-info {
 .solution-spec__item-title{
   display: block;
   color: #ff6600;
-  font: bold 20px 'PT Sans','Helvetica';
+  font: bold 20px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   position: relative;
   margin: 25px 0 15px 60px;
   letter-spacing: .6px;
@@ -4174,7 +4207,7 @@ a:hover .complectation__item-info {
 }
 
 .solution-spec__point {
-  font: italic 14px 'PT Sans','Helvetica';
+  font: italic 14px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: block;
   margin-left: 20px;
   line-height: 27px;
@@ -4225,36 +4258,47 @@ a:hover .complectation__item-info {
   left: -40px;
 }
 
+.story-wrap {
+  position: relative;
+  margin-bottom: 60px;
+  margin-top: -20px;
+}
+
 .story__item {
   padding-left: 100px;
   position: relative;
+  margin-bottom: -20px;
+  min-height: 270px;
 }
 
 .story__item-text-wrap {
-   padding: 50px 0 50px 230px;
+   padding: 67px 0 0 230px;
    width: 100%;
 }
 
 .story__item-title {
-  font: bold 20px 'PT Sans','Helvetica';
+  font-size: 20px;
+  font-weight: bold;
   color: #051013;
   display: block;
   width: 95%;  
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   padding-right: 20px;
+  padding-top: 14px;
 }
 
 .story__item-text  {
-  font: 16px 'PT Sans','Helvetica';
+  font-size: 16px;
+  line-height: 28px;
   color: #435155;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 }
 
 .story__year {
   position: absolute;
   left: -10px;
   bottom: 0;
-  top: -40px;
+  top: 0;
   width: 95px;
  
 }
@@ -4286,10 +4330,19 @@ a:hover .complectation__item-info {
   vertical-align: middle;
   height: auto;
   color: #f7f9f9;
-  font: 800 20px 'Open Sans','Helvetica';
+  font: 800 20px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-align: right;
-  padding-right: 21px;
+  padding-right: 24px;
   padding-bottom: 40px;
+  -webkit-transition: color 0.15s ease;
+  -moz-transition: color 0.15s ease;
+  -o-transition: color 0.15s ease;
+  transition: color 0.15s ease;
+}
+
+.story__year-measure {
+  width: 70px;
+  display: inline-block;
 }
 
 .story__year-line_unmasked  .story__year-item {
@@ -4304,16 +4357,15 @@ a:hover .complectation__item-info {
   vertical-align: top;
   height: 30px;
   color: #051013;
-  font: 800 30px 'Open Sans','Helvetica';
-  line-height: 30px;
+  font: 800 30px/36px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 0;
   margin-left: 0;
 }
 
 .story__item-image {
   left: 120px;
-  top: 40px;
+  top: 57px;
   position: absolute;
   display: block;
   width: 180px;
@@ -4327,7 +4379,7 @@ a:hover .complectation__item-info {
   right: -40px;
   position: absolute;
   display: block;
-  top: 39px;
+  top: 16px;
   background-position: -40px 0;
   z-index: 10;
 }
@@ -4344,7 +4396,7 @@ a:hover .complectation__item-info {
   right: -40px;
   position: absolute;
   display: block;
-  top: 39px;
+  top: 16px;
   background-position: 0 0;
   z-index: 10;
 }
@@ -4367,7 +4419,7 @@ a:hover .complectation__item-info {
   -o-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
   position: absolute;
-  top: 40px;
+  top: 57px;
   width: 180px;
   z-index: 10;
 }
@@ -4383,15 +4435,15 @@ a:hover .complectation__item-info {
 .story__fill {
   border-right: 5px solid #0e8abd;
   position: absolute;
-  top: 250px;
+  top: -15px;
   left: 80px;
   width: 5px;
   height: 0;
   z-index: 10;
-  -webkit-transition: height 0.3s ease;
-  -moz-transition: height 0.3s ease;
-   -o-transition: height 0.3s ease;
-  transition: height 0.3s ease;
+  -webkit-transition: height 0.15s ease;
+  -moz-transition: height 0.15s ease;
+   -o-transition: height 0.15s ease;
+  transition: height 0.15s ease;
 }
 
 .projects .content:before {
@@ -4404,20 +4456,24 @@ a:hover .complectation__item-info {
 }
 
 .projects__period-title {
-  font: bold 20px 'PT Sans','Helvetica';
+  font: bold 20px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #051013;
   padding-top: 5px;
   display: block;
-  letter-spacing: 1px;
+  letter-spacing: .05em;
+}
+
+.projects__radio-main {
+  margin-bottom: 14px;
 }
 
 .projects__radio-box{
-  padding: 16px 0 0 15px;
+  padding: 17px 0 0 15px;
 }
 
 .pseudo-radio {
   display: inline-block;
-  margin-right: 35px;
+  margin-right: 29px;
   cursor: pointer;
   position: relative;
 }
@@ -4431,11 +4487,11 @@ a:hover .complectation__item-info {
 .pseudo-radio__link:active,
 .pseudo-radio__link:focus {
   display: inline-block;
-  font: 18px 'PT Sans','Helvetica';
+  font: 18px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border-bottom: 1px dotted;
   color: #0e8abd;
   text-decoration: none;
-  padding: 5px 0  0;
+  padding: 3px 0  0;
 }
 
 .pseudo-radio_active .pseudo-radio__link{
@@ -4444,21 +4500,25 @@ a:hover .complectation__item-info {
   font-weight: bold;
   color: #000;
   outline: 3px solid #000;
-  padding: 5px 12px;
-  margin-left: -12px;
-  margin-right: -12px;
+  padding: 3px 9px;
+  margin-left: -9px;
+  margin-right: -9px;
 }
 
 .pseudo-radio_active:hover   .pseudo-radio__link{
   border: 0;
 }
 
+.projects__filter {
+  margin-bottom: 27px;
+}
+
 .projects__type-title {
-  font: bold 20px 'PT Sans','Helvetica';
+  font: bold 20px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #051013;
   padding-top: 25px;
   display: block;
-  letter-spacing: 1px;
+  letter-spacing: .05em;
 }
 
 .pseudo-radio_arrowed {
@@ -4482,30 +4542,36 @@ a:hover .complectation__item-info {
 }
 
 .projects__result {
-  margin-top: 30px;
   background: #fff;
-  min-height: 300px;
+  padding:0 0 33px 0;
+  margin-left: 41px;
 }
 
 .projects__result-title {
   color: #051013;
   display: block;
   width: 400px;
-  font: 800 30px 'Open Sans','Helvetica';
-  line-height: 30px;
-  padding-top: 20px;
+  font: 800 30px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 35px;
+  padding-top: 29px;
   float: left;
 }
 
 .projects__close-map {
   display: inline-block;
   float: right;
-  margin-top: 20px;
-  width: 110px;
+  margin-top: 38px;
+  width: 118px;
   position: relative;
+  line-height: 26px;
 }
 
-.projects__close-map:after {
+.projects__close-map-link {
+  font: italic 16px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 26px;
+}
+
+.projects__close-map-link:before {
   content: '';
   position: absolute;
   background: url(/f/i/map-icon.png);
@@ -4514,18 +4580,10 @@ a:hover .complectation__item-info {
   top: 10px;
   left: -70px;
 }
-.projects__close-map .arr:after {
-  margin-top: 6px;
-}
-
-.projects__close-map-link {
-  font: italic 16px 'PT Sans','Helvetica';
-  line-height: 16px;
-}
 
 .projects__result-map-wrap {
   height: 595px;
-  margin: 120px 0 40px;
+  margin: 0 0 36px;
 }
 
 .projects__result-map{
@@ -4546,7 +4604,6 @@ a:hover .complectation__item-info {
   -o-transition: background 0.4s ease;
   transition: background 0.4s ease;  
   float: left;
-  padding-bottom: 20px;
   position: relative;
 }
 
@@ -4579,12 +4636,8 @@ a:hover .complectation__item-info {
 
 .projects__result-object-link {
   display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
+  text-decoration: none;
+  padding-bottom: 15px;
 }
 
 .projects__result-object-image-wrap {
@@ -4594,6 +4647,7 @@ a:hover .complectation__item-info {
 }
 
 .projects__result-object-mask {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -4634,6 +4688,7 @@ a:hover .complectation__item-info {
 }
 
 .projects__result-object-wrap {
+  display: block;
   padding: 15px 20px;
 }
 
@@ -4641,21 +4696,24 @@ a:hover .complectation__item-info {
   display: block;
 }
 
+.projects__result-object-description {
+  margin-bottom: 10px;
+}
+
 .projects__result-object-text {
-  font: 14px 'PT Sans','Helvetica';
+  font: 14px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #435155;
   -webkit-transition: color 0.4s ease;
   -moz-transition: color 0.4s ease;
   -o-transition: color 0.4s ease;
   transition: color 0.4s ease;
-  letter-spacing: .2px;
   line-height: 22px;
 }
 
 .projects__result-object-text_italic {
-  font: italic 14px 'PT Sans','Helvetica';
+  font: italic 14px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #90989a;
-  line-height: 30px;
+  line-height: 28px;
   -webkit-transition: color 0.4s ease;
   -moz-transition: color 0.4s ease;
   -o-transition: color 0.4s ease;
@@ -4663,36 +4721,47 @@ a:hover .complectation__item-info {
 }
 
 .projects__result-object-title{
-  font: bold 20px 'PT Sans','Helvetica';
-  letter-spacing: .4px;
-  padding: 10px 0;
+  font: bold 20px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 7px 0 11px;
   line-height: 30px;
+  letter-spacing: .025em;
   -webkit-transition: color 0.4s ease;
   -moz-transition: color 0.4s ease;
   -o-transition: color 0.4s ease;
   transition: color 0.4s ease;
 }
 
+.projects__result-filter {
+  display: table;
+  margin-bottom: -7px;
+}
+
+.projects__result-filter-item {
+  display: table-row;
+}
+
 .projects__result-filter-feature {
-  font: italic 16px 'PT Sans','Helvetica';
+  font: italic 16px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #051013; 
-  letter-spacing: .8px;
+  letter-spacing: .05em;
 }
 
 .projects__result-filter-feature-wrap {
-  display: inline-block;
+  display: table-cell;
+  padding-bottom: 10px;
+  padding-top: 9px;
 }
 
 
 .projects__result-filter-feature {
   display: block;
-  line-height: 38px;
 }
 
 .projects__result-filter-radio-wrap {
   padding-left: 20px;
-  display: inline-block;
-  line-height: 38px;
+  padding-bottom: 10px;
+  padding-top: 9px;
+  display: table-cell;
 }
 
 .pseudo-radio_unbordered {
@@ -4701,6 +4770,8 @@ a:hover .complectation__item-info {
 
 .pseudo-radio_unbordered .pseudo-radio__link{
   font-size: 16px;
+  padding: 0!important;
+  margin: 0!important;
 }
 
 .pseudo-radio_active.pseudo-radio_unbordered  .pseudo-radio__link{
@@ -4708,15 +4779,14 @@ a:hover .complectation__item-info {
 }
 
 .projects__items {
-  padding-top: 30px;
+  padding-top: 0;
 }
 
 .projects__result-paginator{
     width: 100%;
 	height: 40px;
-
-	padding-bottom: 80px;
 	overflow: hidden;
+  margin-bottom: 5px;
 }
 
 .projects__result-paginator ul{
@@ -4740,13 +4810,14 @@ a:hover .complectation__item-info {
 	width: 40px;
 	height: 40px;
 	color: #0e8abd;
-    font: bold 16px 'PT Sans','Helvetica';
+    font: bold 16px 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	text-align: center;
 	line-height: 40px;
 	background: #f7f9f9;
 }
 
-.projects__result-paginator-item  a:hover{	
+.projects__result-paginator-item  a:hover,
+.projects__result-paginator-item  a.active {	
   background: #0e8abd; 
   color: white;
   text-decoration: none;
@@ -4762,9 +4833,8 @@ a:hover .complectation__item-info {
 }
 
 .project .description {
-  padding-top: 0;
-  width: 100%;
-  padding-bottom: 30px;
+  padding: 0;
+  display: block;
 }
 
 .project .gallery__item_order {
@@ -4773,84 +4843,92 @@ a:hover .complectation__item-info {
   position: relative;
 }
 
-.project .gallery__item_order:after {
-  content: "\2192";
-  color: #fff;
-  margin-left: 3px;
-  position: absolute;
-  display: block;
-  right: 22px;
-  bottom: 35px;
-}
-
 .project .icon-map {
   background-position: -61px -60px;
   height: 40px;
-  margin-top: 20px;
+  margin-top: 16px;
   margin-bottom: 10px;
   margin-left: 15px;
   width: 65px;
 }
 
+.projects__load-content {
+  opacity: 1;
+  -webkit-transition: opacity .4s linear;
+  -moz-transition: opacity .4s linear;
+  -ms-transition: opacity .4s linear;
+  -o-transition: opacity .4s linear;
+  transition: opacity .4s linear;
+}
+
+.loading .projects__load-content {
+  opacity: .4;
+}
+
+.description {
+  margin-bottom: 30px;
+}
+
 .description__wrap {
-  padding-bottom: 40px;
+  padding: 7px 0 0 0;
   width: 100%;
-  float: left;
+  overflow: hidden;
 }
 
 .description__left { 
   float: left;
-  width: 49%;
+  width: 48%;
 }
 
 .description__right {
   float: right;
-  width: 49%;
-  padding-left: 2%;
+  width: 48%;
+}
+
+.description__item {
+  display: table;
+}
+
+.description__item-line {
+  display: table-row;
 }
 
 .description__item-text {
   color: #2a3639;
-  font: 18px 'PT Sans','Helvetica';
-  display: block;
-  line-height: 38px;
-  letter-spacing: .4px;
-  display: table;
+  font-size: 18px;
+  display: table-cell;
+  padding-bottom: 12px;
 }
 
 .description__item-text_title {
   font-size: 20px;
   font-weight: bold;
-  width: 160px;
-  display: inline-block;
-  float: left;
+  white-space: nowrap;
+  padding-right: 21px;
 }
 
 .feature__item {
-  width: 100%;
-  position: relative;
+  display: table-row;
 }
 
 .feature__text {
   color: #2a3639;
-  font: 16px 'PT Sans','Helvetica';
-  display: block;
-  line-height: 34px;
-  letter-spacing: .4px;
-  display: table;
-  width: 70%;
+  font-size: 16px;
+  display: table-cell;
+  padding-bottom: 7px;
 }
 
 .feature__text_title {
-  font-size: 16px;
   font-weight: bold;
-  width: 30%;
-  display: inline-block;
-  float: left;
+  padding-right: 30px;
 }
 
 .content_big:before{
   background: url(/f/i/spec-back.png) no-repeat;
   height: 780px;
   width: 100%;
+}
+
+.inv {
+  display: none;
 }
