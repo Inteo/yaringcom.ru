@@ -539,7 +539,7 @@ $(document).ready(function() {
           })), d.length && $("HTML, BODY").animate({
             scrollTop: d.offset().top - e - f
           }, function() {
-            window.location.hash = c
+            //window.location.hash = c
           })
         })
       })
