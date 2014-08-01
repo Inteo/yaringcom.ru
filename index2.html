@@ -59,31 +59,16 @@
 	 
 	function facility_see_photo(){
 		if($(".facility__see-photo").hasClass("facility__see-photo_state_active")){
-			$(".facility__image").animate({
-				width: "33%"
+			$(".facility__wrap").animate({
+				marginLeft: "30%"
 			}, 500);
-			
-			setTimeout(function () {
-				$(".facility__icon").show();
-				$(".facility__image").css("z-index", "-1");
-			}, 500); 
 			$(".facility__see-photo").removeClass("facility__see-photo_state_active");
 		}
 		else {
-			if($(window).width() > 1280){
-				$(".facility__image").animate({
-				width: "82%"
+			$(".facility__wrap").animate({
+				marginLeft: "100%"
 			}, 500);
-			}
-			else{
-				$(".facility__image").animate({
-				width: "100%"
-				}, 500);
-			}
-		
-		
-			$(".facility__icon").hide();
-			$(".facility__image").css("z-index", "99");
+
 			$(".facility__see-photo").addClass("facility__see-photo_state_active");
 		}
 		
@@ -218,20 +203,21 @@
 			  <span class = "production__icon"></span>
 			  <div class="path path_color_white"><a href="/">Главная</a> → <a href="#">Продукция</a> → <a href="#">Котельные</a> → Передвижная котельная</div>
 			  <span class = "production__title cut">Производство</span>
-			  <p class = "production__text bigcut">ЗАО «Яринжком» – один из крупнейших российских производителей на рынке котельных и теплоэнергетического оборудования. Более 20 лет компания успешно развивается в малой энергетике, наращивая темпы производства, постоянно повышая качество выпускаемой продукции, квалификацию персонала и уровень сервиса для клиента.  </p>
-			  <div class = "production__item production__item_first bigcut">
+			  <div class="bigcut">
+			  <p class = "production__text">ЗАО «Яринжком» – один из крупнейших российских производителей на рынке котельных и теплоэнергетического оборудования. Более 20 лет компания успешно развивается в малой энергетике, наращивая темпы производства, постоянно повышая качество выпускаемой продукции, квалификацию персонала и уровень сервиса для клиента.  </p>
+			  <div class = "production__item production__item_first">
 				<span class = "production__item-title">9000<span class = "production__item-title_small">м<sup>2</sup></span></span>
-				<span class = "production__item-text">производственных Площадей</span>
+				<span class = "production__item-text">производственных площадей</span>
 			  </div>
 			  <div class = "production__item">
 				<span class = "production__item-title">350</span>
-				<span class = "production__item-text">сорудников</span>
+				<span class = "production__item-text">сотрудников</span>
 			  </div>
 			  <div class = "production__item">
 				<span class = "production__item-title">>20</span>
 				<span class = "production__item-text">лет успешной работы</span>
 			  </div>
-			</div>
+			</div></div>
 		</div>
 	</div>
 	
@@ -256,114 +242,125 @@
 	  <div class = "area__wrap">
 	    <div class = "area__content">
 		  <span class = "area__title area__title_big">9000<span class = "area__title area__title_small">м<sup>2</sup></span></span> 
-		  <span class = "area__title">собственных производственных площадей на <a href = "#" class = "area__link">3 предприятиях</a></span>
+		  <span class = "area__title">собственных производственных площадей на <a href = "#" class = "area__link js-scroll-to" data-scrollto="photos">3 предприятиях</a></span>
 		</div>
 	  </div>
 	</div>
 	
-	<div class = "facility">
-		<div class = "facility__image">
-			<span class = "facility__see-photo" onclick = "facility_see_photo();"><span class = "facility__see-photo-link">Посмотреть фото предприятия</span></span>
-			<span class = "facility__icon"></span>
-		</div>
-		<div class = "wrap">
+	<div class = "facility js-scroll-target" data-scrollto="photos">
+	  <div class = "facility__image">
+		
+		<div class = "facility__wrap"><span class = "facility__see-photo" onclick = "facility_see_photo();"><span class = "facility__see-photo-link">Посмотреть фото предприятия</span></span><div class = "facility__holder">
 			<div class = "facility__switch">
 				<div class = "facility__switch-item facility__switch-item_1  facility__switch-item_state_active" onclick = "facility_switch(1);">
 					<span class = "facility__switch-link">Производственное предприятие № 1</span>
-					<span class = "facility__switch-address">г.Ярославль, пр-т Домостроителей, 1</span>
-				</div>
-				<div class = "facility__switch-item facility__switch-item_2" onclick = "facility_switch(2);">
+					<span class = "facility__switch-address">Ярославль, пр-т Домостроителей, 1</span>
+				</div><div class = "facility__switch-item facility__switch-item_2" onclick = "facility_switch(2);">
 					<span class = "facility__switch-link">Производственное предприятие № 2</span>
-					<span class = "facility__switch-address">г.Ярославль, Полушкина Роща, 9</span>
-				</div>
-				<div class = "facility__switch-item facility__switch-item_3" onclick = "facility_switch(3);">
+					<span class = "facility__switch-address">Ярославль, Полушкина Роща, 9</span>
+				</div><div class = "facility__switch-item facility__switch-item_3" onclick = "facility_switch(3);">
 					<span class = "facility__switch-link">Производственное предприятие № 3</span>
-					<span class = "facility__switch-address">г.Ярославль, Вторая Яковлевская, 3</span>
+					<span class = "facility__switch-address">Ярославль, Вторая Яковлевская, 3</span>
 				</div>
 			</div>
 			
-			<div class = "facility__switch-container facility__switch-container_1">
-				<div class = "facility__switch-container-item">
-					<span class = "facility__pretext facility__pretext"> <img src="/f/i/facility-pict1.png" alt=""></span>
+			<div class = "facility__switch-container facility__switch-container_state_active facility__switch-container_1 clear">
+				<div class = "facility__switch-container-item ">
+					<span class = "facility__pretext"> <img src="/f/i/facility-pict1.png" alt=""></span>
 					<p class = "facility__text facility__text_font_italic">Основная и самая крупная производственная площадка компании. Здесь изготавливается весь объём котельных установок и стальных резервуаров, которые в заводских условиях проходят комплекс необходимых испытаний и приёмо-сдаточных операций ОТК.</p>
 				</div>
-	
+	            <div class="facility__extra">
 				<div class = "facility__switch-container-item">
-					<div class = "facility__pretext">
-						<span class = "facility__pretext-cont facility__pretext-cont_size_big">7100</span>
-						<span class = "facility__pretext-cont facility__pretext-cont_size_small">м<sup>2</sup></span>
-						<span class = "facility__pretext-cont">производственной Площади</span>
+					<div class = "facility__pretext facility__pretext_type_letters">
+						<span class = "facility__pretext-cont_size_big">7100</span>&nbsp;<span class = "facility__pretext-cont_size_small">м&sup2;</span>
+						<span class = "facility__pretext-cont">производственной площади</span>
 					</div>
-					<span class = "facility__title">Оборудование</span>
-					<p class = "facility__text">Площадка оснащена современным оборудованием: металлообрабатывающие и трубогибочные станки, вальцы, оборудование для резки и заготовки металла, сварочные и слесарные посты, окрасочная, грузоподъемное оборудование и механизмы, а также стенды для проведения испытаний готовых изделий и настройки отдельных элементов комплектующего оборудования.</p>
+					<div class="facility__text">
+					  <p class="facility__title">Оборудование</p>
+					  <p>Площадка оснащена современным оборудованием: металлообрабатывающие и трубогибочные станки, вальцы, оборудование для резки и заготовки металла, сварочные и слесарные посты, окрасочная, грузоподъемное оборудование и механизмы, а также стенды для проведения испытаний готовых изделий и настройки отдельных элементов комплектующего оборудования.</p>
+					</div>
 				</div>
 				
 				<div class = "facility__switch-container-item">
-					<div class = "facility__pretext">
+					<div class = "facility__pretext facility__pretext_type_letters">
 						<span class = "facility__pretext-cont facility__pretext-cont_size_big">158</span>
 						<span class = "facility__pretext-cont">сотрудников</span>
 					</div>
-					<span class = "facility__title">Рабочий персонал</span>
-					<p class = "facility__text">На предприятии работают бригады сварщиков, монтажников, сборщиков металлоконструкций, электриков, специалисты по сборке оборудования КИПиА, специалисты по водоподготовительному оборудованию, окрасочным и изоляционным работам, мастера производства работ, сотрудники службы входного контроля и специалисты отдела ОТК</p>
-					<p class = "facility__text facility__text_iconized">В цехах установлены камеры наблюдения для оперативного контроля выполнения производственных задач.</p>
+					<div class="facility__text">
+					  <p class="facility__title">Рабочий персонал</p>
+					  <p>На предприятии работают бригады сварщиков, монтажников, сборщиков металлоконструкций, электриков, специалисты по сборке оборудования КИПиА, специалисты по водоподготовительному оборудованию, окрасочным и изоляционным работам, мастера производства работ, сотрудники службы входного контроля и специалисты отдела ОТК</p>
+					  <p class="facility__text-extra"><span class="iconize-camera">В цехах установлены камеры наблюдения для оперативного контроля выполнения производственных задач.</span></p>
+					</div>
+				</div>
 				</div>
 			</div>
 			
-			<div class = "facility__switch-container facility__switch-container_2">
+			<div class = "facility__switch-container facility__switch-container_2 clear">
 				<div class = "facility__switch-container-item">
 					<span class = "facility__pretext facility__pretext"> <img src="/f/i/facility-pict1.png" alt=""></span>
 					<p class = "facility__text facility__text_font_italic">Основная и самая крупная производственная площадка компании. Здесь изготавливается весь объём котельных установок и стальных резервуаров, которые в заводских условиях проходят комплекс необходимых испытаний и приёмо-сдаточных операций ОТК.</p>
 				</div>
+				<div class="facility__extra">
 				<div class = "facility__switch-container-item">
-					<div class = "facility__pretext">
-						<span class = "facility__pretext-cont facility__pretext-cont_size_big">8200</span>
-						<span class = "facility__pretext-cont facility__pretext-cont_size_small">м<sup>2</sup></span>
-						<span class = "facility__pretext-cont">производственной Площади</span>
+					<div class = "facility__pretext facility__pretext_type_letters">
+						<span class = "facility__pretext-cont_size_big">8200</span>&nbsp;<span class = "facility__pretext-cont_size_small">м&sup2;</span>
+						<span class = "facility__pretext-cont">производственной площади</span>
 					</div>
-					<span class = "facility__title">Оборудование</span>
-					<p class = "facility__text">Площадка оснащена современным оборудованием: металлообрабатывающие и трубогибочные станки, вальцы, оборудование для резки и заготовки металла, сварочные и слесарные посты, окрасочная, грузоподъемное оборудование и механизмы, а также стенды для проведения испытаний готовых изделий и настройки отдельных элементов комплектующего оборудования.</p>
+					<div class="facility__text">
+					  <p class="facility__title">Оборудование</p>
+					  <p>Площадка оснащена современным оборудованием: металлообрабатывающие и трубогибочные станки, вальцы, оборудование для резки и заготовки металла, сварочные и слесарные посты, окрасочная, грузоподъемное оборудование и механизмы, а также стенды для проведения испытаний готовых изделий и настройки отдельных элементов комплектующего оборудования.</p>
+					</div>
 				</div>
 				
 				<div class = "facility__switch-container-item">
-					<div class = "facility__pretext">
+					<div class = "facility__pretext facility__pretext_type_letters">
 						<span class = "facility__pretext-cont facility__pretext-cont_size_big">238</span>
 						<span class = "facility__pretext-cont">сотрудников</span>
 					</div>
-					<span class = "facility__title">Рабочий персонал</span>
-					<p class = "facility__text">На предприятии работают бригады сварщиков, монтажников, сборщиков металлоконструкций, электриков, специалисты по сборке оборудования КИПиА, специалисты по водоподготовительному оборудованию, окрасочным и изоляционным работам, мастера производства работ, сотрудники службы входного контроля и специалисты отдела ОТК</p>
-					<p class = "facility__text facility__text_iconized">В цехах установлены камеры наблюдения для оперативного контроля выполнения производственных задач.</p>
+					<div class="facility__text">
+					  <p class="facility__title">Рабочий персонал</p>
+					  <p>На предприятии работают бригады сварщиков, монтажников, сборщиков металлоконструкций, электриков, специалисты по сборке оборудования КИПиА, специалисты по водоподготовительному оборудованию, окрасочным и изоляционным работам, мастера производства работ, сотрудники службы входного контроля и специалисты отдела ОТК</p>
+					  <p class="facility__text-extra"><span class="iconize-camera">В цехах установлены камеры наблюдения для оперативного контроля выполнения производственных задач.</span></p>
+					</div>
+				</div>
 				</div>
 			</div>
 			
-			<div class = "facility__switch-container facility__switch-container_3">
+			<div class = "facility__switch-container facility__switch-container_3 clear">
 				<div class = "facility__switch-container-item">
 					<span class = "facility__pretext facility__pretext"> <img src="/f/i/facility-pict1.png" alt=""></span>
 					<p class = "facility__text facility__text_font_italic">Основная и самая крупная производственная площадка компании. Здесь изготавливается весь объём котельных установок и стальных резервуаров, которые в заводских условиях проходят комплекс необходимых испытаний и приёмо-сдаточных операций ОТК.</p>
 				</div>
+				<div class="facility__extra">
 				<div class = "facility__switch-container-item">
-					<div class = "facility__pretext">
-						<span class = "facility__pretext-cont facility__pretext-cont_size_big">6700</span>
-						<span class = "facility__pretext-cont facility__pretext-cont_size_small">м<sup>2</sup></span>
-						<span class = "facility__pretext-cont">производственной Площади</span>
+					<div class = "facility__pretext facility__pretext_type_letters">
+						<span class = "facility__pretext-cont_size_big">6700</span>&nbsp;<span class = "facility__pretext-cont_size_small">м&sup2;</span>
+						<span class = "facility__pretext-cont">производственной площади</span>
 					</div>
-					<span class = "facility__title">Оборудование</span>
-					<p class = "facility__text">Площадка оснащена современным оборудованием: металлообрабатывающие и трубогибочные станки, вальцы, оборудование для резки и заготовки металла, сварочные и слесарные посты, окрасочная, грузоподъемное оборудование и механизмы, а также стенды для проведения испытаний готовых изделий и настройки отдельных элементов комплектующего оборудования.</p>
+					<div class="facility__text">
+					  <p class="facility__title">Оборудование</p>
+					  <p>Площадка оснащена современным оборудованием: металлообрабатывающие и трубогибочные станки, вальцы, оборудование для резки и заготовки металла, сварочные и слесарные посты, окрасочная, грузоподъемное оборудование и механизмы, а также стенды для проведения испытаний готовых изделий и настройки отдельных элементов комплектующего оборудования.</p>
+					</div>
 				</div>
 				
 				<div class = "facility__switch-container-item">
-					<div class = "facility__pretext">
+					<div class = "facility__pretext facility__pretext_type_letters">
 						<span class = "facility__pretext-cont facility__pretext-cont_size_big">288</span>
 						<span class = "facility__pretext-cont">сотрудников</span>
 					</div>
-					<span class = "facility__title">Рабочий персонал</span>
-					<p class = "facility__text">На предприятии работают бригады сварщиков, монтажников, сборщиков металлоконструкций, электриков, специалисты по сборке оборудования КИПиА, специалисты по водоподготовительному оборудованию, окрасочным и изоляционным работам, мастера производства работ, сотрудники службы входного контроля и специалисты отдела ОТК</p>
-					<p class = "facility__text facility__text_iconized">В цехах установлены камеры наблюдения для оперативного контроля выполнения производственных задач.</p>
+					<div class="facility__text">
+					  <p class="facility__title">Рабочий персонал</p>
+					  <p>На предприятии работают бригады сварщиков, монтажников, сборщиков металлоконструкций, электриков, специалисты по сборке оборудования КИПиА, специалисты по водоподготовительному оборудованию, окрасочным и изоляционным работам, мастера производства работ, сотрудники службы входного контроля и специалисты отдела ОТК</p>
+					  <p class="facility__text-extra"><span class="iconize-camera">В цехах установлены камеры наблюдения для оперативного контроля выполнения производственных задач.</span></p>
+					</div>
+				</div>
 				</div>
 			</div>
-		</div>
+		</div></div>
+	  </div>
 	</div>
 	
-    <div class="catalog"><div class="wrap"><div class="catalog__wrap">
+    <div class="catalog catalog_inner"><div class="wrap"><div class="catalog__wrap">
       <p class="catalog__title"><a href="#">Котельные</a></p>
       <table>
         <tr>
