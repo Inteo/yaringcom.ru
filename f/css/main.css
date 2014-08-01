@@ -3714,6 +3714,7 @@ a:hover .complectation__item-info {
 .feature th,
 .feature td {
   padding-bottom: 7px;
+  vertical-align: top;
 }
 
 .feature__value {
