@@ -3720,6 +3720,11 @@ a:hover .complectation__item-info {
   text-align: left;
   padding-right: 30px;
 }
+
+.feature p {
+  margin: 0;
+  text-align: left!important;
+}
   
 .feature th,
 .feature td {
@@ -3850,6 +3855,7 @@ a:hover .complectation__item-info {
 
 .data p {
   margin: 0;
+  text-align: left!important;
 }
 
 .table-title-text {
