@@ -2183,6 +2183,9 @@ a:hover .brands__smtitle {
   padding: 27px 17px 36px 26px;
   width: 217px;
 }
+.menu__extra-item-holder_double {
+  padding-top: 49px;
+}
 @media all and (max-width: 1190px) {
   .menu__extra-item_secondary .menu__extra-item-holder {
     font-size: 12px;
