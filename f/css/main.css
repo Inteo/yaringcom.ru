@@ -2052,7 +2052,9 @@ a:hover .brands__smtitle {
   background: #fff;
   color: #435155;
 }
-.section p {
+.section p,
+.section ul,
+.section ol {
   margin-bottom: 28px;
 }
 .gallery {
@@ -3802,6 +3804,7 @@ a:hover .complectation__item-info {
 
 .data {
   margin: 40px 0 40px -41px;
+  background: #fff;
 }
 
 .data b,
@@ -3812,6 +3815,8 @@ a:hover .complectation__item-info {
 @media all and (max-width: 1190px) {
   .data {
     padding-left: -33px;
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 
@@ -4996,6 +5001,7 @@ a:hover .complectation__item-info {
   width: 100%;
 }
 
-.inv {
+.inv,
+.b-extra-forms {
   display: none;
 }

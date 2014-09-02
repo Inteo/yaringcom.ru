@@ -367,6 +367,16 @@ $(document).ready(function() {
 
   $('input, textarea').placeholder();
 
+  $(".modal-inline").fancybox({
+    fitToView : true,
+    autoSize  : true,
+    helpers: {
+      overlay: {
+        fixed: false
+      }
+    }
+  });
+
   $(".header__button").click(function() {
     if ($(this).hasClass('active')) {
       $(this).removeClass('active');
