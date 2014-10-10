@@ -1,0 +1,758 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="ie"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Яринжком</title>
+  <meta name="viewport" content="width=1010">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="/f/css/jquery.mCustomScrollbar.css"><link rel="stylesheet" href="/f/css/main.css">
+  <!--[if lte IE 9]><link rel="stylesheet" href="/f/css/ie.css"><![endif]-->
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Open+Sans:400,400italic,800,600&subset=latin,cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="/f/fancybox/jquery.fancybox.css?v=2.1.5" media="screen">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <script src="/f/js/modernizr.min.js"></script>
+  <script src="/f/js/jquery-1.10.2.min.js"></script>
+
+  <script src="/f/js/kenburn.min.js"></script>
+  <script src="/f/js/jquery.smooth.js"></script>
+  <script src="/f/js/jquery.mousewheel.min.js"></script>
+  <script src="/f/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="/f/js/jquery.mCustomScrollbar.js"></script>
+  <script src="/f/js/plugins.min.js"></script>
+  <script src="/f/js/common.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+  <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><script src="/f/js/sandpaper.js"></script><![endif]-->
+</head>
+
+<body>
+  <div class="container">
+    <div class="contacts"><!--noindex-->
+    <div class="wrap">
+      <div class="contacts__wrap">
+        <div class="contacts__feedback">
+          <div class="contacts__feedback-wrap">
+            
+            <a class="contacts__callback" href="#"><span class="valign"></span><b>Закажите обратный звонок</b></a>
+            <div class="contacts__feedback-or">или</div>
+            <div class="contacts__feedback-letter"><a href="#" class="pseudo">напишите нам</a></div>
+          </div>
+
+        </div>
+        <div class="clear">
+          <div class="contacts__main">
+            <p class="contacts__title">Головной офис <span class="contacts__subtitle">Ярославль</span></p>
+            <div class="contacts__item">
+              <p class="contacts__item-title">Коммерческий отдел:</p>
+              <p class="contacts__item-phone"><span class="contacts__item-phonecode">(4852)</span> 40-85-33, 40-85-31</p>
+            </div>
+            <div class="contacts__item">
+              <p class="contacts__item-title">Отдел закупки:</p>
+              <p class="contacts__item-phone"><span class="contacts__item-phonecode">(4852)</span> 40-85-68</p>
+            </div>
+            <div class="contacts__item">
+              <p class="contacts__item-title">Проектная группа:</p>
+              <p class="contacts__item-phone"><span class="contacts__item-phonecode">(4852)</span> 79-18-00</p>
+            </div>
+            <div class="contacts__email"><b>E-mail:</b> <a href="mailto:info@yaringcom.ru">info@yaringcom.ru</a></div>
+          </div>
+          <div class="contacts__branch">
+            <p class="contacts__title">Представительства</p>
+            <table>
+            <tr><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Москва</p>
+              <p class="contacts__branch-phone">(495) 602-00-63</p>
+              <p class="contacts__branch-email"><a href="mailto:moscow@yaringcom.ru">moscow@yaringcom.ru</a></p>
+            </div></td><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Екатеринбург</p>
+              <p class="contacts__branch-phone">(343) 237-03-73</p>
+              <p class="contacts__branch-email"><a href="mailto:ural@yaringcom.ru">ural@yaringcom.ru</a></p>
+            </div></td><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Нижний Новгород</p>
+              <p class="contacts__branch-phone">(831) 233-02-35</p>
+              <p class="contacts__branch-email"><a href="mailto:nnov@yaringcom.ru">nnov@yaringcom.ru</a></p>
+            </div></td></tr><tr><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Краснодар</p>
+              <p class="contacts__branch-phone">(861) 944-13-10</p>
+              <p class="contacts__branch-email"><a href="mailto:kras1@yaringcom.ru">kras1@yaringcom.ru</a></p>
+            </div></td><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Алматы</p>
+              <p class="contacts__branch-phone">(727) 390-85-83<br>(727) 233-03-25</p>
+              <p class="contacts__branch-email"><a href="mailto:kz@yaringcom.ru">kz@yaringcom.ru</a></p>
+            </div></td><td>
+            <div class="contacts__branch-item">
+              <p class="contacts__branch-title">Казань</p>
+              <p class="contacts__branch-phone">(843) 216-56-93</p>
+              <p class="contacts__branch-email"><a href="mailto:kazan@yaringcom.ru">kazan@yaringcom.ru</a></p>
+            </div></td></tr></table>
+          </div>
+        </div>
+      </div></div><!--/noindex-->
+    </div>
+
+    <div class="header"><div class="wrap"><div class="header__wrap">
+      <div class="header__logo">
+        <a href="/" class="header__logo-link">
+          <img src="/f/i/logo.png" alt="Яринжком">
+          <ins>
+            <span>Производство</span>модульных котельных</ins>
+        </a>
+      </div>
+      <div class="header__contacts">
+        <span class="header__phone">
+          <span class="header__phone-text">Звонок бесплатный</span>
+          <span class="header__phone-num">8 800 540-32-76</span>
+        </span>
+        <a href="#" class="header__button"><span class="valign"></span><span class="header__button-link">Как с нами связаться?</span><span class="header__button-link header__button-link_close">Закрыть <span>&times;</span></span></a>
+      </div>
+      <div class="header__menu">
+        <span><a href="#">Продукция</a>
+        </span>
+        <span><a href="#">Услуги</a>
+        </span>
+        <span><a href="#">Проекты</a>
+        </span>
+        <span><a href="#">Решения</a>
+        </span>
+        <span><a href="#">О компании</a>
+        </span>
+        <span><a href="#">Производство</a>
+        </span>
+        <span><a href="#">Контакты</a>
+        </span>
+        <span class="justify"></span>
+      </div>
+    </div></div></div>
+
+    <div class="inner">
+      <div class="wrap">
+        <div class="inner__wrap clear">		
+          <div class="inner__menu">
+            <ul class="menu">
+              <li><a href="#" class="menu__item iconize-menu iconize-menu_1">Котельные</a></li>
+              <li><a href="#" class="menu__item iconize-menu iconize-menu_2">Дымовые трубы</a></li>
+              <li><a href="#" class="menu__item iconize-menu iconize-menu_3">Стальные резервуары</a></li>
+              <li><a href="#" class="menu__item iconize-menu iconize-menu_4">Промышленные дымоходы</a></li>
+              <li><a href="#" class="menu__item iconize-menu iconize-menu_5">Тепловые пункты</a></li>
+            </ul>
+          </div>
+          <div class="inner__content">
+            <div class="inner__content-wrap">
+              <div class="path"><a href="/">Главная</a> → <a href="#">Продукция</a> → <a href="#">Котельные</a> → Передвижная котельная</div>
+              <div class="content content_big">
+                <div class="decor decor_scheme">
+                 <div class="rel">
+				 <div class="project">
+                  <div class="cut cut_fixed">
+                    <h1 class="short">Готовое решение блочно-модульной газовой котельной 0,2 МВт</h1>
+
+                    <div class="tabs">
+                      <span class="tabs__item"><a href="#" class="pseudo js-scroll-to" data-scrollto="description">Описание</a></span><span class="tabs__item"><a href="#" class="pseudo js-scroll-to" data-scrollto="feature">Характеристики</a></span><span class="tabs__item"><a href="#" class="pseudo js-scroll-to" data-scrollto="main-equip">Основное оборудование</a></span><span class="tabs__item"><a href="#" class="pseudo js-scroll-to" data-scrollto="additional-equip">Дополнительное оборудование</a></span>
+                    </div>
+                   </div>
+                  <div class="bigcut js-scroll-target" data-scrollto="description">
+
+                   
+<div class="equal equal_top clear"><div class="equal__left">
+<dl>
+<dt class="iconize-list">Предусмотрен автоматический режим работы</dt>
+<dd>с возможностью перехода в ручной режим.</dd>
+</dl>
+<dl>
+<dt class="iconize-list">Дымовая труба на основании котельной</dt>
+<dd>Не требует индивидуального надзора.</dd>
+</dl>
+<dl>
+<dt class="iconize-list">Дополнительное оборудование</dt>
+<dd>Контур ГВС; Независимый котловой контур; Линия редуцирования давления газа/ГРУ; Узлы учета.</dd>
+</dl>
+</div><div class="equal__right">
+<dl>
+<dt class="iconize-list">Автономный эффективный источник теплоснабжения</dt>
+</dl>
+<dl>
+<dt class="iconize-list">Максимальный уровень оснащения</dt>
+<dd>приборами и средствами обеспечения безопасности</dd>
+</dl>
+<dl>
+<dt class="iconize-list">Система диспетчеризации</dt>
+<dd>с передачей сигналов по кабелю/радио-каналу/GSM-каналу.</dd>
+</dl>
+</div></div>
+
+					<div class="btn-group"><a class="btn" href="/"><span class="icon-list"></span> Заказать решение</a></div>
+                    <div class="section">
+
+
+
+                      <div class="gallery gallery_main">
+                        <div class="gallery__holder" data-width="1440"  style="width:1440px; height: 360px;">
+                          <a href="#" class="gallery__item gallery__item_main"><img src="/f/i/img1.jpg" alt=""></a>
+                          <a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small9.jpg" alt=""></a>
+						   <a href="#" class="gallery__item gallery__item_order"><span><i class="icon-map"></i>Посмотреть<br> проект на карте</span> &rarr;</a>
+                          <a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small10.jpg" alt=""></a>
+                          <a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small11.jpg" alt=""></a><a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small12.jpg" alt=""></a><a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small10.jpg" alt=""></a><a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small9.jpg" alt=""></a><a href="#" class="gallery__item gallery__item_masked"><img src="/f/i/small12.jpg" alt=""></a>
+                        </div>
+                      </div>
+                    </div>
+				    <div class = "section section_feature js-scroll-target" data-scrollto="feature">
+					  <h2>Характеристики</h2>
+					  <div class = "feature">
+						<table>
+						<tr>
+						  <th>Количество блоков:</th>
+						  <td>1, установленный на шасси КАМАЗ 65115-1095-62</td>
+						</tr>
+						<tr>
+						  <th>Мощность:</th>
+						  <td>2 МВт</td>
+						</tr>
+						<tr>
+						  <th>Температурный график:</th>
+						  <td>95&deg; / 70&deg;С</td>
+						</tr>
+						<tr>
+						  <th>Габариты (ДхШхВ):</th>
+						  <td>12х2,5х2,5 м</td>
+						</tr>
+						<tr>
+						  <th>Топливо основное:</th>
+						  <td>Дизельное топливо</td>
+						</tr>
+						<tr>
+						  <th>Топливо резервное:</th>
+						  <td>Нет</td>
+						</tr>
+						<tr>
+						  <th>ГВС:</th>
+						  <td>Нет</td>
+						</tr>
+						<tr>
+						  <th>Дымовая труба:</th>
+						  <td>Стальная двухсекционная, h = 5 м</td>
+						</tr>
+						<tr>
+						  <th>Паспорт котельной:</th>
+						  <td>Прилагается</td>
+						</tr>
+						<tr>
+						  <th>Дополнительно:</th>
+						  <td>Автономный источник электроснабжения: дизель генератор мощностью 50 КВт</td>
+						</tr>
+						<tr>
+						  <th>Объем работ по котельной:</th>
+						  <td>Проект выполнен «под ключ»</td>
+						</tr>
+						</table>
+					  </div>
+
+				    </div>
+					<div class = "section js-scroll-target" data-scrollto="main-equip">
+					  <h2>Основное оборудование</h2>
+					  <div class = "main-equip">
+					    <div class="file file_doc">
+                          <div class="file__title"><a href="#">Основное оборудование</a></div>
+                          <div class="file__size">DOC, 904 Кб</div>
+                        </div>
+						<div class="data">
+						<table>
+						  <tr>
+							<th>Наименование</th>
+							<th>Количество</th>
+						  </tr>
+						  <tr>
+							<td><p><b>Блок-модуль</b></p>
+							  (металлоконструкция с ограждениями из сендвич-панелей)<br> Габариты блока ДхШхВ: 12х2,5х2,5м
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr><th colspan="2" class="data-title">Тепломеханическое оборудование</th></tr>
+						  <tr>
+							<td>
+							  <p><b>Стальной водогрейный котел «ELL 760» 760 кВт</b></p>
+							  «UNICAL», Италия
+							</td>
+							<td>2</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Водоподготовительная установка</b></p>
+				
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Насос сетевого контура</b></p>
+							  Q=70 м³/ч; H=50 м.в.ст.. Германия
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Насос котлового контура,  NB50-125/121 Grundfoss</b></p>
+							  Q= 54 м3/ч., H=32м.в.ст., Германия/Дания (WILO/Grundfoss)
+							</td>
+							<td>2 <br>(1&nbsp;резервный)</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Насос котлового контура</b></p>
+							  Q= 49м3/ч., H=15м.в.ст., Германия/Дания (WILO/Grundfoss)
+							</td>
+							<td>2 <br>(1 резервный)</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Теплообменник пластинчатый контура отопления</b></p>
+							  «Ридан», Россия
+							</td>
+							<td>2</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Комплект арматуры ГВС</b></p>
+							
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Комплект запорной арматуры</b></p>
+							  (дисковые поворотные затворы, обратные и предохранительные клапаны, фильтры очистки воды, краны шаровые, фитинги, фланцы, болты, шпильки, крепления)
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Газовая горелка  GAS P 100/M</b></p>
+							  «FBR», Италия
+							</td>
+							<td>2</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Газовая линия</b></p>
+							  (термозапорный клапан, отсечной электромагнитный клапан)
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Сигнализаторы загазованности RGD по CH4 и CO</b></p>
+							  «Sietron», Италия
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Силовой щит ВРУ, приборы автоматики</b></p>
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Водяной калорифер</b></p>
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Вентилятор вытяжной</b></p>
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Распределительный щит управления с элементами автоматики и управления</b></p>
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Датчики давления, температуры, манометры, термометры, термостаты</b></p>
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Диспетчеризация котельной с выводом сигнала на центральный пункт наблюдения</b></p>
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Система пожаротушения, пожарная сигнализация и пожарное оборудование</b></p>
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+              <tr>
+							<td>
+							  <p><b>Счетчик газа СГ-16МТ-250</b></p>
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Учет тепловой энергии на отопление и ГВС</b></p>
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Учет электроэнергии</b></p>
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Учет исходной воды</b></p>
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Труба дымовая, стальная, самонесущая</b></p>
+							  Н=22м
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Трубопроводы, теплоизоляция, крепления</b></p>
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Пакет рабочей документации на котельную</b></p>
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Паспорт</b></p>
+							</td>
+							<td>1</td>
+						  </tr>
+						</table></div>
+					  </div>
+				    </div>
+
+					<div class = "section js-scroll-target" data-scrollto="additional-equip">
+					  <h2>Дополнительное оборудование</h2>
+					  <div class = "main-equip">
+					    <div class="file file_doc">
+                          <div class="file__title"><a href="#">Основное оборудование</a></div>
+                          <div class="file__size">DOC, 904 Кб</div>
+                        </div>
+						<div class="data">
+						<table>
+						  <tr>
+							<th>Наименование</th>
+							<th>Количество</th>
+						  </tr>
+						  <tr>
+							<td><p><b>Блок-модуль</b></p>
+							  (металлоконструкция с ограждениями из сендвич-панелей)<br> Габариты блока ДхШхВ: 12х2,5х2,5м
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr><th colspan="2" class="data-title">Тепломеханическое оборудование</th></tr>
+						  <tr>
+							<td>
+							  <p><b>Стальной водогрейный котел «ELL 760» 760 кВт</b></p>
+							  «UNICAL», Италия
+							</td>
+							<td>2</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Водоподготовительная установка</b></p>
+				
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Насос сетевого контура</b></p>
+							  Q=70 м³/ч; H=50 м.в.ст.. Германия
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Насос котлового контура,  NB50-125/121 Grundfoss</b></p>
+							  Q= 54 м3/ч., H=32м.в.ст., Германия/Дания (WILO/Grundfoss)
+							</td>
+							<td>2 <br>(1&nbsp;резервный)</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Насос котлового контура</b></p>
+							  Q= 49м3/ч., H=15м.в.ст., Германия/Дания (WILO/Grundfoss)
+							</td>
+							<td>2 <br>(1 резервный)</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Теплообменник пластинчатый контура отопления</b></p>
+							  «Ридан», Россия
+							</td>
+							<td>2</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Комплект арматуры ГВС</b></p>
+							
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Комплект запорной арматуры</b></p>
+							  (дисковые поворотные затворы, обратные и предохранительные клапаны, фильтры очистки воды, краны шаровые, фитинги, фланцы, болты, шпильки, крепления)
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Газовая горелка  GAS P 100/M</b></p>
+							  «FBR», Италия
+							</td>
+							<td>2</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Газовая линия</b></p>
+							  (термозапорный клапан, отсечной электромагнитный клапан)
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Сигнализаторы загазованности RGD по CH4 и CO</b></p>
+							  «Sietron», Италия
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Силовой щит ВРУ, приборы автоматики</b></p>
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Водяной калорифер</b></p>
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Вентилятор вытяжной</b></p>
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Распределительный щит управления с элементами автоматики и управления</b></p>
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Датчики давления, температуры, манометры, термометры, термостаты</b></p>
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Диспетчеризация котельной с выводом сигнала на центральный пункт наблюдения</b></p>
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Система пожаротушения, пожарная сигнализация и пожарное оборудование</b></p>
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+              <tr>
+							<td>
+							  <p><b>Счетчик газа СГ-16МТ-250</b></p>
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Учет тепловой энергии на отопление и ГВС</b></p>
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Учет электроэнергии</b></p>
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Учет исходной воды</b></p>
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Труба дымовая, стальная, самонесущая</b></p>
+							  Н=22м
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Трубопроводы, теплоизоляция, крепления</b></p>
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Пакет рабочей документации на котельную</b></p>
+							</td>
+							<td>1 комплект</td>
+						  </tr>
+						  <tr>
+							<td>
+							  <p><b>Паспорт</b></p>
+							</td>
+							<td>1</td>
+						  </tr>
+						</table></div>
+					  </div>
+				    </div>
+
+                   </div>
+                  </div>
+                </div>
+				</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="catalog catalog_inner"><div class="wrap"><div class="catalog__wrap">
+      <p class="catalog__title"><a href="#">Котельные</a></p>
+      <table>
+        <tr>
+          <td>
+            <p class="catalog__subtitle">по типу исполнения:</p>
+            <ul>
+              <li><a href="#">Блочно-модульные котельные</a></li>
+              <li><a href="#">Модульные котельные</a></li>
+              <li><a href="#">Блочные котельные</a></li>
+              <li><a href="#">Передвижная котельная</a></li>
+              <li><a href="#">Стационарная котельная</a></li>
+              <li><a href="#">Промышленная котельная</a></li>
+              <li><a href="#">Аварийная котельная</a></li>
+              <li><a href="#">Мини-котельная</a></li>
+            </ul>
+          </td>
+          <td>
+            <p class="catalog__subtitle">по виду топлива:</p>
+            <ul>
+              <li><a href="#">Газовая котельная</a></li>
+              <li><a href="#">Жидкотопливная котельная</a></li>
+              <li><a href="#">Твёрдотопливная котельная</a></li>
+              <li><a href="#">Электрокотельная</a></li>
+              <li><a href="#">Мини-котельная</a></li>
+            </ul>
+          </td>
+          <td>
+            <p class="catalog__subtitle">по типу тепловой нагрузки:</p>
+            <ul>
+              <li><a href="#">Отопительная котельная</a></li>
+              <li><a href="#">Производственная котельная</a></li>
+              <li><a href="#">Производственно-отопительная котельная</a></li>
+            </ul>
+          </td>
+          <td>
+            <p class="catalog__subtitle">по размещению:</p>
+            <ul>
+              <li><a href="#">Отдельно стоящая котельная</a></li>
+              <li><a href="#">Крышная котельная</a></li>
+              <li><a href="#">Пристроенная котельная</a></li>
+              <li><a href="#">Встроенная котельная</a></li>
+              <li><a href="#">Мини-котельная</a></li>
+            </ul>
+          </td>
+          <td>
+            <p class="catalog__subtitle">по типу котлоагрегатов:</p>
+            <ul>
+              <li><a href="#">Паровая котельная</a></li>
+              <li><a href="#">Водоргейная котельная</a></li>
+              <li><a href="#">Паро-водогрейная котельная</a></li>
+              <li><a href="#">Котельная на диатермическом масле</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td style="width:20%">
+            <p class="catalog__title"><a href="#">Дымовые трубы</a></p>
+            <ul>
+              <li><a href="#">Ферменные дымовые трубы</a></li>
+              <li><a href="#">Самонесущие дымовые трубы</a></li>
+              <li><a href="#">Фасадные дымовые трубы</a></li>
+              <li><a href="#">Колонные дымовые трубы</a></li>
+              <li><a href="#">Дымовые трубы на растяжках</a></li>
+            </ul>
+          </td>
+          <td style="width:30%">
+            <p class="catalog__title"><a href="#">Стальные резервуары</a></p>
+            <ul>
+              <li><a href="#">Резервуары надземные РГЦ-3 – РГЦ 100)</a></li>
+              <li><a href="#">Резервуары подземные (РГЦ-3 – РГЦ 100)</a></li>
+              <li><a href="#">Резервуары для воды (РГЦ-3 – РГЦ 100)</a></li>
+              <li><a href="#">Резервуары для нефтепродуктов (ГЦ-3 – РГЦ 100)</a></li>
+            </ul>
+          </td>
+          <td style="width:25%">
+            <p class="catalog__title"><a href="#">Промышленные дымоходы</a></p>
+            <ul>
+              <li><a href="#">Модульные дымоходы</a></li>
+              <li><a href="#">Промышленные системы дымоудаления</a></li>
+            </ul>
+          </td>
+          <td style="width:25%">
+            <p class="catalog__title"><a href="#">Индивидуальные тепловые пункты</a></p>
+            <ul>
+              <li><a href="#">В блочном исполнении</a></li>
+              <li><a href="#">На раме</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div></div></div>
+    <div class="footer"><div class="wrap">
+      <div class="footer__wrap">
+        <div class="developer">Создание сайта – <a href="http://inteo-s.ru" rel="external">Интео</a></div>
+        © 1992—2014 ЗАО «Яринжком»<br>
+Все права защищены.<br>
+Полное или частичное копирование материалов запрещено.
+      </div>
+    </div></div>
+  </div>
+</body>
+
+</html>

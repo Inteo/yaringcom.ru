@@ -926,6 +926,11 @@ $(document).ready(function() {
     return false;
   });
 
+  $(".projects__result-object-close").click(function() {
+    $(this).closest('.projects__result-object_on-map').fadeOut();
+    return false;
+  });
+
   $(".menu__item").click(function() {
     if (is_touch_device()) {
       if ($(this).closest('.menu__extra').length) {
